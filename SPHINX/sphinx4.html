@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Sphinxの使い方その4 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Gitの使い方" href="../GIT/gitindex.html" />
+    <link rel="prev" title="Sphinxの使い方その3" href="sphinx3.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sphinxindex.html">Sphinxの使い方</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="sphinxindex.html#id1">目次</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sphinx1.html">Sphinxの使い方その1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sphinx2.html">Sphinxの使い方その2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sphinx3.html">Sphinxの使い方その3</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sphinxの使い方その4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#markdown">-Markdownを使おう-</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">-その他のカスタマイズ-</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="sphinxindex.html">Sphinxの使い方</a> &raquo;</li>
+        
+      <li>Sphinxの使い方その4</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx4">
+<h1>Sphinxの使い方その4<a class="headerlink" href="#sphinx4" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="markdown">
+<h2>-Markdownを使おう-<a class="headerlink" href="#markdown" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>さて、何度も言っているようにMarkdownをSphinxで使えるようにしたい。但し正直Sphinxを使用していてreStructureTextもそこまで難しくない気もしており筆者的にはどちらでもいい気もしている。但しマークアップ言語の主流はやはりMarkdownであり、どうせならmdで書いた方がいい気もする。</p>
+<p>ということでMarkdownを使えるようにしていく。</p>
+<p>SphinxでMarkdownを使用するためにはrecommonmarkというライブラリをインストールする必要がある。以下のコマンドでインストールが可能。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">recommonmark</span>
+</pre></div>
+</div>
+<p>インストール終了後、次のようにconf.pyの<code class="docutils literal notranslate"><span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">[]</span></code>となっているところを<code class="docutils literal notranslate"><span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">['recommonmark']</span></code>にする。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;recommonmark&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>さらに次のように<code class="docutils literal notranslate"><span class="pre">source_suffix</span></code>を記述する。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="c1">#html_theme = &#39;alabaster&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+
+<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_rtd_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;.md&#39;</span> <span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>これはファイルの拡張子がrstの時、txtの時、mdの時、それぞれどういうファイルとして読み込みを行うかを記述している。この記述によりmd記法だけではなく元々のrst記法も使用できるようにしている。</p>
+<p>さらにその下に次のような記述をする。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
+
+<span class="n">github_doc_root</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/rtfd/recommonmark/tree/master/doc/&#39;</span>
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;recommonmark_config&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="s1">&#39;url_resolver&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="n">github_doc_root</span> <span class="o">+</span> <span class="n">url</span><span class="p">,</span>
+                <span class="s1">&#39;auto_toc_tree_section&#39;</span><span class="p">:</span> <span class="s1">&#39;Contents&#39;</span><span class="p">,</span>
+                <span class="p">},</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">AutoStructify</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>正直筆者はこの内容を把握していないが、recommonmarkを使用するためのメインの記述という理解で十分だと思う。一応参考にしたサイトのリンクを記載しておく</p>
+<p><a class="reference external" href="https://qiita.com/leo-mon/items/46c43f0f97f730e64754">Sphinxでmarkdownを扱う(qiita)</a></p>
+<p>ただし上のリンクで<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">recommonmark.parser</span> <span class="pre">import</span> <span class="pre">CommonMarkParser</span></code>などとしているが、Sphinxのバージョンが3.x.xになって以降はparserに関する記述は必要なくなったはず。そのため上の説明ではこの部分の記述はしていない。逆に古いSphinxを使用している場合は必要に応じて調べてほしい。</p>
+<p>また<code class="docutils literal notranslate"><span class="pre">setup()</span></code>の意味が知りたければrecommonmarkの公式ドキュメントを見るとよい。詳しく書いてあるはずだ。</p>
+<p><a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/index.html#autostructify">recommonmark公式ドキュメント</a></p>
+<p>ただしこの辺りの記述はSphinx特有のものではなくゴリゴリにPythonなのでPythonを軽く学んだ後に読むのがよいかもしれない。</p>
+<p>話がそれたがこれでmd記法を使用するための準備は完了である。</p>
+<p>mdでファイルを作成し、index.rstにパスを記述した上で<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>を実行してちゃんとコンパイルができるかどうか確認してみてほしい。</p>
+<p>参考までにmdファイルとindex.rstの中身を記載しておく。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[](</span>
+<span class="n">hello2</span><span class="o">.</span><span class="n">md</span>
+<span class="p">)</span>
+
+<span class="c1"># Hello World</span>
+</pre></div>
+</div>
+<p>hello2.mdの記述はコメントである。またmdとrstで拡張子より前の部分が同じ名前のファイルが複数あると警告が出るため、hello2.mdとした。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. webpage documentation master file, created by
+   sphinx-quickstart on Thu Apr 29 02:53:00 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to webpage&#39;s documentation!
+===================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   Hello/hello.rst
+   Hello/hello2.md
+</pre></div>
+</div>
+<p>これでMarkdownがSphinxで使用できるようになった。</p>
+</div>
+<div class="section" id="id1">
+<h2>-その他のカスタマイズ-<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="css">
+<h3>CSSで見栄えをよくする<a class="headerlink" href="#css" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>もう十分設定したしお腹いっぱいな気もする。だがここまできたら次で説明する設定もしてほしい。ほかに何を設定するかというと、例えば自分で作ったサイトをもう１度見てもらうと分かる。<a class="reference internal" href="sphinx3.html"><span class="doc">「その3」</span></a>のrtdのテーマの写真をもう1度載せておく。</p>
+<div class="figure align-default">
+<img alt="../_images/theme_rtd.png" src="../_images/theme_rtd.png" />
+</div>
+<p>上の画像を見ると、細かいことかもしれないがウェブページの端がパソコンの端に一致していないことが分かる。よく分からないと思った人は、ノートPCではなくデスクトップで見てほしい。なぜそんなにページが縮こまっているんだ...と思うはず。これはrtdのテーマでサイトの端が固定されていることが原因。</p>
+<p>端の固定を解決するには<strong>CSS</strong>を記述し、そのCSSを反映するような形でSphinxでコンパイルしてもらえばいい。</p>
+<p>とは言ってもCSSを1から書くのではなく直したいところのみを記述すればいい。CSSを上書きするというイメージの方が正確なのかもしれない。</p>
+<p>そのためにはまず、<code class="docutils literal notranslate"><span class="pre">_static</span></code>ディレクトリにcustom.cssというファイルを作る。さらにファイルに次のような記述をする。</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">wy-nav-content</span> <span class="p">{</span>
+        <span class="k">max-width</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>この記述はCSS特有の記述方法である。</p>
+<p>さらにMarkdownを使用するために定義した<code class="docutils literal notranslate"><span class="pre">setup()</span></code>にCSSに関する内容も書いてやる。つまりconf.pyは以下のようになる。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
+
+<span class="n">github_doc_root</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/rtfd/recommonmark/tree/master/doc/&#39;</span>
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;recommonmark_config&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="s1">&#39;url_resolver&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="n">github_doc_root</span> <span class="o">+</span> <span class="n">url</span><span class="p">,</span>
+                <span class="s1">&#39;auto_toc_tree_section&#39;</span><span class="p">:</span> <span class="s1">&#39;Contents&#39;</span><span class="p">,</span>
+                <span class="p">},</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">AutoStructify</span><span class="p">)</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="s1">&#39;custom.css&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>こうすることでページを作る際にcustom.cssも参照してページが作られるようになる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>を実行しよう。下の画像のように横幅がちゃんと広がっているはずだ。</p>
+<div class="figure align-default">
+<img alt="../_images/fix_rtd.png" src="../_images/fix_rtd.png" />
+</div>
+<p>もう１つCSSのカスタマイズを説明しておく。次のような記述をcustom.css足してみる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">wy</span><span class="o">-</span><span class="n">side</span><span class="o">-</span><span class="n">nav</span><span class="o">-</span><span class="n">search</span><span class="p">,</span> <span class="o">.</span><span class="n">wy</span><span class="o">-</span><span class="n">nav</span><span class="o">-</span><span class="n">top</span> <span class="p">{</span>
+        <span class="n">background</span><span class="p">:</span> <span class="c1">#32CD32</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>その後<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>を実行する。</p>
+<div class="figure align-default">
+<img alt="../_images/green_rtd.png" src="../_images/green_rtd.png" />
+</div>
+<p>見ての通りページのメインカラーが変わる。地味な変化かもしれないが、応用すればサイドバーや文字など様々なところのデザインを自分好みに変えることができるはずである。また検索ボックスの上に現在は家のマークとwebpageという文字が書いてあるが、この部分を好きなロゴに変えることができるらしい。T先輩が変えていたので間違いない。そのためCSSやSphinxに関して色々調べて触ってみるとよい。</p>
+<div class="admonition hint">
+<p class="admonition-title">ヒント</p>
+<p>#32CD32はCSSにおいて緑色に割り当てられている番号である。色の種類は番号の数だけあり、細かく変更できる。「CSS　色　番号」などでググれば色々出てくると思うので調べて自分好みの色にするとよい。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Markdownの表組み<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>このページトップでrecommonmarkによりMarkdownを使用できるようにした。しかしながらrecommonmarkはMarkdownの表組み記法に対応していないらしい。そのためMarkdownで表を書きたい場合は別途ライブラリが必要になる。インストールは次のコマンド。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">markdown</span><span class="o">-</span><span class="n">tables</span>
+</pre></div>
+</div>
+<p>インストールが終わったら、conf.pyに<code class="docutils literal notranslate"><span class="pre">sphinx-markdown-tables</span></code>を利用することを明示する。やり方は<code class="docutils literal notranslate"><span class="pre">extensions</span></code>に<code class="docutils literal notranslate"><span class="pre">sphinx_markdown_tables</span></code>の記述を足す。つまり以下のようにすればいい。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;recommonmark&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sphinx_markdown_tables&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>これで設定は完了している。</p>
+</div>
+<div class="section" id="id3">
+<h3>著者・プロジェクト名など<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>はじめの質問で著者やプロジェクト名を考えるのに悩んだ人もいるかもしれない。しかしこれらは後からも変更ができるので安心してほしい。変え方は<code class="docutils literal notranslate"><span class="pre">project</span></code>,<code class="docutils literal notranslate"><span class="pre">copyright</span></code>,<code class="docutils literal notranslate"><span class="pre">author</span></code>の変数にそれぞれ文字列を代入するだけである。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;webpage&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2021, I.K.&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;I.K.&#39;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>ここまで色々設定してきたため、conf.pyの中身がよく分からなくなってしまったという人もいるかもしれない。そのため筆者が現在使用しているconf.pyの中身を記載しておく。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configuration file for the Sphinx documentation builder.</span>
+<span class="c1">#</span>
+<span class="c1"># This file only contains a selection of the most common options. For a full</span>
+<span class="c1"># list see the documentation:</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html</span>
+
+<span class="c1"># -- Path setup --------------------------------------------------------------</span>
+
+<span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c1"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c1"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c1">#</span>
+<span class="c1"># import os</span>
+<span class="c1"># import sys</span>
+<span class="c1"># sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+<span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
+
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;MDnotes&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2021, S.Harada,I.Kawabata,S.Ikeda,K.Shibata&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;ikawabata&#39;</span>
+
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;recommonmark&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sphinx_markdown_tables&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="c1"># The language for content autogenerated by Sphinx. Refer to documentation</span>
+<span class="c1"># for a list of supported languages.</span>
+<span class="c1">#</span>
+<span class="c1"># This is also used if you do content translation via gettext catalogs.</span>
+<span class="c1"># Usually you set &quot;language&quot; from the command line for these cases.</span>
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;ja&#39;</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
+
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="c1">#html_theme = &#39;alabaster&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+
+<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_rtd_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;.md&#39;</span> <span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
+
+<span class="n">github_doc_root</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/rtfd/recommonmark/tree/master/doc/&#39;</span>
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;recommonmark_config&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="s1">&#39;url_resolver&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="n">github_doc_root</span> <span class="o">+</span> <span class="n">url</span><span class="p">,</span>
+                <span class="s1">&#39;auto_toc_tree_section&#39;</span><span class="p">:</span> <span class="s1">&#39;Contents&#39;</span><span class="p">,</span>
+                <span class="p">},</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">AutoStructify</span><span class="p">)</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="s1">&#39;custom.css&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>設定についてはここまで。次のページからは高度なmdとrstの書き方について説明する。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../GIT/gitindex.html" class="btn btn-neutral float-right" title="Gitの使い方" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sphinx3.html" class="btn btn-neutral float-left" title="Sphinxの使い方その3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

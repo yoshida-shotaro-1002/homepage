@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5.【補足】mdpファイルの詳細 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="GROMACSチュートリアル2" href="GROMACSindex2.html" />
+    <link rel="prev" title="4.【補足】トポロジーファイルの詳細" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html">GROMACSのインストール</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="GROMACSindex1.html">GROMACSチュートリアル1</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GROMACSindex1.html#id1">目次</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html">1. シミュレーションの準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html">2.MDシミュレーションの実行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html">3.シミュレーション結果の解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html">4.【補足】トポロジーファイルの詳細</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.【補足】mdpファイルの詳細</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#minim-mdp">minim.mdp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nvt-mdp">nvt.mdp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#npt-mdp">npt.mdp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#md-mdp">md.mdp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">まとめ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACSmdp%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="GROMACSindex1.html">GROMACSチュートリアル1</a> &raquo;</li>
+        
+      <li>5.【補足】mdpファイルの詳細</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mdp">
+<h1>5.【補足】mdpファイルの詳細<a class="headerlink" href="#mdp" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは、タンパク質のシミュレーションで使用したmdpファイルの詳細に触れる。 MDシミュレーションの一般的な流れと使用したmdpファイルは（ions.mdpを除いて）次のようなものであった。</p>
+<ol class="simple">
+<li><p>エネルギー最小化 : minim.mdp</p></li>
+<li><p>NVT平衡化 : nvt.mdp</p></li>
+<li><p>NPT平衡化 : npt.mdp</p></li>
+<li><p>本計算 : md.mdp</p></li>
+</ol>
+<p>それぞれのファイルでどのような設定を行っているのか、重要なポイントに絞って解説する。 ここで紹介しなかったコマンドやより詳しい解説は<a class="reference external" href="https://shalad2.github.io/JellyPage/gromacs/gromacs_mdp.html">GROMACS.mdpオプション</a>または<a class="reference external" href="https://manual.gromacs.org/documentation/2018/user-guide/mdp-options.html">公式ドキュメント</a>を参照してほしい。 なお、全ての設定に対してコメントが付いているので、それを読んで理解してもらってもよいだろう。</p>
+<div class="section" id="minim-mdp">
+<h2>minim.mdp<a class="headerlink" href="#minim-mdp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>エネルギー最小化のために使用したminim.mdpの内容は次のようなものであった。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">minim</span><span class="o">.</span><span class="n">mdp</span>
+<span class="p">;</span> <span class="n">minim</span><span class="o">.</span><span class="n">mdp</span> <span class="o">-</span> <span class="n">used</span> <span class="k">as</span> <span class="nb">input</span> <span class="n">into</span> <span class="n">grompp</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">em</span><span class="o">.</span><span class="n">tpr</span>
+<span class="p">;</span> <span class="n">Parameters</span> <span class="n">describing</span> <span class="n">what</span> <span class="n">to</span> <span class="n">do</span><span class="p">,</span> <span class="n">when</span> <span class="n">to</span> <span class="n">stop</span> <span class="ow">and</span> <span class="n">what</span> <span class="n">to</span> <span class="n">save</span>
+<span class="n">integrator</span>  <span class="o">=</span> <span class="n">steep</span>         <span class="p">;</span> <span class="n">Algorithm</span> <span class="p">(</span><span class="n">steep</span> <span class="o">=</span> <span class="n">steepest</span> <span class="n">descent</span> <span class="n">minimization</span><span class="p">)</span>
+<span class="n">emtol</span>       <span class="o">=</span> <span class="mf">1000.0</span>        <span class="p">;</span> <span class="n">Stop</span> <span class="n">minimization</span> <span class="n">when</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">force</span> <span class="o">&lt;</span> <span class="mf">1000.0</span> <span class="n">kJ</span><span class="o">/</span><span class="n">mol</span><span class="o">/</span><span class="n">nm</span>
+<span class="n">emstep</span>      <span class="o">=</span> <span class="mf">0.01</span>          <span class="p">;</span> <span class="n">Minimization</span> <span class="n">step</span> <span class="n">size</span>
+<span class="n">nsteps</span>      <span class="o">=</span> <span class="mi">50000</span>         <span class="p">;</span> <span class="n">Maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="p">(</span><span class="n">minimization</span><span class="p">)</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">perform</span>
+    
+<span class="p">;</span> <span class="n">Parameters</span> <span class="n">describing</span> <span class="n">how</span> <span class="n">to</span> <span class="n">find</span> <span class="n">the</span> <span class="n">neighbors</span> <span class="n">of</span> <span class="n">each</span> <span class="n">atom</span> <span class="ow">and</span> <span class="n">how</span> <span class="n">to</span> <span class="n">calculate</span> <span class="n">the</span> <span class="n">interactions</span>
+<span class="n">nstlist</span>         <span class="o">=</span> <span class="mi">1</span>         <span class="p">;</span> <span class="n">Frequency</span> <span class="n">to</span> <span class="n">update</span> <span class="n">the</span> <span class="n">neighbor</span> <span class="nb">list</span> <span class="ow">and</span> <span class="n">long</span> <span class="nb">range</span> <span class="n">forces</span>
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>   <span class="o">=</span> <span class="n">Verlet</span>    <span class="p">;</span> <span class="n">Buffered</span> <span class="n">neighbor</span> <span class="n">searching</span>
+<span class="n">ns_type</span>         <span class="o">=</span> <span class="n">grid</span>      <span class="p">;</span> <span class="n">Method</span> <span class="n">to</span> <span class="n">determine</span> <span class="n">neighbor</span> <span class="nb">list</span> <span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">grid</span><span class="p">)</span>
+<span class="n">coulombtype</span>     <span class="o">=</span> <span class="n">PME</span>       <span class="p">;</span> <span class="n">Treatment</span> <span class="n">of</span> <span class="n">long</span> <span class="nb">range</span> <span class="n">electrostatic</span> <span class="n">interactions</span>
+<span class="n">rcoulomb</span>        <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">Short</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatic</span> <span class="n">cut</span><span class="o">-</span><span class="n">off</span>
+<span class="n">rvdw</span>            <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">Short</span><span class="o">-</span><span class="nb">range</span> <span class="n">Van</span> <span class="n">der</span> <span class="n">Waals</span> <span class="n">cut</span><span class="o">-</span><span class="n">off</span>
+<span class="n">pbc</span>             <span class="o">=</span> <span class="n">xyz</span>       <span class="p">;</span> <span class="n">Periodic</span> <span class="n">Boundary</span> <span class="n">Conditions</span> <span class="ow">in</span> <span class="nb">all</span> <span class="mi">3</span> <span class="n">dimensions</span>
+</pre></div>
+</div>
+<p>1つ目のセクションでは、エネルギー最小化のために<code class="docutils literal notranslate"><span class="pre">integrator</span> <span class="pre">=</span> <span class="pre">steep</span></code>で最急降下アルゴリズムを採用している。 <code class="docutils literal notranslate"><span class="pre">emtol</span> <span class="pre">=</span> <span class="pre">1000.0</span></code>は最大力Fmaxが1000 kJ mol-1 nm-1以下の値となるまでエネルギー最小化を行う設定をしている。 エネルギー最小化の最大ステップ数は<code class="docutils literal notranslate"><span class="pre">nsteps</span> <span class="pre">=</span> <span class="pre">50000</span></code>としていて、これより前にエネルギーが最小化された場合はそこで停止する。</p>
+<p>また、2つ目のセクションでは非結合相互作用（LJ相互作用、静電相互作用）に関する設定をしている。 <code class="docutils literal notranslate"><span class="pre">pbc</span> <span class="pre">=</span> <span class="pre">xyz</span></code>は3次元の周期的境界条件を指定している。</p>
+</div>
+<div class="section" id="nvt-mdp">
+<h2>nvt.mdp<a class="headerlink" href="#nvt-mdp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>300 Kにおける100 psのNVT平衡化のために使用したnvt.mdpの内容は次のようなものであった。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nvt</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">title</span>                   <span class="o">=</span> <span class="n">OPLS</span> <span class="n">Lysozyme</span> <span class="n">NVT</span> <span class="n">equilibration</span> 
+<span class="n">define</span>                  <span class="o">=</span> <span class="o">-</span><span class="n">DPOSRES</span>  <span class="p">;</span> <span class="n">position</span> <span class="n">restrain</span> <span class="n">the</span> <span class="n">protein</span>
+<span class="p">;</span> <span class="n">Run</span> <span class="n">parameters</span>
+<span class="n">integrator</span>              <span class="o">=</span> <span class="n">md</span>        <span class="p">;</span> <span class="n">leap</span><span class="o">-</span><span class="n">frog</span> <span class="n">integrator</span>
+<span class="n">nsteps</span>                  <span class="o">=</span> <span class="mi">50000</span>     <span class="p">;</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">50000</span> <span class="o">=</span> <span class="mi">100</span> <span class="n">ps</span>
+<span class="n">dt</span>                      <span class="o">=</span> <span class="mf">0.002</span>     <span class="p">;</span> <span class="mi">2</span> <span class="n">fs</span>
+<span class="p">;</span> <span class="n">Output</span> <span class="n">control</span>
+<span class="n">nstxout</span>                 <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">save</span> <span class="n">coordinates</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="n">nstvout</span>                 <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">save</span> <span class="n">velocities</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="n">nstenergy</span>               <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">save</span> <span class="n">energies</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="n">nstlog</span>                  <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">update</span> <span class="n">log</span> <span class="n">file</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="p">;</span> <span class="n">Bond</span> <span class="n">parameters</span>
+<span class="n">continuation</span>            <span class="o">=</span> <span class="n">no</span>        <span class="p">;</span> <span class="n">first</span> <span class="n">dynamics</span> <span class="n">run</span>
+<span class="n">constraint_algorithm</span>    <span class="o">=</span> <span class="n">lincs</span>     <span class="p">;</span> <span class="n">holonomic</span> <span class="n">constraints</span>
+<span class="n">constraints</span>             <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>   <span class="p">;</span> <span class="n">bonds</span> <span class="n">involving</span> <span class="n">H</span> <span class="n">are</span> <span class="n">constrained</span>
+<span class="n">lincs_iter</span>              <span class="o">=</span> <span class="mi">1</span>         <span class="p">;</span> <span class="n">accuracy</span> <span class="n">of</span> <span class="n">LINCS</span>
+<span class="n">lincs_order</span>             <span class="o">=</span> <span class="mi">4</span>         <span class="p">;</span> <span class="n">also</span> <span class="n">related</span> <span class="n">to</span> <span class="n">accuracy</span>
+<span class="p">;</span> <span class="n">Nonbonded</span> <span class="n">settings</span>
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>           <span class="o">=</span> <span class="n">Verlet</span>    <span class="p">;</span> <span class="n">Buffered</span> <span class="n">neighbor</span> <span class="n">searching</span>
+<span class="n">ns_type</span>                 <span class="o">=</span> <span class="n">grid</span>      <span class="p">;</span> <span class="n">search</span> <span class="n">neighboring</span> <span class="n">grid</span> <span class="n">cells</span>
+<span class="n">nstlist</span>                 <span class="o">=</span> <span class="mi">10</span>        <span class="p">;</span> <span class="mi">20</span> <span class="n">fs</span><span class="p">,</span> <span class="n">largely</span> <span class="n">irrelevant</span> <span class="k">with</span> <span class="n">Verlet</span>
+<span class="n">rcoulomb</span>                <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">short</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatic</span> <span class="n">cutoff</span> <span class="p">(</span><span class="ow">in</span> <span class="n">nm</span><span class="p">)</span>
+<span class="n">rvdw</span>                    <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">short</span><span class="o">-</span><span class="nb">range</span> <span class="n">van</span> <span class="n">der</span> <span class="n">Waals</span> <span class="n">cutoff</span> <span class="p">(</span><span class="ow">in</span> <span class="n">nm</span><span class="p">)</span>
+<span class="n">DispCorr</span>                <span class="o">=</span> <span class="n">EnerPres</span>  <span class="p">;</span> <span class="n">account</span> <span class="k">for</span> <span class="n">cut</span><span class="o">-</span><span class="n">off</span> <span class="n">vdW</span> <span class="n">scheme</span>
+<span class="p">;</span> <span class="n">Electrostatics</span>
+<span class="n">coulombtype</span>             <span class="o">=</span> <span class="n">PME</span>       <span class="p">;</span> <span class="n">Particle</span> <span class="n">Mesh</span> <span class="n">Ewald</span> <span class="k">for</span> <span class="n">long</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatics</span>
+<span class="n">pme_order</span>               <span class="o">=</span> <span class="mi">4</span>         <span class="p">;</span> <span class="n">cubic</span> <span class="n">interpolation</span>
+<span class="n">fourierspacing</span>          <span class="o">=</span> <span class="mf">0.16</span>      <span class="p">;</span> <span class="n">grid</span> <span class="n">spacing</span> <span class="k">for</span> <span class="n">FFT</span>
+<span class="p">;</span> <span class="n">Temperature</span> <span class="n">coupling</span> <span class="ow">is</span> <span class="n">on</span>
+<span class="n">tcoupl</span>                  <span class="o">=</span> <span class="n">V</span><span class="o">-</span><span class="n">rescale</span>             <span class="p">;</span> <span class="n">modified</span> <span class="n">Berendsen</span> <span class="n">thermostat</span>
+<span class="n">tc</span><span class="o">-</span><span class="n">grps</span>                 <span class="o">=</span> <span class="n">Protein</span> <span class="n">Non</span><span class="o">-</span><span class="n">Protein</span>   <span class="p">;</span> <span class="n">two</span> <span class="n">coupling</span> <span class="n">groups</span> <span class="o">-</span> <span class="n">more</span> <span class="n">accurate</span>
+<span class="n">tau_t</span>                   <span class="o">=</span> <span class="mf">0.1</span>     <span class="mf">0.1</span>           <span class="p">;</span> <span class="n">time</span> <span class="n">constant</span><span class="p">,</span> <span class="ow">in</span> <span class="n">ps</span>
+<span class="n">ref_t</span>                   <span class="o">=</span> <span class="mi">300</span>     <span class="mi">300</span>           <span class="p">;</span> <span class="n">reference</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">one</span> <span class="k">for</span> <span class="n">each</span> <span class="n">group</span><span class="p">,</span> <span class="ow">in</span> <span class="n">K</span>
+<span class="p">;</span> <span class="n">Pressure</span> <span class="n">coupling</span> <span class="ow">is</span> <span class="n">off</span>
+<span class="n">pcoupl</span>                  <span class="o">=</span> <span class="n">no</span>        <span class="p">;</span> <span class="n">no</span> <span class="n">pressure</span> <span class="n">coupling</span> <span class="ow">in</span> <span class="n">NVT</span>
+<span class="p">;</span> <span class="n">Periodic</span> <span class="n">boundary</span> <span class="n">conditions</span>
+<span class="n">pbc</span>                     <span class="o">=</span> <span class="n">xyz</span>       <span class="p">;</span> <span class="mi">3</span><span class="o">-</span><span class="n">D</span> <span class="n">PBC</span>
+<span class="p">;</span> <span class="n">Velocity</span> <span class="n">generation</span>
+<span class="n">gen_vel</span>                 <span class="o">=</span> <span class="n">yes</span>       <span class="p">;</span> <span class="n">assign</span> <span class="n">velocities</span> <span class="kn">from</span> <span class="nn">Maxwell</span> <span class="n">distribution</span>
+<span class="n">gen_temp</span>                <span class="o">=</span> <span class="mi">300</span>       <span class="p">;</span> <span class="n">temperature</span> <span class="k">for</span> <span class="n">Maxwell</span> <span class="n">distribution</span>
+<span class="n">gen_seed</span>                <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>        <span class="p">;</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">seed</span>
+</pre></div>
+</div>
+<p>NVT平衡化のMD計算を行うために<code class="docutils literal notranslate"><span class="pre">integrator</span> <span class="pre">=</span> <span class="pre">md</span></code>としている。 タイムステップは2 fsに設定するので、psの単位で<code class="docutils literal notranslate"><span class="pre">dt</span> <span class="pre">=</span> <span class="pre">0.002</span></code>としており、100 psのシミュレーションのためには<code class="docutils literal notranslate"><span class="pre">nsteps</span> <span class="pre">=</span> <span class="pre">50000</span></code>が必要になる。</p>
+<p>シミュレーションを始める際には原子に初速度が必要であるので、シミュレーション開始時に<code class="docutils literal notranslate"><span class="pre">gen_vel</span> <span class="pre">=</span> <span class="pre">yes</span></code>でマクスウェル分布に従ってランダムな速度を与える。 温度制御は<code class="docutils literal notranslate"><span class="pre">tcoupl</span> <span class="pre">=</span> <span class="pre">V-rescale</span></code>という方法で行い、温度は<code class="docutils literal notranslate"><span class="pre">ref_t</span> <span class="pre">=</span> <span class="pre">300</span></code>を参照する。 NVTアンサンブルなので圧力は制御せず、<code class="docutils literal notranslate"><span class="pre">pcoupl</span> <span class="pre">=</span> <span class="pre">no</span></code>としている。</p>
+<p>結果の出力は「Output control」の部分で行い、原子の座標や速度、系のエネルギー、シミュレーションのログファイルを何ステップおきに出力するかを設定する。 タイムステップは2 fsなので、<code class="docutils literal notranslate"><span class="pre">nstxout</span> <span class="pre">=</span> <span class="pre">500</span></code>とすると座標の出力は1 psおきに設定される。</p>
+</div>
+<div class="section" id="npt-mdp">
+<h2>npt.mdp<a class="headerlink" href="#npt-mdp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>300 K、1barにおける100 psのNPT平衡化のために使用したnpt.mdpの内容は次のようなものであった。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npt</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">title</span>                   <span class="o">=</span> <span class="n">OPLS</span> <span class="n">Lysozyme</span> <span class="n">NPT</span> <span class="n">equilibration</span> 
+<span class="n">define</span>                  <span class="o">=</span> <span class="o">-</span><span class="n">DPOSRES</span>  <span class="p">;</span> <span class="n">position</span> <span class="n">restrain</span> <span class="n">the</span> <span class="n">protein</span>
+<span class="p">;</span> <span class="n">Run</span> <span class="n">parameters</span>
+<span class="n">integrator</span>              <span class="o">=</span> <span class="n">md</span>        <span class="p">;</span> <span class="n">leap</span><span class="o">-</span><span class="n">frog</span> <span class="n">integrator</span>
+<span class="n">nsteps</span>                  <span class="o">=</span> <span class="mi">50000</span>     <span class="p">;</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">50000</span> <span class="o">=</span> <span class="mi">100</span> <span class="n">ps</span>
+<span class="n">dt</span>                      <span class="o">=</span> <span class="mf">0.002</span>     <span class="p">;</span> <span class="mi">2</span> <span class="n">fs</span>
+<span class="p">;</span> <span class="n">Output</span> <span class="n">control</span>
+<span class="n">nstxout</span>                 <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">save</span> <span class="n">coordinates</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="n">nstvout</span>                 <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">save</span> <span class="n">velocities</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="n">nstenergy</span>               <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">save</span> <span class="n">energies</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="n">nstlog</span>                  <span class="o">=</span> <span class="mi">500</span>       <span class="p">;</span> <span class="n">update</span> <span class="n">log</span> <span class="n">file</span> <span class="n">every</span> <span class="mf">1.0</span> <span class="n">ps</span>
+<span class="p">;</span> <span class="n">Bond</span> <span class="n">parameters</span>
+<span class="n">continuation</span>            <span class="o">=</span> <span class="n">yes</span>       <span class="p">;</span> <span class="n">Restarting</span> <span class="n">after</span> <span class="n">NVT</span>
+<span class="n">constraint_algorithm</span>    <span class="o">=</span> <span class="n">lincs</span>     <span class="p">;</span> <span class="n">holonomic</span> <span class="n">constraints</span>
+<span class="n">constraints</span>             <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>   <span class="p">;</span> <span class="n">bonds</span> <span class="n">involving</span> <span class="n">H</span> <span class="n">are</span> <span class="n">constrained</span>
+<span class="n">lincs_iter</span>              <span class="o">=</span> <span class="mi">1</span>         <span class="p">;</span> <span class="n">accuracy</span> <span class="n">of</span> <span class="n">LINCS</span>
+<span class="n">lincs_order</span>             <span class="o">=</span> <span class="mi">4</span>         <span class="p">;</span> <span class="n">also</span> <span class="n">related</span> <span class="n">to</span> <span class="n">accuracy</span>
+<span class="p">;</span> <span class="n">Nonbonded</span> <span class="n">settings</span>
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>           <span class="o">=</span> <span class="n">Verlet</span>    <span class="p">;</span> <span class="n">Buffered</span> <span class="n">neighbor</span> <span class="n">searching</span>
+<span class="n">ns_type</span>                 <span class="o">=</span> <span class="n">grid</span>      <span class="p">;</span> <span class="n">search</span> <span class="n">neighboring</span> <span class="n">grid</span> <span class="n">cells</span>
+<span class="n">nstlist</span>                 <span class="o">=</span> <span class="mi">10</span>        <span class="p">;</span> <span class="mi">20</span> <span class="n">fs</span><span class="p">,</span> <span class="n">largely</span> <span class="n">irrelevant</span> <span class="k">with</span> <span class="n">Verlet</span> <span class="n">scheme</span>
+<span class="n">rcoulomb</span>                <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">short</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatic</span> <span class="n">cutoff</span> <span class="p">(</span><span class="ow">in</span> <span class="n">nm</span><span class="p">)</span>
+<span class="n">rvdw</span>                    <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">short</span><span class="o">-</span><span class="nb">range</span> <span class="n">van</span> <span class="n">der</span> <span class="n">Waals</span> <span class="n">cutoff</span> <span class="p">(</span><span class="ow">in</span> <span class="n">nm</span><span class="p">)</span>
+<span class="n">DispCorr</span>                <span class="o">=</span> <span class="n">EnerPres</span>  <span class="p">;</span> <span class="n">account</span> <span class="k">for</span> <span class="n">cut</span><span class="o">-</span><span class="n">off</span> <span class="n">vdW</span> <span class="n">scheme</span>
+<span class="p">;</span> <span class="n">Electrostatics</span>
+<span class="n">coulombtype</span>             <span class="o">=</span> <span class="n">PME</span>       <span class="p">;</span> <span class="n">Particle</span> <span class="n">Mesh</span> <span class="n">Ewald</span> <span class="k">for</span> <span class="n">long</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatics</span>
+<span class="n">pme_order</span>               <span class="o">=</span> <span class="mi">4</span>         <span class="p">;</span> <span class="n">cubic</span> <span class="n">interpolation</span>
+<span class="n">fourierspacing</span>          <span class="o">=</span> <span class="mf">0.16</span>      <span class="p">;</span> <span class="n">grid</span> <span class="n">spacing</span> <span class="k">for</span> <span class="n">FFT</span>
+<span class="p">;</span> <span class="n">Temperature</span> <span class="n">coupling</span> <span class="ow">is</span> <span class="n">on</span>
+<span class="n">tcoupl</span>                  <span class="o">=</span> <span class="n">V</span><span class="o">-</span><span class="n">rescale</span>             <span class="p">;</span> <span class="n">modified</span> <span class="n">Berendsen</span> <span class="n">thermostat</span>
+<span class="n">tc</span><span class="o">-</span><span class="n">grps</span>                 <span class="o">=</span> <span class="n">Protein</span> <span class="n">Non</span><span class="o">-</span><span class="n">Protein</span>   <span class="p">;</span> <span class="n">two</span> <span class="n">coupling</span> <span class="n">groups</span> <span class="o">-</span> <span class="n">more</span> <span class="n">accurate</span>
+<span class="n">tau_t</span>                   <span class="o">=</span> <span class="mf">0.1</span>     <span class="mf">0.1</span>           <span class="p">;</span> <span class="n">time</span> <span class="n">constant</span><span class="p">,</span> <span class="ow">in</span> <span class="n">ps</span>
+<span class="n">ref_t</span>                   <span class="o">=</span> <span class="mi">300</span>     <span class="mi">300</span>           <span class="p">;</span> <span class="n">reference</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">one</span> <span class="k">for</span> <span class="n">each</span> <span class="n">group</span><span class="p">,</span> <span class="ow">in</span> <span class="n">K</span>
+<span class="p">;</span> <span class="n">Pressure</span> <span class="n">coupling</span> <span class="ow">is</span> <span class="n">on</span>
+<span class="n">pcoupl</span>                  <span class="o">=</span> <span class="n">Parrinello</span><span class="o">-</span><span class="n">Rahman</span>     <span class="p">;</span> <span class="n">Pressure</span> <span class="n">coupling</span> <span class="n">on</span> <span class="ow">in</span> <span class="n">NPT</span>
+<span class="n">pcoupltype</span>              <span class="o">=</span> <span class="n">isotropic</span>             <span class="p">;</span> <span class="n">uniform</span> <span class="n">scaling</span> <span class="n">of</span> <span class="n">box</span> <span class="n">vectors</span>
+<span class="n">tau_p</span>                   <span class="o">=</span> <span class="mf">2.0</span>                   <span class="p">;</span> <span class="n">time</span> <span class="n">constant</span><span class="p">,</span> <span class="ow">in</span> <span class="n">ps</span>
+<span class="n">ref_p</span>                   <span class="o">=</span> <span class="mf">1.0</span>                   <span class="p">;</span> <span class="n">reference</span> <span class="n">pressure</span><span class="p">,</span> <span class="ow">in</span> <span class="n">bar</span>
+<span class="n">compressibility</span>         <span class="o">=</span> <span class="mf">4.5e-5</span>                <span class="p">;</span> <span class="n">isothermal</span> <span class="n">compressibility</span> <span class="n">of</span> <span class="n">water</span><span class="p">,</span> <span class="n">bar</span><span class="o">^-</span><span class="mi">1</span>
+<span class="n">refcoord_scaling</span>        <span class="o">=</span> <span class="n">com</span>
+<span class="p">;</span> <span class="n">Periodic</span> <span class="n">boundary</span> <span class="n">conditions</span>
+<span class="n">pbc</span>                     <span class="o">=</span> <span class="n">xyz</span>       <span class="p">;</span> <span class="mi">3</span><span class="o">-</span><span class="n">D</span> <span class="n">PBC</span>
+<span class="p">;</span> <span class="n">Velocity</span> <span class="n">generation</span>
+<span class="n">gen_vel</span>                 <span class="o">=</span> <span class="n">no</span>        <span class="p">;</span> <span class="n">Velocity</span> <span class="n">generation</span> <span class="ow">is</span> <span class="n">off</span>
+</pre></div>
+</div>
+<p>NPT平衡化のMDの設定はNVTとほとんど同じであるが、NPTアンサンブルでは圧力制御を行うため<code class="docutils literal notranslate"><span class="pre">pcoupl</span> <span class="pre">=</span> <span class="pre">Parrinello-Rahman</span></code>としている。 この時の圧力の値は<code class="docutils literal notranslate"><span class="pre">ref_p</span> <span class="pre">=</span> <span class="pre">1.0</span></code>を参照している。 温度制御はNVT平衡化の設定のままで継続して行っている。</p>
+<p>またNPT平衡化では、系の原子に初速度を与える代わりにNVT平衡化の最終状態を引き継ぐため、<code class="docutils literal notranslate"><span class="pre">gen_vel</span> <span class="pre">=</span> <span class="pre">no</span></code>及び<code class="docutils literal notranslate"><span class="pre">continuation</span> <span class="pre">=</span> <span class="pre">yes</span></code>へ変更をしている。 こうすることで、指定したチェックポイントファイルを読み込み、シミュレーションを継続することが可能になる。</p>
+</div>
+<div class="section" id="md-mdp">
+<h2>md.mdp<a class="headerlink" href="#md-mdp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最後に、本計算で用いたmd.mdpの内容を確認する。 本計算はNPTアンサンブルで行っているので、シミュレーション条件はNPT平衡化とほとんど同じである。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">title</span>                   <span class="o">=</span> <span class="n">OPLS</span> <span class="n">Lysozyme</span> <span class="n">NPT</span> <span class="n">equilibration</span> 
+<span class="p">;</span> <span class="n">Run</span> <span class="n">parameters</span>
+<span class="n">integrator</span>              <span class="o">=</span> <span class="n">md</span>        <span class="p">;</span> <span class="n">leap</span><span class="o">-</span><span class="n">frog</span> <span class="n">integrator</span>
+<span class="n">nsteps</span>                  <span class="o">=</span> <span class="mi">500000</span>    <span class="p">;</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">500000</span> <span class="o">=</span> <span class="mi">1000</span> <span class="n">ps</span> <span class="p">(</span><span class="mi">1</span> <span class="n">ns</span><span class="p">)</span>
+<span class="n">dt</span>                      <span class="o">=</span> <span class="mf">0.002</span>     <span class="p">;</span> <span class="mi">2</span> <span class="n">fs</span>
+<span class="p">;</span> <span class="n">Output</span> <span class="n">control</span>
+<span class="n">nstxout</span>                 <span class="o">=</span> <span class="mi">0</span>         <span class="p">;</span> <span class="n">suppress</span> <span class="n">bulky</span> <span class="o">.</span><span class="n">trr</span> <span class="n">file</span> <span class="n">by</span> <span class="n">specifying</span>
+<span class="n">nstvout</span>                 <span class="o">=</span> <span class="mi">0</span>         <span class="p">;</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">output</span> <span class="n">frequency</span> <span class="n">of</span> <span class="n">nstxout</span><span class="p">,</span>
+<span class="n">nstfout</span>                 <span class="o">=</span> <span class="mi">0</span>         <span class="p">;</span> <span class="n">nstvout</span><span class="p">,</span> <span class="ow">and</span> <span class="n">nstfout</span>
+<span class="n">nstenergy</span>               <span class="o">=</span> <span class="mi">5000</span>      <span class="p">;</span> <span class="n">save</span> <span class="n">energies</span> <span class="n">every</span> <span class="mf">10.0</span> <span class="n">ps</span>
+<span class="n">nstlog</span>                  <span class="o">=</span> <span class="mi">5000</span>      <span class="p">;</span> <span class="n">update</span> <span class="n">log</span> <span class="n">file</span> <span class="n">every</span> <span class="mf">10.0</span> <span class="n">ps</span>
+<span class="n">nstxout</span><span class="o">-</span><span class="n">compressed</span>      <span class="o">=</span> <span class="mi">5000</span>      <span class="p">;</span> <span class="n">save</span> <span class="n">compressed</span> <span class="n">coordinates</span> <span class="n">every</span> <span class="mf">10.0</span> <span class="n">ps</span>
+<span class="n">compressed</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="n">grps</span>       <span class="o">=</span> <span class="n">System</span>    <span class="p">;</span> <span class="n">save</span> <span class="n">the</span> <span class="n">whole</span> <span class="n">system</span>
+<span class="p">;</span> <span class="n">Bond</span> <span class="n">parameters</span>
+<span class="n">continuation</span>            <span class="o">=</span> <span class="n">yes</span>       <span class="p">;</span> <span class="n">Restarting</span> <span class="n">after</span> <span class="n">NPT</span>
+<span class="n">constraint_algorithm</span>    <span class="o">=</span> <span class="n">lincs</span>     <span class="p">;</span> <span class="n">holonomic</span> <span class="n">constraints</span>
+<span class="n">constraints</span>             <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>   <span class="p">;</span> <span class="n">bonds</span> <span class="n">involving</span> <span class="n">H</span> <span class="n">are</span> <span class="n">constrained</span>
+<span class="n">lincs_iter</span>              <span class="o">=</span> <span class="mi">1</span>         <span class="p">;</span> <span class="n">accuracy</span> <span class="n">of</span> <span class="n">LINCS</span>
+<span class="n">lincs_order</span>             <span class="o">=</span> <span class="mi">4</span>         <span class="p">;</span> <span class="n">also</span> <span class="n">related</span> <span class="n">to</span> <span class="n">accuracy</span>
+<span class="p">;</span> <span class="n">Neighborsearching</span>
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>           <span class="o">=</span> <span class="n">Verlet</span>    <span class="p">;</span> <span class="n">Buffered</span> <span class="n">neighbor</span> <span class="n">searching</span>
+<span class="n">ns_type</span>                 <span class="o">=</span> <span class="n">grid</span>      <span class="p">;</span> <span class="n">search</span> <span class="n">neighboring</span> <span class="n">grid</span> <span class="n">cells</span>
+<span class="n">nstlist</span>                 <span class="o">=</span> <span class="mi">10</span>        <span class="p">;</span> <span class="mi">20</span> <span class="n">fs</span><span class="p">,</span> <span class="n">largely</span> <span class="n">irrelevant</span> <span class="k">with</span> <span class="n">Verlet</span> <span class="n">scheme</span>
+<span class="n">rcoulomb</span>                <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">short</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatic</span> <span class="n">cutoff</span> <span class="p">(</span><span class="ow">in</span> <span class="n">nm</span><span class="p">)</span>
+<span class="n">rvdw</span>                    <span class="o">=</span> <span class="mf">1.0</span>       <span class="p">;</span> <span class="n">short</span><span class="o">-</span><span class="nb">range</span> <span class="n">van</span> <span class="n">der</span> <span class="n">Waals</span> <span class="n">cutoff</span> <span class="p">(</span><span class="ow">in</span> <span class="n">nm</span><span class="p">)</span>
+<span class="p">;</span> <span class="n">Electrostatics</span>
+<span class="n">coulombtype</span>             <span class="o">=</span> <span class="n">PME</span>       <span class="p">;</span> <span class="n">Particle</span> <span class="n">Mesh</span> <span class="n">Ewald</span> <span class="k">for</span> <span class="n">long</span><span class="o">-</span><span class="nb">range</span> <span class="n">electrostatics</span>
+<span class="n">pme_order</span>               <span class="o">=</span> <span class="mi">4</span>         <span class="p">;</span> <span class="n">cubic</span> <span class="n">interpolation</span>
+<span class="n">fourierspacing</span>          <span class="o">=</span> <span class="mf">0.16</span>      <span class="p">;</span> <span class="n">grid</span> <span class="n">spacing</span> <span class="k">for</span> <span class="n">FFT</span>
+<span class="p">;</span> <span class="n">Temperature</span> <span class="n">coupling</span> <span class="ow">is</span> <span class="n">on</span>
+<span class="n">tcoupl</span>                  <span class="o">=</span> <span class="n">V</span><span class="o">-</span><span class="n">rescale</span>             <span class="p">;</span> <span class="n">modified</span> <span class="n">Berendsen</span> <span class="n">thermostat</span>
+<span class="n">tc</span><span class="o">-</span><span class="n">grps</span>                 <span class="o">=</span> <span class="n">Protein</span> <span class="n">Non</span><span class="o">-</span><span class="n">Protein</span>   <span class="p">;</span> <span class="n">two</span> <span class="n">coupling</span> <span class="n">groups</span> <span class="o">-</span> <span class="n">more</span> <span class="n">accurate</span>
+<span class="n">tau_t</span>                   <span class="o">=</span> <span class="mf">0.1</span>     <span class="mf">0.1</span>           <span class="p">;</span> <span class="n">time</span> <span class="n">constant</span><span class="p">,</span> <span class="ow">in</span> <span class="n">ps</span>
+<span class="n">ref_t</span>                   <span class="o">=</span> <span class="mi">300</span>     <span class="mi">300</span>           <span class="p">;</span> <span class="n">reference</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">one</span> <span class="k">for</span> <span class="n">each</span> <span class="n">group</span><span class="p">,</span> <span class="ow">in</span> <span class="n">K</span>
+<span class="p">;</span> <span class="n">Pressure</span> <span class="n">coupling</span> <span class="ow">is</span> <span class="n">on</span>
+<span class="n">pcoupl</span>                  <span class="o">=</span> <span class="n">Parrinello</span><span class="o">-</span><span class="n">Rahman</span>     <span class="p">;</span> <span class="n">Pressure</span> <span class="n">coupling</span> <span class="n">on</span> <span class="ow">in</span> <span class="n">NPT</span>
+<span class="n">pcoupltype</span>              <span class="o">=</span> <span class="n">isotropic</span>             <span class="p">;</span> <span class="n">uniform</span> <span class="n">scaling</span> <span class="n">of</span> <span class="n">box</span> <span class="n">vectors</span>
+<span class="n">tau_p</span>                   <span class="o">=</span> <span class="mf">2.0</span>                   <span class="p">;</span> <span class="n">time</span> <span class="n">constant</span><span class="p">,</span> <span class="ow">in</span> <span class="n">ps</span>
+<span class="n">ref_p</span>                   <span class="o">=</span> <span class="mf">1.0</span>                   <span class="p">;</span> <span class="n">reference</span> <span class="n">pressure</span><span class="p">,</span> <span class="ow">in</span> <span class="n">bar</span>
+<span class="n">compressibility</span>         <span class="o">=</span> <span class="mf">4.5e-5</span>                <span class="p">;</span> <span class="n">isothermal</span> <span class="n">compressibility</span> <span class="n">of</span> <span class="n">water</span><span class="p">,</span> <span class="n">bar</span><span class="o">^-</span><span class="mi">1</span>
+<span class="p">;</span> <span class="n">Periodic</span> <span class="n">boundary</span> <span class="n">conditions</span>
+<span class="n">pbc</span>                     <span class="o">=</span> <span class="n">xyz</span>       <span class="p">;</span> <span class="mi">3</span><span class="o">-</span><span class="n">D</span> <span class="n">PBC</span>
+<span class="p">;</span> <span class="n">Dispersion</span> <span class="n">correction</span>
+<span class="n">DispCorr</span>                <span class="o">=</span> <span class="n">EnerPres</span>  <span class="p">;</span> <span class="n">account</span> <span class="k">for</span> <span class="n">cut</span><span class="o">-</span><span class="n">off</span> <span class="n">vdW</span> <span class="n">scheme</span>
+<span class="p">;</span> <span class="n">Velocity</span> <span class="n">generation</span>
+<span class="n">gen_vel</span>                 <span class="o">=</span> <span class="n">no</span>        <span class="p">;</span> <span class="n">Velocity</span> <span class="n">generation</span> <span class="ow">is</span> <span class="n">off</span>
+</pre></div>
+</div>
+<p>1 nsのシミュレーションを行っているので<code class="docutils literal notranslate"><span class="pre">nsteps</span> <span class="pre">=</span> <span class="pre">500000</span></code>が必要である。</p>
+<p>本計算での設定で特徴的なのは、今まで指定していた<code class="docutils literal notranslate"><span class="pre">define</span> <span class="pre">=</span> <span class="pre">-DPOSRES</span></code>を指定していないことである。 これはタンパク質の位置拘束を有効にする設定で、平衡化の段階ではタンパク質が大きく動かないようにするために指定していた。 しかし、本計算ではタンパク質のダイナミクスを観測するために指定を外している。</p>
+<p>また出力形式であるが、今回は座標のみを書き出したいので、ファイルサイズの小さいxtc形式のトラジェクトリを指定している。 そのためtrr形式は<code class="docutils literal notranslate"><span class="pre">nstxout</span> <span class="pre">=</span> <span class="pre">0</span></code>として出力せず、<code class="docutils literal notranslate"><span class="pre">nstxout-compressed</span> <span class="pre">=</span> <span class="pre">5000</span></code>として5000ステップおきにxtc形式のトラジェクトリを出力している。 これで10 psおきに座標が記録されることになるので、1 nsのシミュレーションでは約100ステップ分のトラジェクトリを得ることになる。 VMDでトラジェクトリを眺める時に、読み込まれたステップ数を確認してほしい。</p>
+</div>
+<div class="section" id="id1">
+<h2>まとめ<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>mdpファイルの形式と、その大まかな内容を見てきた。 詳細な説明はしていないので、次のリンクを参考にしてさらに理解を深めてほしい。</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://shalad2.github.io/JellyPage/gromacs/gromacs_mdp.html">GROMACS.mdpオプション</a></p></li>
+<li><p><a class="reference external" href="https://manual.gromacs.org/documentation/2018/user-guide/mdp-options.html">公式ドキュメント（外部ページ）</a></p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GROMACSindex2.html" class="btn btn-neutral float-right" title="GROMACSチュートリアル2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html" class="btn btn-neutral float-left" title="4.【補足】トポロジーファイルの詳細" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, S.Harada,I.Kawabata,S.Ikeda,K.Shibata.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

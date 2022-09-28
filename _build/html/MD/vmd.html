@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>VMD &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Discovery Studio" href="Discovery_studio.html" />
+    <link rel="prev" title="Gnuplotでグラフ作成" href="../plot/Gnuplot_01.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VMD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">使い方</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gromacs">Gromacsの計算結果の場合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namd">Namdの計算結果の場合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lammps">Lammpsの計算結果の場合</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pc-mac-sshvmd">個人PC(mac)からssh先の<code class="docutils literal notranslate"><span class="pre">vmd</span></code>を起動する場合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">きれいなスナップショットの作り方</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">環境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">想定している系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">設定</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grafics-colors">Grafics --&gt;&gt; Colors...</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graphics-representations">Graphics --&gt;&gt; Representations...</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extensions-tk-console">Extensions --&gt;&gt; Tk console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-render">File --&gt;&gt; Render</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>VMD</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vmd">
+<h1>VMD<a class="headerlink" href="#vmd" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>VMD(Visual molecular dynamics)は、分子モデリングならびに可視化コンピュータプログラムである。</p>
+<p>MDは分子動力学シミュレーションの結果を眺め、解析するためのツールとして主に開発されたが、容積データや配列データ、任意のグラフィックオブジェクトを扱うためのツールも含まれている。</p>
+<p>早い話、MD計算のトラジェクトリを可視化できるツールである。</p>
+<div class="section" id="id1">
+<h2>インストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://www.ks.uiuc.edu/Development/Download/download.cgi?UserID=&amp;AccessCode=&amp;ArchiveID=1475">VMD_downloads</a>にアクセスし、Namdと同様にアカウント作成、ダウンロードまで進む。</p>
+<p>以下<code class="docutils literal notranslate"><span class="pre">~/App/</span></code> にダウンロードしここにインストールする方法。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># 移動</span>
+<span class="nb">cd</span> ~/App/
+
+<span class="c1"># 展開</span>
+tar xvf vmd-1.9.3??????.tar.gz
+
+<span class="c1"># 移動</span>
+<span class="nb">cd</span> vmd-1.9.3/
+
+<span class="c1"># (任意)インストールディレクトリの変更をしたい場合は</span>
+vi configure
+
+<span class="c1"># とし、以下２行を書き換える。</span>
+<span class="nv">$install_bin_dir</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin&quot;</span><span class="p">;</span>
+<span class="nv">$install_library_dir</span><span class="o">=</span><span class="s2">&quot;/usr/local/lib/</span><span class="nv">$install_name</span><span class="s2">&quot;</span><span class="p">;</span>
+
+<span class="c1"># make 設定</span>
+./configure
+
+<span class="c1"># 移動</span>
+<span class="nb">cd</span> src
+
+<span class="c1"># インストール</span>
+sudo make install
+</pre></div>
+</div>
+<p>一度terminalを閉じて、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vmd
+</pre></div>
+</div>
+<p>としたときに、</p>
+<p><img alt="../_images/vmd.png" src="../_images/vmd.png" /></p>
+<p>このような画像が出できたらインストール成功である。</p>
+<p>(<code class="docutils literal notranslate"><span class="pre">exit</span></code>や左上のFile -&gt; Quit)で閉じることができる。</p>
+</div>
+<div class="section" id="id2">
+<h2>使い方<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>vmdでトラジェクトリを見るためには、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vmd &lt;構造ファイル&gt; &lt;トラジェクトリファイル&gt;
+</pre></div>
+</div>
+<p>とする。</p>
+<div class="section" id="gromacs">
+<h3>Gromacsの計算結果の場合<a class="headerlink" href="#gromacs" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vmd structure.gro trajectory.trr
+
+<span class="c1">## &quot;.trr&quot;の他にも、&quot;.xtc&quot;でも可</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namd">
+<h3>Namdの計算結果の場合<a class="headerlink" href="#namd" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vmd</span> <span class="n">structure</span><span class="o">.</span><span class="n">psf</span> <span class="n">trajectory</span><span class="o">.</span><span class="n">dcd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lammps">
+<h3>Lammpsの計算結果の場合<a class="headerlink" href="#lammps" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vmd</span> <span class="n">structure</span><span class="o">.</span><span class="n">psf</span> <span class="n">trajectory</span><span class="o">.</span><span class="n">xtc</span>
+	<span class="ow">or</span>
+<span class="n">vmd</span> <span class="n">structure</span><span class="o">.</span><span class="n">psf</span> <span class="n">trajectory</span><span class="o">.</span><span class="n">dcd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pc-mac-sshvmd">
+<h2>個人PC(mac)からssh先の<code class="docutils literal notranslate"><span class="pre">vmd</span></code>を起動する場合<a class="headerlink" href="#pc-mac-sshvmd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>mac限定だと思われる</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XQuartz</span></code>を終了</p></li>
+<li><p>sshしていない(ローカルで)<code class="docutils literal notranslate"><span class="pre">defaults</span> <span class="pre">write</span> <span class="pre">org.macosforge.xquartz.X11</span> <span class="pre">enable_iglx</span> <span class="pre">-bool</span> <span class="pre">true</span></code>を実行</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span></code>してリモートマシンへ接続</p></li>
+<li><p>vmdが起動するはず。(影の描写には非対応？)</p></li>
+</ol>
+<p>当然だが、ネットの速度に依存してレスポンスが変わるため自宅Wi-Fiではやや反応が悪いか？</p>
+</div>
+<div class="section" id="id3">
+<h2>きれいなスナップショットの作り方<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h3>環境<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>VMD for LINUXAMD64, version 1.9.2 (December 29, 2014)</p></li>
+<li><p>NVIDIA Corporation GM107GL Quadro K620 (rev a2)</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>想定している系<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>水ー脂質膜のような系</p></li>
+<li><p>コレステロール入りの脂質膜</p></li>
+<li><p>PEG修飾リン脂質膜など</p>
+<ul>
+<li><p>高分子鎖などはこの方法だと暗くなってしまう可能性あり</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>設定<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="grafics-colors">
+<h4>Grafics --&gt;&gt; Colors...<a class="headerlink" href="#grafics-colors" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Categorise</th>
+<th align="center">Names</th>
+<th align="center">Colors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Display</td>
+<td align="center">Background</td>
+<td align="center">8 White</td>
+</tr>
+</tbody>
+</table><p>にして背景を白色にしておく。
+上に印刷したりスライドに載せるときは背景を白色にしておくといい。
+（ディスプレイ上で見るときは黒が見やすいのだが）</p>
+</div>
+<div class="section" id="graphics-representations">
+<h4>Graphics --&gt;&gt; Representations...<a class="headerlink" href="#graphics-representations" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id7">
+<h5>分子種ごとに表示を分ける<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Rep</span></code>を押して分子種の数だけ項目を作り、
+<code class="docutils literal notranslate"><span class="pre">Selected</span> <span class="pre">Atoms</span></code>で種類の指定をする。
+例として</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resname</span> <span class="pre">DMPC</span></code>(分子名がDMPCのもの)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">same</span> <span class="pre">residue</span> <span class="pre">as</span> <span class="pre">resname</span> <span class="pre">DMPC</span> <span class="pre">and</span> <span class="pre">z</span> <span class="pre">&gt;</span> <span class="pre">10</span></code>(z&gt;10の範囲にあるDMPC分子のみ)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">water</span></code>(水)</p></li>
+</ul>
+<p>といった指定ができるため活用してください。
+作った分子種に対して以下の設定（①〜③）をそれぞれ行う。</p>
+</div>
+<div class="section" id="id8">
+<h5>①色の指定<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">Coloring</span> <span class="pre">Method</span></code>で色の指定ができる。
+様々な指定ができるが、<code class="docutils literal notranslate"><span class="pre">ColorID</span></code>を選び右隣のリストから色を直接指定するのが一番きれいになる。
+時間がない人は<code class="docutils literal notranslate"><span class="pre">Name</span></code>のままでもいいかな？</p>
+</div>
+<div class="section" id="id9">
+<h5>②マテリアルの指定<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">Material</span></code>の欄で描画素材の変更ができる。
+個人的には<code class="docutils literal notranslate"><span class="pre">AOShiny</span></code>がおすすめ。明るすぎると思う場合は<code class="docutils literal notranslate"><span class="pre">Edgy</span></code>など選択肢となるか？</p>
+</div>
+<div class="section" id="id10">
+<h5>③描画タイプの指定<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">Drawing</span> <span class="pre">Method</span></code>で分子のタイプが指定できる。
+デフォルトの<code class="docutils literal notranslate"><span class="pre">Lines</span></code>は細すぎるため、<code class="docutils literal notranslate"><span class="pre">Licorice</span></code>がおすすめ。
+特に注目したい分子がある場合は<code class="docutils literal notranslate"><span class="pre">VDW</span></code>がいいが、多用し過ぎると見にくくなる。</p>
+<p>系に水が含まれる場合は水の設定を以下のようにするといい。</p>
+<p><strong>水の設定</strong></p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">項目</th>
+<th align="center">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Coloring Method</td>
+<td align="center">colorID(10 syanか22 cyan3がおすすめ)</td>
+</tr>
+<tr>
+<td align="center">Drawing Method</td>
+<td align="center">QuickSurf</td>
+</tr>
+<tr>
+<td align="center">Material</td>
+<td align="center">Transparent</td>
+</tr>
+<tr>
+<td align="center">Resolusion</td>
+<td align="center">1.60</td>
+</tr>
+<tr>
+<td align="center">Radius Scale</td>
+<td align="center">1.6</td>
+</tr>
+<tr>
+<td align="center">Density Isovalue</td>
+<td align="center">3.7</td>
+</tr>
+<tr>
+<td align="center">Grid</td>
+<td align="center">0.8</td>
+</tr>
+<tr>
+<td align="center">Surface</td>
+<td align="center">Max</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="display">
+<h4>Display<a class="headerlink" href="#display" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<ul class="simple">
+<li><p>Perspective --&gt;&gt; Orthographicに変更</p></li>
+<li><p>Depth Cueing --&gt;&gt; チェックがついている場合は外す</p></li>
+<li><p>Axes --&gt;&gt; Offに（軸が消える）</p></li>
+<li><p>Rendermode --&gt;&gt; GLSL</p></li>
+<li><p>Display Settings</p>
+<ul>
+<li><p>Shadows --&gt;&gt; On</p></li>
+<li><p>Amb. Occl. --&gt;&gt; On</p></li>
+<li><p>AO Ambient --&gt;&gt; 0.90</p></li>
+<li><p>AO Direct --&gt;&gt; 0.60</p></li>
+</ul>
+</li>
+</ul>
+<p>と設定する。</p>
+<p><img alt="../_images/vmd_disp_setting.png" src="../_images/vmd_disp_setting.png" /></p>
+</div>
+<div class="section" id="extensions-tk-console">
+<h4>Extensions --&gt;&gt; Tk console<a class="headerlink" href="#extensions-tk-console" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>VMD上で使えるコンソールだが、よく使うものとして、</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pbc</span> <span class="pre">box</span> <span class="pre">-center</span> <span class="pre">origin</span></code> (周期境界の箱を表示)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">Display</span> <span class="pre">Background</span> <span class="pre">white</span></code> (背景を黒色に)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rotate</span> <span class="pre">x</span> <span class="pre">by</span> <span class="pre">90</span></code> (x軸周りに90°回転)</p></li>
+</ul>
+<p>などがある。詳しくは公式サイトを参照</p>
+</div>
+<div class="section" id="file-render">
+<h4>File --&gt;&gt; Render<a class="headerlink" href="#file-render" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>いよいよ画像ファイルとして保存するが、以下のような設定をおすすめする。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">項目</th>
+<th align="center">設定値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Render the current scane using:</td>
+<td align="center">Tachylon or TachylonL-OptiX</td>
+</tr>
+<tr>
+<td align="center">Filename</td>
+<td align="center">好きなように</td>
+</tr>
+<tr>
+<td align="center">Render Command:</td>
+<td align="center">どこかに<code>-res 2000</code>を書き込む</td>
+</tr>
+</tbody>
+</table><p><img alt="../_images/vmd_render_setting.png" src="../_images/vmd_render_setting.png" /></p>
+<p>として<code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Rendering</span></code>すれば画像の書き出しが始まる。
+生成される画像は<code class="docutils literal notranslate"><span class="pre">.tga</span></code>なので<code class="docutils literal notranslate"><span class="pre">convert</span> <span class="pre">-density</span> <span class="pre">2000</span> <span class="pre">vmd.tga</span> <span class="pre">vmd.png</span></code>とし
+変換するといい。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Discovery_studio.html" class="btn btn-neutral float-right" title="Discovery Studio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../plot/Gnuplot_01.html" class="btn btn-neutral float-left" title="Gnuplotでグラフ作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

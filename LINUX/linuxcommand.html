@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Linux commands (nessesary) &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="vi" href="vim_0.html" />
+    <link rel="prev" title="Linux Basic Questions" href="linuxq1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux commands (nessesary)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cp"><code class="docutils literal notranslate"><span class="pre">cp</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">文法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test1-dat-test2-datcp-test1-dat-test2-dat">test1.dat をtest2.datという名前でコピーする。<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">test1.dat</span> <span class="pre">test2.dat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filetext1-datcp-file-text1-dat">fileディレクトリの中のtext1.datを一つ上のディレクトリにコピーしてくる。<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">file/text1.dat</span> <span class="pre">./</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filefile-samecp-r-file-file-same">fileディレクトリをfile_sameという名前でコピーする。<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span> <span class="pre">file</span> <span class="pre">file_same</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mv"><code class="docutils literal notranslate"><span class="pre">mv</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">ファイル名変更時の文法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text1-dat-text-new-datmv-text1-dat-text-new-dat">text1.dat をtext_new.datに改名<code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">text1.dat</span> <span class="pre">text_new.dat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ファイル移動時の文法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#text1-dat-filemv-text1-dat-file">text1.dat をfileの中に入れる<code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">text1.dat</span> <span class="pre">file</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rm"><code class="docutils literal notranslate"><span class="pre">rm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">文法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-dat-rm-test-dat">ファイル test.dat を削除<code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">test.dat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-rm-r-file">ディレクトリ file/ を削除 <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">file</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#echo"><code class="docutils literal notranslate"><span class="pre">echo</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">文法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6"></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-am-a-geniusecho-i-am-a-genius">I am a geniusと表示する。<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;I</span> <span class="pre">am</span> <span class="pre">a</span> <span class="pre">genius&quot;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-am-a-geniustest-datecho-i-am-a-genius-test-dat">I am a geniusという内容が書かれたtest.datというファイルを作成。<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;I</span> <span class="pre">am</span> <span class="pre">a</span> <span class="pre">genius&quot;</span> <span class="pre">&gt;</span> <span class="pre">test.dat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cat"><code class="docutils literal notranslate"><span class="pre">cat</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">文法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-am-a-geniustest-datcat-test-dat">I am a geniusという内容が書かれたtest.datというファイルの中身を見る<code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">test.dat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bashrc">~/.bashrcの中身を表示してみる。</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sl"><code class="docutils literal notranslate"><span class="pre">sl</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Linux commands (nessesary)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linux-commands-nessesary">
+<h1>Linux commands (nessesary)<a class="headerlink" href="#linux-commands-nessesary" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>先の章で説明したように、linuxは<code class="docutils literal notranslate"><span class="pre">cd</span></code>や<code class="docutils literal notranslate"><span class="pre">mkdir</span></code>などのコマンドを用いて操作します。</p>
+<p>このページではその他のコマンドについて解説します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>command</strong></p></td>
+<td><p><strong>result</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>pwd</p></td>
+<td><p>カレントディレクトリのパスを表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>cd</p></td>
+<td><p>ディレクトリ移動</p></td>
+</tr>
+<tr class="row-even"><td><p>mkdir</p></td>
+<td><p>新規ディレクトリ作成</p></td>
+</tr>
+<tr class="row-odd"><td><p>ls</p></td>
+<td><p>ディレクトリの中身表示</p></td>
+</tr>
+<tr class="row-even"><td><p>cp</p></td>
+<td><p>ファイル・ディレクトリのコピー</p></td>
+</tr>
+<tr class="row-odd"><td><p>mv</p></td>
+<td><p>ファイル移動 or ファイル名変更</p></td>
+</tr>
+<tr class="row-even"><td><p>rm</p></td>
+<td><p>ファイル・ディレクトリ削除</p></td>
+</tr>
+<tr class="row-odd"><td><p>echo</p></td>
+<td><p>文字の表示</p></td>
+</tr>
+<tr class="row-even"><td><p>cat</p></td>
+<td><p>ファイルの中身を表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>sl</p></td>
+<td><p>ここまで疲れたらやってみてね</p></td>
+</tr>
+</tbody>
+</table>
+<p>ここでは、</p>
+<p><a class="reference internal" href="linux1.html"><span class="doc">Linux Basic</span></a> で紹介しなかったものについて解説をします。</p>
+<div class="section" id="cp">
+<h2><code class="docutils literal notranslate"><span class="pre">cp</span></code><a class="headerlink" href="#cp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ファイルをコピーするコマンド</p>
+<div class="section" id="id1">
+<h3>文法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cp コピー元ファイル　コピー後名
+</pre></div>
+</div>
+</div>
+<div class="section" id="test1-dat-test2-datcp-test1-dat-test2-dat">
+<h3>test1.dat をtest2.datという名前でコピーする。<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">test1.dat</span> <span class="pre">test2.dat</span></code><a class="headerlink" href="#test1-dat-test2-datcp-test1-dat-test2-dat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+text1.dat
+
+$ cp text1.dat test2.dat <span class="c1"># test1.dat をtest2.datという名前でコピーする。</span>
+
+$ ls
+text1.dat test2.dat
+</pre></div>
+</div>
+</div>
+<div class="section" id="filetext1-datcp-file-text1-dat">
+<h3>fileディレクトリの中のtext1.datを一つ上のディレクトリにコピーしてくる。<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">file/text1.dat</span> <span class="pre">./</span></code><a class="headerlink" href="#filetext1-datcp-file-text1-dat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+file
+
+$ cp file/text1.dat ./
+
+$ ls
+file text1.dat
+</pre></div>
+</div>
+</div>
+<div class="section" id="filefile-samecp-r-file-file-same">
+<h3>fileディレクトリをfile_sameという名前でコピーする。<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span> <span class="pre">file</span> <span class="pre">file_same</span></code><a class="headerlink" href="#filefile-samecp-r-file-file-same" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+file text1.dat
+
+$ cp -r file file_same
+
+$ ls
+file file_same text1.dat
+</pre></div>
+</div>
+<p>このように、ファイルなら<code class="docutils literal notranslate"><span class="pre">cp</span></code>で問題ないがディレクトリをコピーする場合、<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span></code>とする。</p>
+</div>
+</div>
+<div class="section" id="mv">
+<h2><code class="docutils literal notranslate"><span class="pre">mv</span></code><a class="headerlink" href="#mv" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>ファイル名を変更するコマンド</p></li>
+<li><p>ファイルを移動するコマンド</p></li>
+</ul>
+<div class="section" id="id2">
+<h3>ファイル名変更時の文法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mv 変更前ファイル名　変更後ファイル名
+</pre></div>
+</div>
+</div>
+<div class="section" id="text1-dat-text-new-datmv-text1-dat-text-new-dat">
+<h3>text1.dat をtext_new.datに改名<code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">text1.dat</span> <span class="pre">text_new.dat</span></code><a class="headerlink" href="#text1-dat-text-new-datmv-text1-dat-text-new-dat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+text1.dat
+$ mv text1.dat text_new.dat
+
+$ ls
+text_new.dat
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>ファイル移動時の文法<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mv 移動したいファイル　移動先のディレクトリ
+</pre></div>
+</div>
+<div class="section" id="text1-dat-filemv-text1-dat-file">
+<h4>text1.dat をfileの中に入れる<code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">text1.dat</span> <span class="pre">file</span></code><a class="headerlink" href="#text1-dat-filemv-text1-dat-file" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+file text1.dat
+
+$ mv test1.dat file
+
+$ ls
+file
+
+$ ls file/
+test1.dat
+</pre></div>
+</div>
+<p>移動先のディレクトリはすでに存在している必要がある。まだ作ってなければtext1.datがfileに改名されてしまう。</p>
+</div>
+</div>
+</div>
+<div class="section" id="rm">
+<h2><code class="docutils literal notranslate"><span class="pre">rm</span></code><a class="headerlink" href="#rm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ファイルを削除するコマンド</p>
+<div class="section" id="id4">
+<h3>文法<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rm 削除したいファイル
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-dat-rm-test-dat">
+<h3>ファイル test.dat を削除<code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">test.dat</span></code><a class="headerlink" href="#test-dat-rm-test-dat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+test.dat
+
+$ rm test.dat
+
+$ ls
+</pre></div>
+</div>
+<p>このように、確認メッセージなどがなく、削除されるため注意が必要！！</p>
+<p>（ゴミ箱に行ったりもせずいきなり消える）</p>
+</div>
+<div class="section" id="file-rm-r-file">
+<h3>ディレクトリ file/ を削除 <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">file</span></code><a class="headerlink" href="#file-rm-r-file" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls
+file
+
+$ rm -r file
+
+$ ls
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">cp</span></code> のと同様にディレクトリに対して行うには<code class="docutils literal notranslate"><span class="pre">-r</span></code>のオプションが必要。</p>
+</div>
+</div>
+<div class="section" id="echo">
+<h2><code class="docutils literal notranslate"><span class="pre">echo</span></code><a class="headerlink" href="#echo" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>文字の表示をするコマンド</p>
+<div class="section" id="id5">
+<h3>文法<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> 表示したい文字
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3><a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+</div>
+<div class="section" id="i-am-a-geniusecho-i-am-a-genius">
+<h3>I am a geniusと表示する。<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;I</span> <span class="pre">am</span> <span class="pre">a</span> <span class="pre">genius&quot;</span></code><a class="headerlink" href="#i-am-a-geniusecho-i-am-a-genius" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;I am a genius&quot;</span>
+I am a genius
+</pre></div>
+</div>
+<p>これだけだと何の面白みもないが、あとで紹介する「リダイレクト」を活用することで利便性が格段に上がる。</p>
+</div>
+<div class="section" id="i-am-a-geniustest-datecho-i-am-a-genius-test-dat">
+<h3>I am a geniusという内容が書かれたtest.datというファイルを作成。<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;I</span> <span class="pre">am</span> <span class="pre">a</span> <span class="pre">genius&quot;</span> <span class="pre">&gt;</span> <span class="pre">test.dat</span></code><a class="headerlink" href="#i-am-a-geniustest-datecho-i-am-a-genius-test-dat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;I am a genius&quot;</span> &gt; test.dat
+$ cat test.dat
+I am a genius
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">cat</span> </code>はファイルの中身を表示するコマンドで、次に説明する。</p>
+</div>
+</div>
+<div class="section" id="cat">
+<h2><code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#cat" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ファイルの中身を表示する。</p>
+<div class="section" id="id7">
+<h3>文法<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cat 中身を表示したいファイル
+</pre></div>
+</div>
+</div>
+<div class="section" id="i-am-a-geniustest-datcat-test-dat">
+<h3>I am a geniusという内容が書かれたtest.datというファイルの中身を見る<code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">test.dat</span></code><a class="headerlink" href="#i-am-a-geniustest-datcat-test-dat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ cat test.dat
+I am a genius
+</pre></div>
+</div>
+</div>
+<div class="section" id="bashrc">
+<h3>~/.bashrcの中身を表示してみる。<a class="headerlink" href="#bashrc" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ cat ~/.bashrc
+........................
+........................
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sl">
+<h2><code class="docutils literal notranslate"><span class="pre">sl</span></code><a class="headerlink" href="#sl" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまでやって疲れたら<code class="docutils literal notranslate"><span class="pre">sl</span></code>コマンドを試してほしい。疲れがなくなるはずだ。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="vim_0.html" class="btn btn-neutral float-right" title="vi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linuxq1.html" class="btn btn-neutral float-left" title="Linux Basic Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

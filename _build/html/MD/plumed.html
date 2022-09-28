@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>PLUMED &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Packmol" href="packmol.html" />
+    <link rel="prev" title="FFTW" href="fftw.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fftw.html">FFTW</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PLUMED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">インストール方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">注意</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">plumedのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">パッチを当てる</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>PLUMED</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plumed">
+<h1>PLUMED<a class="headerlink" href="#plumed" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><img alt="../_images/plumed.png" src="../_images/plumed.png" /></p>
+<p><a class="reference external" href="https://www.plumed.org/">PLUMED</a>は分子動力学シミュレーションのための拡張サンプリングアルゴリズム、様々な自由エネルギー手法、および解析ツールを実装するオープンソースライブラリである。ACEMD、AMBER、DL_POLY、GROMACS、LAMMPS、NAMD、OpenMM、ABIN、CP2K、i-PI、PINY-MD、およびQuantum ESPRESSOと一緒に使うために設計されているが、解析および可視化ツールのVMD、HTMD、OpenPathSamplingと一緒に使うこともできる。</p>
+<p>加えて、PLUMEDは分子動力学トラジェクトリの分析のためのスタンドアローンツールとして使うこともできる。METAGUIと名付けられたグラフィカルユーザインタフェースも入手可能である。</p>
+<div class="section" id="id1">
+<h2>インストール方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>本研究室では、gromacsなどでレプリカ交換などの計算をするためにPLUMEDを必要とする場合がほとんどだろう。手順としては、</p>
+<ol class="simple">
+<li><p>plumed本体のインストール</p></li>
+<li><p>gromacsなどのMDソフトウェアにパッチを当てる</p></li>
+</ol>
+<p>という流れが一般的になるだろう。</p>
+<div class="section" id="id2">
+<h3>注意<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>現在(2020/01/22)、plumedとgromacsの依存関係は以下のとおりである。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">plumed</th>
+<th>MD software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">2.5</td>
+<td>gromacs-2016-6<br />gromacs-2018-8<br />gromacs-2019-4<br />gromacs-4-5-7<br />namd-2-12<br />namd-2-13</td>
+</tr>
+<tr>
+<td align="center">2.4</td>
+<td>gromacs-2018-6<br />gromacs-4-5-7<br />gromacs-5-1-4<br />lammps-6Apr13<br />namd-2-12<br />namd-2-13</td>
+</tr>
+</tbody>
+</table><p>これより古いplumed(2.3以前)はサポート対象外のため推奨しない。自分の利用したいMDソフトウェアに合わせたplumedをインストールすること。</p>
+</div>
+<div class="section" id="id3">
+<h3>plumedのインストール<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ソースコードは<a class="reference external" href="https://www.plumed.org//download.html">公式サイトのDownload</a>から入手できる。plumed-?.?.?.tgzをダウンロードし、適当な場所(<code class="docutils literal notranslate"><span class="pre">~/App</span></code>)で展開する。</p>
+<p>その後以下のコマンドを入力</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/App/plumed-?.?.?
+./configure --prefix<span class="o">=</span>/usr/local/
+make -j <span class="m">4</span>
+make doc
+sudo make install  <span class="c1"># sudo is needed if the prefix is root</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">plumed</span></code>とコマンド入力し、<code class="docutils literal notranslate"><span class="pre">/usr/local/bin/plumed</span></code>と出力されればインストールに成功している。</p>
+</div>
+<div class="section" id="id4">
+<h3>パッチを当てる<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><a class="reference external" href="https://tanaty5828.github.io/sphinx/MD/gromacs.html">gromacsのページ</a>でも書いてあるが、gromacsのルートディレクトリで</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plumed patch -p
+</pre></div>
+</div>
+<p>のコマンドを実行、対話形式でMDソフトウェアのバージョンを選択するだけである。</p>
+<p>もしスパコン上でパッチを当てる場合は、</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plumed patch --no-mpi -p
+</pre></div>
+</div>
+<p>--no-mpiを追加する。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="packmol.html" class="btn btn-neutral float-right" title="Packmol" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fftw.html" class="btn btn-neutral float-left" title="FFTW" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

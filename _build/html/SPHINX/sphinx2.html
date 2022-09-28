@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Sphinxの使い方その2 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Sphinxの使い方その3" href="sphinx3.html" />
+    <link rel="prev" title="Sphinxの使い方その1" href="sphinx1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sphinxindex.html">Sphinxの使い方</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="sphinxindex.html#id1">目次</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sphinx1.html">Sphinxの使い方その1</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sphinxの使い方その2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">-ウェブページの作成-</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">-実際に自分で書いてみる-</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sphinx3.html">Sphinxの使い方その3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sphinx4.html">Sphinxの使い方その4</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="sphinxindex.html">Sphinxの使い方</a> &raquo;</li>
+        
+      <li>Sphinxの使い方その2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx2">
+<h1>Sphinxの使い方その2<a class="headerlink" href="#sphinx2" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>-ウェブページの作成-<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下のコマンドを、<strong>Makefile</strong>と同じ階層のディレクトリで実行してみてほしい。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+<p>その後windowsのエクスプローラーで_build/htmlの中にある<strong>index.html</strong>をダブルクリックしてほしい。</p>
+<p>すると以下のようなサイトがブラウザで見られるはずだ。</p>
+<div class="figure align-default">
+<img alt="../_images/first_indexrst.png" src="../_images/first_indexrst.png" />
+</div>
+<p>ここまでの手順で何もページ作りをしていないが、デフォルトのページが作れたことになる。</p>
+<p>何も作っていないのに何を基にHTMLを作っているのかと疑問に思う人もいるかもしれないが、前ページの<a class="reference internal" href="sphinx1.html"><span class="doc">「その1」</span></a>で述べたようにindex.rstが目次の役割を果たしつつ、それ自体もrstの原稿であったことを思い出してほしい。したがってindex.htmlはindex.rstをコンパイルして作られたページということになる。実際index.rstの中身は以下のようになっており、</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. webpage documentation master file, created by
+   sphinx-quickstart on Thu Apr 29 02:53:00 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to webpage&#39;s documentation!
+===================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+</pre></div>
+</div>
+<p>Welcome to webpage's documentation!という見出しの言葉が対応していることがわかるだろう。</p>
+<div class="admonition tip">
+<p class="admonition-title">ちなみに</p>
+<p>rstでは「=」を見出しにしたい文字列の下に連続して書くことで、その文字列を見出しにできる。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>また.. hogehoge:: はSphinx特有の書き方である。中でも上記のtoctreeはSphinxの大黒柱ともいうべき機能であり、これによりページ間の繋がりを管理して目次等を作ってくれている。</p>
+</div>
+<p>余談だが、索引をクリックすると索引と呼ばれるページが出てくるもののこのページの使い方を筆者は理解できていない。というか必要ないように思える。またモジュール索引に関してはクリックするとリンクが切れており、別途設定が必要なのであろう。さらに検索ページも、そもそも開いたページに検索フォームが作られているため必要ない。</p>
+<p>したがって筆者はこれらのページを全て削除している。</p>
+<p>すなわち<code class="docutils literal notranslate"><span class="pre">Indices</span> <span class="pre">and</span> <span class="pre">tables</span></code>以下の行を全てindex.rstから消している。以降の説明でも同様であるので注意してほしい。</p>
+</div>
+<div class="section" id="id2">
+<h2>-実際に自分で書いてみる-<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Hello Worldという見出しが表示されるだけのページを作成してみよう。</p>
+<p>まずはrstファイルを作る。作る場所はindex.rstと同じ階層に作成する。</p>
+<p>すなわち筆者の環境では以下のようなディレクトリ構造になっている。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── Makefile
+├── _build
+├── _static
+├── _templates
+├── conf.py
+├── index.rst
+├── hello.rst
+└── make.bat
+</pre></div>
+</div>
+<p>rstはただのテキストファイルであるので、rstファイルを書くためのエディタはviでもメモ帳でもVScodeでも何でもよい。以下のように記述する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">hello</span><span class="o">.</span><span class="n">rst</span>
+
+<span class="n">Hello</span> <span class="n">World</span>
+<span class="o">============</span>
+</pre></div>
+</div>
+<p>ちなみに<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">hello.rst</span></code>はコメントであり、Sphinxではこのようにしてコメントアウトできる。</p>
+<div class="admonition tip">
+<p class="admonition-title">ちなみに</p>
+<p>rstのコメントアウトの仕方ではなく、あくまでSphinxのコメントアウトである。ただrstの記法はそもそもSphinxでしか用いられていなかった気もする。例えばmd記法はSphinxで使える以外にも様々なところで使える。例えばqiitaではmd記法を使用してページを作成できる。</p>
+</div>
+<p>hello.rstを作成したら、index.rstにhello.rstのパスを記述する必要がある。作成したいかなるrstやmdもindex.rstにそのパスを記述する必要がある。そうでないとページを管理できないため。</p>
+<p>したがってindex.rstに以下のように記述。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. webpage documentation master file, created by
+   sphinx-quickstart on Thu Apr 29 02:53:00 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to webpage&#39;s documentation!
+===================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   hello.rst
+</pre></div>
+</div>
+<p>ちなみにtoctreeにファイルのパスを記述する際はインデントを必ず意識してほしい。今は、toctreeの「t」と同じ位置にhello.rstの「h」が来ている。もしhello.rstの前にスペースあるいはタブを入れずに「hello.rst」と書くと、うまく読み込めないためにエラーが表示される。</p>
+<p>ここまでできたら<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>を実行する。そしてindex.htmlをブラウザで開くと以下のようになっているはずだ。</p>
+<div class="figure align-default">
+<img alt="../_images/helloworld1.png" src="../_images/helloworld1.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/helloworld2.png" src="../_images/helloworld2.png" />
+</div>
+<p>ただしrstファイルが増えていくとindex.rstと同じ階層のディレクトリがめちゃくちゃになる。その場合は、ディレクトリを作ってディレクトリも含めたパスをtoctreeに記述してやればよい。次のようなディレクトリ構図を想定する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── Makefile
+├── _build
+├── _static
+├── _templates
+├── conf.py
+├── index.rst
+├── Hellow
+│　　　└──hellow.rst
+└── make.bat
+</pre></div>
+</div>
+<p>この場合toctreeには次のように書く。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. webpage documentation master file, created by
+   sphinx-quickstart on Thu Apr 29 02:53:00 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to webpage&#39;s documentation!
+===================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   Hello/hello.rst
+</pre></div>
+</div>
+<p>これができれば一応どんな記事も書けるということになる。
+次のページではSphinxを使用したページデザインの変更について説明していく。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>rstファイルやmdファイルには必ず見出しを含む必要があり、見出しのないただのテキストだけのファイルは許されずエラーとなる。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sphinx3.html" class="btn btn-neutral float-right" title="Sphinxの使い方その3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sphinx1.html" class="btn btn-neutral float-left" title="Sphinxの使い方その1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

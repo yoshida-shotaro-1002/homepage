@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>LAMMPS &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="MPDyn" href="mpdyn.html" />
+    <link rel="prev" title="Namd" href="namd.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namd.html">Namd</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LAMMPS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">インストール</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cmake">CMake</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">並列オプション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">コンパイラオプション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fft">FFTオプション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">パッケージオプション</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpu">GPUパッケージ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tl-dl">TL;DL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#traditional-make">Traditional make(古い方法)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make"><code class="docutils literal notranslate"><span class="pre">make</span></code>に失敗する場合</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">インストール(gpu)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>LAMMPS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lammps">
+<h1>LAMMPS<a class="headerlink" href="#lammps" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>篠田グループの粗視化モデルがインストールされているため、粗視化MD計算はこちらで行うことが多い。</p>
+<div class="section" id="id1">
+<h2>インストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="cmake">
+<h3>CMake<a class="headerlink" href="#cmake" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>lammpsもGromacs同様、cmakeでインストールする方法が最近主流になってきている。CMakeのほうがかなり簡単にインストールできるので、頑張ってみよう。</p>
+<p>基本的には、ダウンロードしたディレクトリに入り、<code class="docutils literal notranslate"><span class="pre">build</span></code>ディレクトリを作成し<code class="docutils literal notranslate"><span class="pre">build</span></code>のなかに入り、cmakeを実行するだけである。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone -b stable https://github.com/lammps/lammps.git
+<span class="nb">cd</span> lammps
+mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+cmake ../cmake
+make -j <span class="m">8</span>
+</pre></div>
+</div>
+<p>ただし、これでは必要なパッケージ等々がインストールできていないのでcmakeの際にオプションを指定する必要がある。</p>
+<div class="section" id="id2">
+<h4>並列オプション<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>これらがないとスパコン等での並列計算ができない</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-DBUILD_MPI=on</td>
+<td>MPI並列</td>
+</tr>
+<tr>
+<td>-DBUILD_OMP=on</td>
+<td>OpenMP並列</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id3">
+<h4>コンパイラオプション<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>lammpsは、c++のコンパイラにデフォルトで<code class="docutils literal notranslate"><span class="pre">mpicxx</span></code>を使用する。理由がなければ、インテルコンパイラに変更したほうがいい。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-DCMAKE_C_COMPILER=mpiicc</td>
+<td>Cコンパイラにmpiiccを指定</td>
+</tr>
+<tr>
+<td>-DCMAKE_CXX_COMPILER=mpiicpc</td>
+<td>C++コンパイラにmpiicpcを指定</td>
+</tr>
+<tr>
+<td>-DCMAKE_Fortran_COMPILER=mpiifort</td>
+<td>Fortranコンパイラにmpiifortを指定</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="fft">
+<h4>FFTオプション<a class="headerlink" href="#fft" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>PPPM(Particle–Particle–Particle–Mesh)などの静電相互作用の取り扱いのために必要になる。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-DFFT=FFTW3</td>
+<td>FFTにFFTW3を指定</td>
+</tr>
+<tr>
+<td>(or) -DFFT=MKL</td>
+<td>FFTにMKLを指定</td>
+</tr>
+</tbody>
+</table><p>FFTにFFTW3を指定しても、CMakeがFFTW3を見つけてくれないときがある。その時はFFTW3のincludeとlibディレクトリを指定する必要がある。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-DFFTW3_INCLUDE_DIRS=/home/...</td>
+<td>FFTW3のincludeディレクトリを指定</td>
+</tr>
+<tr>
+<td>-DFFTW3_LIBRARIES=/home/...</td>
+<td>FFTW3のlibディレクトリを指定</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id4">
+<h4>パッケージオプション<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>SPICA粗視化力場などを使用するために必要</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-DPKG_MOLECULE=on</td>
+<td>MOLECULEパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_OPT=on</td>
+<td>OPTパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_RIGID=on</td>
+<td>Rigid bodyをあつかうパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_MISC=on</td>
+<td>xtcなどトラジェクトリ関連のパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_KSPACE=on</td>
+<td>PPPMなどの静電相互作用関連のパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_USER-MISC=on</td>
+<td>xtcなどトラジェクトリ関連のパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_USER-MOLFILE=on</td>
+<td>PDBの出力ができるようになる</td>
+</tr>
+<tr>
+<td>-DPKG_USER-CGSDK=on</td>
+<td>SPICA力場のパッケージ</td>
+</tr>
+<tr>
+<td>-DPKG_USER-COLVARS=on</td>
+<td>ABFなどcolvarsのパッケージ</td>
+</tr>
+</tbody>
+</table><p>これらは全て必要になると思うので、入れておきましょう。</p>
+</div>
+<div class="section" id="gpu">
+<h4>GPUパッケージ<a class="headerlink" href="#gpu" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>GPUのあるスパコンで利用できる。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-DPKG_GPU=on</td>
+<td>GPUパッケージ本体</td>
+</tr>
+<tr>
+<td>-DGPU_API=cuda</td>
+<td>利用するAPIの指定。指定しないと<strong>OpenCL</strong>が指定される。</td>
+</tr>
+<tr>
+<td>-DGPU_ARCH=sm_??</td>
+<td>GPUアーキテクチャの指定(以下参照)</td>
+</tr>
+</tbody>
+</table><p>GPUのアーキテクチャはcudaのバージョンやGPU本体によって変わる。大まかに、</p>
+<ul class="simple">
+<li><p>sm_12 or sm_13 for GT200 (supported by CUDA 3.2 until CUDA 6.5)</p></li>
+<li><p>sm_20 or sm_21 for Fermi (supported by CUDA 3.2 until CUDA 7.5)</p></li>
+<li><p>sm_30 or sm_35 or sm_37 for Kepler (supported since CUDA 5)</p></li>
+<li><p>sm_50 or sm_52 for Maxwell (supported since CUDA 6)</p></li>
+<li><p>sm_60 or sm_61 for Pascal (supported since CUDA 8)</p></li>
+<li><p>sm_70 for Volta (supported since CUDA 9)</p></li>
+<li><p>sm_75 for Turing (supported since CUDA 10)</p></li>
+</ul>
+<p>という区分け。これを参考に、<code class="docutils literal notranslate"><span class="pre">-D</span> <span class="pre">GPU_ARCH=</span></code>を指定する。詳しくは<a class="reference external" href="https://en.wikipedia.org/wiki/CUDA#GPUs_supported">CUDA - Wikipedia(English)</a>を参照してほしい。</p>
+</div>
+</div>
+<div class="section" id="tl-dl">
+<h3>TL;DL<a class="headerlink" href="#tl-dl" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>名大cxにインストールするときは、こんな感じになった。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cmakeやmpiicpcなどモジュールのロード</span>
+module load intel/2019.5.281
+module load impi/2019.5.281
+module load mpi-fftw/3.3.8
+module load fftw/3.3.8
+module load cuda/10.2.89_440.33.01
+module load cmake/3.17.3
+
+<span class="c1"># lammpsソースのダウンロード</span>
+git clone stable https://github.com/lammps/lammps.git
+
+<span class="c1"># ディレクトリの管理</span>
+<span class="nb">cd</span> lammps
+mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+
+<span class="c1"># cmake</span>
+cmake ../cmake -DBUILD_MPI<span class="o">=</span>on -DBUILD_OMP<span class="o">=</span>on -DCMAKE_C_COMPILER<span class="o">=</span>mpiicc -DCMAKE_CXX_COMPILER<span class="o">=</span>mpiicpc -DCMAKE_Fortran_COMPILER<span class="o">=</span>mpiifort -DPKG_USER-COLVARS<span class="o">=</span>yes -DPKG_MOLECULE<span class="o">=</span>on -DPKG_OPT<span class="o">=</span>on -DPKG_RIGID<span class="o">=</span>on -DPKG_MISC<span class="o">=</span>on -DPKG_USER-MISC<span class="o">=</span>on -DPKG_USER-CGSDK<span class="o">=</span>on -DPKG_KSPACE<span class="o">=</span>on -DFFT<span class="o">=</span>MKL -DPKG_GPU<span class="o">=</span>on -DGPU_API<span class="o">=</span>cuda -DGPU_ARCH<span class="o">=</span>sm_70
+
+<span class="c1"># インストール</span>
+make -j <span class="m">8</span>
+</pre></div>
+</div>
+<p>これで、<code class="docutils literal notranslate"><span class="pre">build</span></code>の中に<code class="docutils literal notranslate"><span class="pre">lmp</span></code>という実行バイナリが生成される。</p>
+</div>
+<div class="section" id="traditional-make">
+<h3>Traditional make(古い方法)<a class="headerlink" href="#traditional-make" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>かなり長くて大変だが、説明しよう。</p>
+<p>以下は田中が東大物性研にインストールした際の手順だが、ほとんど同じはずだ。</p>
+<p><a class="reference external" href="https://lammps.sandia.gov/">LAMMPSのサイト</a>に行き、ダウンロードのページからstableと書いてあるものをダウンロード。</p>
+<p>以下は<code class="docutils literal notranslate"><span class="pre">~/App/</span></code>にインストールするものとする。</p>
+<p>ダウンロードした<code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code>ファイルを<code class="docutils literal notranslate"><span class="pre">~/App/</span></code>に移動しておく。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tar xvf lammps-11Aug17.tar.gz <span class="c1">#2019現在。数字は異なる可能性あり。</span>
+<span class="nb">cd</span> lammps-11Aug17/lib/colvars
+make -f Makefile.g++
+<span class="nb">cd</span> ../../src
+make yes-molecule yes-kspace yes-opt yes-rigid yes-misc yes-user-colvars yes-user-misc yes-user-cgsdk# 別途必要なモジュールがあれば指定する。
+vi MAKE/Makefile.mpi
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">yes-...</span></code>のコマンドは2-3回やったほうがいいかもしれない。謎の依存関係があるみたい。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FFT_INC =
+FFT_PATH =
+FFT_LIB =
+ と、空行になっているところを編集する。fftwが`~/App/fftw3`にインストールしてあるなら、
+
+FFT_INC = -I/home/tanaka/App/fftw3/include -DFFT_FFTW3
+FFT_PATH =
+FFT_LIB = -L/home/tanaka/App/fftw3/lib -lfftw3
+と編集し、保存する。(/home/tanaka/)の部分は環境に合わせてください。
+</pre></div>
+</div>
+<p>ここまでやったら、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make mpi -j <span class="m">8</span>
+</pre></div>
+</div>
+<p>とする。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">text</span>	   <span class="n">data</span>	    <span class="n">bss</span>	    <span class="n">dec</span>	    <span class="nb">hex</span>	<span class="n">filename</span>
+<span class="mi">19373039</span>	 <span class="mi">396960</span>	 <span class="mi">290848</span>	<span class="mi">20060847</span>	<span class="mi">1321</span><span class="n">aaf</span>	<span class="o">../</span><span class="n">lmp_mpi</span>
+<span class="n">make</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">Leaving</span> <span class="n">directory</span> <span class="s1">&#39;/home/tanaka/App/lammps-11Aug17/src/Obj_mpi&#39;</span>
+</pre></div>
+</div>
+<p>↑のような表示が出ればインストール成功で、(<code class="docutils literal notranslate"><span class="pre">./lmp_mpi</span></code>)という実行バイナリが生成されている。</p>
+<p>インストールできなかった場合、<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean-all</span></code>とすると生まれたゴミを一掃してくれて助かる。</p>
+</div>
+<div class="section" id="make">
+<h3><code class="docutils literal notranslate"><span class="pre">make</span></code>に失敗する場合<a class="headerlink" href="#make" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>また、東大物性研にインストールする際は、<code class="docutils literal notranslate"><span class="pre">MAKE/makefile.mpi</span></code> を</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CCFLAGS =	-g -O3
+を、
+CCFLAGS =	-g -O3 -restrict
+</pre></div>
+</div>
+<p>と編集しないとインストールできなかった。とりあえずそのままやってみて<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">mpi</span> <span class="pre">-j</span> <span class="pre">8</span></code>、上手く行かなかったら上のような編集をするといい。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>インストール(gpu)<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>パソコンにグラフィックボードが刺さってる場合は、gpu版を使ったほうが計算が劇的に早くなることがある。ただし、コンパイルのミスなどで逆に遅くなることもあるので注意して扱うべき？</p>
+<p>手元の環境ではgpuを使うとかなり早くなる。</p>
+<p>先ほどの続きで、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/App/lammps11-Aug17/src
+<span class="nb">cd</span> ../lib/gpu
+vi Makefile.linux
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CUDA_HOME=/usr/local/cuda
+を、
+CUDA_HOME=/home/app/cuda/cuda-8.0 # 東大物性研の場合。
+CUDA_HOME=/usr/local/cuda-10.0 # 研究室PCの場合
+に変更する。（デフォルトのcudaバージョンが変わったら数値は変更する必要あり。）
+ちなみに、
+echo $CUDA_HOME
+の出力結果に変更するのと同義である。わからなかったらecho $CUDA_HOMEをやって調べよう。
+
+また、
+CUDA_ARCH = -arch=sm_21
+の行はコメントアウトしておくほうがいい。ここはGPUのアーキテクチャに依存して変更するのだが、このアーキテクチャを調べる方法がわからないのである。
+</pre></div>
+</div>
+<p>編集が終わったら、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -f Makefile.linux
+vi Makefile.lammps
+</pre></div>
+</div>
+<p>で確認して</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CUDA_HOME</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">cuda</span><span class="o">-</span><span class="mf">8.0</span>
+</pre></div>
+</div>
+<p>のようになっていればOK。まれにここもデフォルト(<code class="docutils literal notranslate"><span class="pre">CUDA_HOME=/usr/local/cuda</span></code>)のままになっていることがあるので、注意が必要である。</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">-f</span> <span class="pre">Makefile.linux</span></code>に成功したら、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../../src
+make yes-gpu
+<span class="c1"># いくつかファイルがないと言われるが、大丈夫である。</span>
+
+make package-status
+<span class="c1"># GPUがONになっていればOKである。</span>
+
+make mpi -j <span class="m">8</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">text</span>	   <span class="n">data</span>	    <span class="n">bss</span>	    <span class="n">dec</span>	    <span class="nb">hex</span>	<span class="n">filename</span>
+<span class="mi">19373039</span>	 <span class="mi">396960</span>	 <span class="mi">290848</span>	<span class="mi">20060847</span>	<span class="mi">1321</span><span class="n">aaf</span>	<span class="o">../</span><span class="n">lmp_mpi</span>
+<span class="n">make</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">Leaving</span> <span class="n">directory</span> <span class="s1">&#39;/home/tanaka/App/lammps-11Aug17/src/Obj_mpi&#39;</span>
+</pre></div>
+</div>
+<p>↑のような表示が出ればインストール成功で、./lmp_mpiという実行バイナリが生成されている。</p>
+<p>これはGPU計算にも対応しているバイナリである。</p>
+<p>インストールできなかった場合、make clean-allとすると生まれたゴミを一掃してくれて助かる。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mpdyn.html" class="btn btn-neutral float-right" title="MPDyn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="namd.html" class="btn btn-neutral float-left" title="Namd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

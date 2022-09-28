@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Molecular Dynamics Software &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Gromacs" href="gromacs.html" />
+    <link rel="prev" title="gnuplotの使い方" href="../GNUPLOT/GNUPLOTusage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Molecular Dynamics Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gromacs">Gromacs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lammps">Lammps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#namd">Namd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mpdyn">MPDyn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Molecular Dynamics Software</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="molecular-dynamics-software">
+<h1>Molecular Dynamics Software<a class="headerlink" href="#molecular-dynamics-software" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="gromacs">
+<h2>Gromacs<a class="headerlink" href="#gromacs" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/gromacs.jpg" src="../_images/gromacs.jpg" />
+<p>普通のPCに使えるプログラムの中では最速。生体系を対象としているが、高分子グループでも使われている。汎用性は比較的高く、テーブル関数による相互作用計算が可能。粗視化モデルにも対応。GPUにも対応。解析ツールも充実しており、使いこなせばかなり使い勝手がよいはず。</p>
+<p>具体的な使い方は <a class="reference internal" href="gromacs.html"><span class="doc">Gromacs</span></a> を参照してください。</p>
+</div>
+<div class="section" id="lammps">
+<h2>Lammps<a class="headerlink" href="#lammps" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/lammps-0.png" src="../_images/lammps-0.png" />
+<p>Sandia National Labで開発されたプログラムであり、クラスターコンピュータで十分な並列効率を保ち、GPUにも対応している。非常に汎用性の高いプログラムであり、様々な境界条件、モデルに対応が可能であり、ポリマーを含む材料系のMD計算では最も利用価値の高いプログラムの一つである。篠田の開発した粗視化モデルも組み込まれており(cg/sdk, 古いlammpsを使っている場合はcg/cmmという名前)、GPUクラスターを用いた高速演算が可能なため、粗視化MDで主に利用している。ソースコードはC++で書かれているが、非常に読みやすく、開発ユーザーが多い。</p>
+<p>具体的な使い方は <a class="reference internal" href="lammps.html"><span class="doc">LAMMPS</span></a> を参照してください。</p>
+</div>
+<div class="section" id="namd">
+<h2>Namd<a class="headerlink" href="#namd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/namd.png" src="../_images/namd.png" />
+<p>Illinois大学で開発されているMDプログラムであり、生体系を主な対象とした大規模計算用に開発された老舗プログラム。同グループで開発されたvmdとの連接が非常に良く、interactive MDを実現している。CHARMM力場を標準としているが、OPLSなどの利用も可能。エネルギー最小化などのアルゴリズムが充実。熱浴にはNose-Hooverが利用できず、Langevin熱浴が標準である。Langevin熱浴による分子運動へのartifactが懸念される（詳細は現在調査中）。ソースコードはC++で書かれており公開されているが、よほどのマニア以外は解読を諦めた方がよい。GPUにも対応済み。</p>
+<p>篠田グループでは粗視化のための全原子リファレンスデータを取るために利用することが多い。</p>
+<p>具体的な使い方は <a class="reference internal" href="namd.html"><span class="doc">Namd</span></a> を参照してください。</p>
+</div>
+<div class="section" id="mpdyn">
+<h2>MPDyn<a class="headerlink" href="#mpdyn" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>篠田の個人的な汎用プログラムであり、粗視化モデルの開発などもこちらを用いて最初行っていた。並列化効率は高くないので一般的なMDには扱いがよくないが、新しいモデルの開発には扱いが非常に良い。膜系の解析ツールが充実しているため、現在では主にMDのトラジェクトリーの解析プログラムとして利用している。ソースコードはfortran90で書かれており、比較的解読が容易と思われる。</p>
+<p>電池のグループで使われている？</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="gromacs.html" class="btn btn-neutral float-right" title="Gromacs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../GNUPLOT/GNUPLOTusage.html" class="btn btn-neutral float-left" title="gnuplotの使い方" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
