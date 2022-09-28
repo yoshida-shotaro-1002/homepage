@@ -1,0 +1,865 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>vi &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="ssh" href="ssh.html" />
+    <link rel="prev" title="Linux commands (nessesary)" href="linuxcommand.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">vi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">このページは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">！注意！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">インストール</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mac">Mac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">使い方</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beginner">Beginner</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">モード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">キーバインド</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">チェックリスト</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#easy">Easy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">キーバインド</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">キーバインド（カーソルの移動に関して）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">チェックリスト</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#normal">Normal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">キーバインド（文字操作）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">キーバインド（移動）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">チェックリスト</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hard">Hard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vim">vimの設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vimrc">.vimrc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">チェックリスト</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lunatic">Lunatic</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">文字置換</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">水平、垂直分割</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">画面スクロール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">インデント</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">チェックリスト</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#phantasm">Phantasm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id20">インストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">プラグイン</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">.vimrc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>vi</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vi">
+<h1>vi<a class="headerlink" href="#vi" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>このページは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><strong>対象者</strong></p>
+<ul>
+<li><p>これからプログラムを書く方</p></li>
+<li><p>これからvimを使い始めようという人</p></li>
+<li><p>vimにが使いづらいと思っている人</p></li>
+</ul>
+</li>
+<li><p><strong>期待される成果</strong></p>
+<ul>
+<li><p>vimが少しでも好きになる</p></li>
+<li><p>vim教に入信できる</p></li>
+<li><p>emacs, VSCodeを捨てることができる。</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>！注意！<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以降、<code class="docutils literal notranslate"><span class="pre">vi</span></code>と<code class="docutils literal notranslate"><span class="pre">vim</span></code>は同じものを指すとする。ただし、<code class="docutils literal notranslate"><span class="pre">vi</span></code>と<code class="docutils literal notranslate"><span class="pre">vim</span></code>で違うものが起動してしまうことがあるので、エイリアスを当てておくことをおすすめする。(以下を<code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>に追記する。)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">vi</span><span class="o">=</span><span class="s1">&#39;vim&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>おそらくデフォルトでインストールされていると思うが、もしインストールされていない場合はyumからインストールする。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo yum -y update
+sudo yum -y install vim
+</pre></div>
+</div>
+</div>
+<div class="section" id="mac">
+<h3>Mac<a class="headerlink" href="#mac" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>バッケージ管理用に<code class="docutils literal notranslate"><span class="pre">Homebrew</span></code>がインストールされているなら、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew update
+brew install lua
+brew install vim
+</pre></div>
+</div>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Cygwin</span></code>をインストールする際にパッケージを追加できると思うので、ここで追加しよう。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>使い方<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サンプルのテキストファイルを用意したので、各自適当な場所にダウンロードしてほしい。</p>
+<p><a class="reference download internal" download="" href="../_downloads/81367b84921f47fa0c462acd75c8843a/sample.dat"><code class="xref download docutils literal notranslate"><span class="pre">sample.dat</span></code></a></p>
+<p>viを起動するためには、<code class="docutils literal notranslate"><span class="pre">sample.dat</span></code>があるディレクトリに行って、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi sample.dat
+</pre></div>
+</div>
+<p>で起動できる。</p>
+<p>またレベル別に</p>
+<ul class="simple">
+<li><p>Beginner</p></li>
+<li><p>Easy</p></li>
+<li><p>Normal</p></li>
+<li><p>Hard</p></li>
+<li><p>Lunatic</p></li>
+<li><p>Phantasm</p></li>
+</ul>
+<p>の6レベルを用意した。初心者はBeginnerからはじめてほしい。</p>
+<div class="section" id="beginner">
+<h3>Beginner<a class="headerlink" href="#beginner" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id5">
+<h4>モード<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>vimにはモードという概念があります。</p>
+<ul class="simple">
+<li><p>カーソルの移動や保存等を行う<strong>ノーマルモード</strong></p></li>
+<li><p>文字入力用の<strong>インサートモード</strong></p></li>
+</ul>
+<p>初心者は自分がどちらのモードにいるかわからなくなりがちです。
+わからなくなったら<strong>esc</strong>を連打するとノーマルモードに戻ることができます。</p>
+<p>手順は、</p>
+<ol class="simple">
+<li><p>（ノーマルモードで）編集したい場所まで移動</p></li>
+<li><p><strong>i</strong>を押下してインサートモードに入り、文章を編集</p></li>
+<li><p><strong>esc</strong>を押下してノーマルモードに戻る。</p></li>
+</ol>
+<p>これを繰り返して文章を編集していきます。</p>
+</div>
+<div class="section" id="id6">
+<h4>キーバインド<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>i</strong></td>
+<td align="center">インサートモードに入る</td>
+</tr>
+<tr>
+<td align="center"><strong>:wq</strong></td>
+<td align="center">ファイルを保存して終了する</td>
+</tr>
+<tr>
+<td align="center"><strong>:q!</strong></td>
+<td align="center">ファイルを保存せず終了する</td>
+</tr>
+<tr>
+<td align="center"><strong>esc</strong></td>
+<td align="center">困ったら連打するとノーマルモードになる。<br />インサートモードを抜ける</td>
+</tr>
+</tbody>
+</table><p>とりあえずこれらを利用することで、テキストの編集や保存ができると思います。</p>
+</div>
+<div class="section" id="id7">
+<h4>チェックリスト<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<input type="checkbox" value="true">vimの起動ができる</input>
+<br>
+<input type="checkbox" value="true">インサートモードに入れる</input>
+<br>
+<input type="checkbox" value="true">ファイルを保存してvimを終了できる</input>
+<br>
+<input type="checkbox" value="true">インサートモードかノーマルモードへ移行できる</input>
+<br>
+<br></div>
+</div>
+<div class="section" id="easy">
+<h3>Easy<a class="headerlink" href="#easy" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>超初心者のキーバインドを覚えたら、次はコピペや移動などを覚えよう。</p>
+<div class="section" id="id8">
+<h4>キーバインド<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>dd</strong></td>
+<td align="center">１行切り取り</td>
+</tr>
+<tr>
+<td align="center"><strong>yy</strong></td>
+<td align="center">１行コピー</td>
+</tr>
+<tr>
+<td align="center"><strong>p</strong></td>
+<td align="center">コピーしたものを貼り付け</td>
+</tr>
+<tr>
+<td align="center"><strong>u</strong></td>
+<td align="center">1手順戻る</td>
+</tr>
+<tr>
+<td align="center"><strong>Ctrl+r</strong></td>
+<td align="center">1手順進む</td>
+</tr>
+</tbody>
+</table><p>u, Ctrl+rはwordの元に戻す、やり直しみたいなものです。</p>
+</div>
+<div class="section" id="id9">
+<h4>キーバインド（カーソルの移動に関して）<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>k</strong></td>
+<td align="center">↑</td>
+</tr>
+<tr>
+<td align="center"><strong>j</strong></td>
+<td align="center">↓</td>
+</tr>
+<tr>
+<td align="center"><strong>l</strong></td>
+<td align="center">→</td>
+</tr>
+<tr>
+<td align="center"><strong>h</strong></td>
+<td align="center">←</td>
+</tr>
+</tbody>
+</table><p><img alt="../_images/vim_move.png" src="../_images/vim_move.png" /></p>
+<p>おそらく最近のvimでは、矢印キーを使っても移動は可能です。しかし、この移動法を覚えることで入力速度は格段に向上します。ある程度文字入力ができるようになったら、矢印を使わずに移動の練習をしてみてください。</p>
+</div>
+<div class="section" id="id10">
+<h4>チェックリスト<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h4>
+ <input type="checkbox" value="true">1行コピーができる</input>
+ <br>
+ <input type="checkbox" value="true">コピーしたものを貼り付けられる</input>
+ <br>
+ <input type="checkbox" value="true">切り取りができる</input>
+ <br>
+ <input type="checkbox" value="true">矢印キーを使わずに移動ができる。</input>
+ <br>
+<input type="checkbox" value="true">元に戻したり進めたりできる</input>
+ <br>
+ <br></div>
+</div>
+<div class="section" id="normal">
+<h3>Normal<a class="headerlink" href="#normal" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>移動もできるし、コピへなどもマスターしたあなたへ</p>
+<p>vimには数多いコマンドがある。ここでは知っておくと便利ものを紹介する。ポイントは、無理に覚えようとせず何度もここに戻ってきて確認することである。</p>
+<div class="section" id="id11">
+<h4>キーバインド（文字操作）<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>x</strong></td>
+<td align="center">1文字削除</td>
+</tr>
+<tr>
+<td align="center"><strong>o</strong></td>
+<td align="center">次行を新規行として挿入してインサートモードへ</td>
+</tr>
+<tr>
+<td align="center"><strong>/検索したい文字</strong></td>
+<td align="center">文書内から文字を検索</td>
+</tr>
+<tr>
+<td align="center"><strong>n</strong></td>
+<td align="center">（検索後に）次の検索候補へ移動</td>
+</tr>
+</tbody>
+</table><p><code class="docutils literal notranslate"><span class="pre">/検索したい文字</span></code>は頻繁に使うことになるだろう。文字を入力し終えたらEnterキーも忘れずに</p>
+</div>
+<div class="section" id="id12">
+<h4>キーバインド（移動）<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>w</strong></td>
+<td align="center">次の単語の先頭へ</td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center">前の単語の先頭へ</td>
+</tr>
+<tr>
+<td align="center"><strong>gg</strong></td>
+<td align="center">ファイルの先頭へ</td>
+</tr>
+<tr>
+<td align="center"><strong>G</strong></td>
+<td align="center">ファイルの最終行へ</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id13">
+<h4>チェックリスト<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<input type="checkbox" value="true">検索ができる</input>
+<br>
+<input type="checkbox" value="true">検索候補を移動できる</input>
+<br>
+<input type="checkbox" value="true">単語ごとの移動ができる</input>
+<br>
+<input type="checkbox" value="true">ファイルの先頭、末尾に移動できる</input>
+<br>
+<br></div>
+</div>
+<div class="section" id="hard">
+<h3>Hard<a class="headerlink" href="#hard" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="vim">
+<h4>vimの設定<a class="headerlink" href="#vim" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>これまで、様々なコマンドやキーバインドを覚えてもらいました。しかし、なんでこんな使いづらくてダサいものを使っているのか不思議に思った人も多いだろう。</p>
+<p>しかしvimは様々なカスタマイズが可能である。</p>
+<p>試しに、ノーマルモードで<code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">number</span></code>と入力して（エンターを押して）みよう。</p>
+<p>左に行番号が表示されただろうか。</p>
+<p>また、<code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">cursorline</span></code>と入力することで現在居る行にアンダーラインを表示できる。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>しかしこれらの設定は、vimを終了すると失われる。</p>
+</div>
+<p>これらの設定をデフォルトにするためには、ホームディレクトリに<code class="docutils literal notranslate"><span class="pre">.vimrc</span></code>というファイルを配置し、そこに設定を書き込むことで毎回反映される。</p>
+</div>
+<div class="section" id="vimrc">
+<h4>.vimrc<a class="headerlink" href="#vimrc" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>.vimrcファイルを開くには、<code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">~/.vimrc</span></code>とする。試しに、以下を書き込んでみよう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">number</span>
+<span class="nb">set</span> <span class="n">cursorline</span>
+</pre></div>
+</div>
+<p>書き込んで保存したあと、サンプルファイルを開いて見よう。行番号とカーソルラインが表示されているはずだ。</p>
+<p>以下、筆者がデフォルトとしている設定である。コピペして追加してもいいが、時間があるならそれぞれどんな効果があるか調べて見よう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">encoding</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="nb">set</span> <span class="n">fileencoding</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="nb">set</span> <span class="n">fileencodings</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="nb">set</span> <span class="n">ambiwidth</span><span class="o">=</span><span class="n">double</span> <span class="s2">&quot; □や○文字が崩れる問題を解決</span>
+<span class="nb">set</span> <span class="n">bomb</span>
+<span class="nb">set</span> <span class="n">binary</span>
+<span class="nb">set</span> <span class="n">ttyfast</span>
+<span class="nb">set</span> <span class="n">backspace</span><span class="o">=</span><span class="n">indent</span><span class="p">,</span><span class="n">eol</span><span class="p">,</span><span class="n">start</span>
+<span class="nb">set</span> <span class="n">tabstop</span><span class="o">=</span><span class="mi">4</span>
+<span class="nb">set</span> <span class="n">softtabstop</span><span class="o">=</span><span class="mi">4</span>
+<span class="nb">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span>
+<span class="nb">set</span> <span class="n">autoindent</span> <span class="s2">&quot; 改行時に前の行のインデントを継続する</span>
+<span class="nb">set</span> <span class="n">smartindent</span> <span class="s2">&quot; 改行時に前の行の構文をチェックし次の行のインデントを増減する</span>
+<span class="nb">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span> <span class="s2">&quot; smartindentで増減する幅</span>
+<span class="nb">set</span> <span class="n">expandtab</span>
+<span class="nb">set</span> <span class="n">splitright</span>
+<span class="nb">set</span> <span class="n">splitbelow</span>
+<span class="nb">set</span> <span class="n">hidden</span>
+<span class="nb">set</span> <span class="n">hlsearch</span>
+<span class="nb">set</span> <span class="n">whichwrap</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="o">&lt;</span><span class="p">,</span><span class="o">&gt;</span><span class="p">,[,],</span><span class="o">~</span> <span class="s2">&quot; カーソルの左右移動で行末から次の行の行頭への移動が可能になる</span>
+<span class="nb">set</span> <span class="n">cursorline</span> <span class="s2">&quot; カーソルラインをハイライト</span>
+<span class="nb">set</span> <span class="n">showmatch</span> <span class="s2">&quot; 括弧の対応関係を一瞬表示する</span>
+<span class="nb">set</span> <span class="n">matchtime</span><span class="o">=</span><span class="mi">1</span> <span class="s2">&quot; 0.1秒だけ</span>
+<span class="nb">set</span> <span class="n">incsearch</span>
+<span class="nb">set</span> <span class="n">ignorecase</span>
+<span class="nb">set</span> <span class="n">smartcase</span>
+<span class="nb">set</span> <span class="n">nobackup</span>
+<span class="nb">set</span> <span class="n">noswapfile</span>
+<span class="nb">set</span> <span class="n">fileformats</span><span class="o">=</span><span class="n">unix</span><span class="p">,</span><span class="n">dos</span><span class="p">,</span><span class="n">mac</span>
+<span class="nb">set</span> <span class="n">ruler</span>
+<span class="nb">set</span> <span class="n">number</span>
+<span class="nb">set</span> <span class="n">wildmenu</span> <span class="s2">&quot; コマンドモードの補完</span>
+<span class="nb">set</span> <span class="n">history</span><span class="o">=</span><span class="mi">5000</span> <span class="s2">&quot; 保存するコマンド履歴の数</span>
+<span class="nb">set</span> <span class="n">gcr</span><span class="o">=</span><span class="n">a</span><span class="p">:</span><span class="n">blinkon0</span>
+<span class="nb">set</span> <span class="n">scrolloff</span><span class="o">=</span><span class="mi">3</span>
+<span class="nb">set</span> <span class="n">laststatus</span><span class="o">=</span><span class="mi">2</span>
+<span class="nb">set</span> <span class="n">showmode</span> <span class="s2">&quot; 現在のモードを表示</span>
+<span class="nb">set</span> <span class="n">showcmd</span> <span class="s2">&quot; 打ったコマンドをステータスラインの下に表示</span>
+<span class="nb">set</span> <span class="n">modeline</span>
+<span class="nb">set</span> <span class="n">modelines</span><span class="o">=</span><span class="mi">10</span>
+<span class="nb">set</span> <span class="n">pumheight</span><span class="o">=</span><span class="mi">10</span>    <span class="s2">&quot;if value is 0 , show menu all</span>
+<span class="nb">set</span> <span class="n">title</span>
+<span class="nb">set</span> <span class="n">titleold</span><span class="o">=</span><span class="s2">&quot;Terminal&quot;</span>
+<span class="nb">set</span> <span class="n">titlestring</span><span class="o">=%</span><span class="n">F</span>
+<span class="nb">set</span> <span class="n">statusline</span><span class="o">=%</span><span class="n">F</span><span class="o">%</span><span class="n">m</span><span class="o">%</span><span class="n">r</span><span class="o">%</span><span class="n">h</span><span class="o">%</span><span class="n">w</span><span class="o">%=</span><span class="p">(</span><span class="o">%</span><span class="p">{</span><span class="o">&amp;</span><span class="n">ff</span><span class="p">}</span><span class="o">/%</span><span class="n">Y</span><span class="p">)</span>\ <span class="p">(</span><span class="n">line</span>\ <span class="o">%</span><span class="n">l</span>\<span class="o">/%</span><span class="n">L</span><span class="p">,</span>\ <span class="n">col</span>\ <span class="o">%</span><span class="n">c</span><span class="p">)</span>\
+<span class="nb">set</span> <span class="n">autoread</span>
+<span class="nb">set</span> <span class="n">noerrorbells</span> <span class="n">visualbell</span> <span class="n">t_vb</span><span class="o">=</span>
+<span class="nb">set</span> <span class="n">clipboard</span><span class="o">+=</span><span class="n">unnamed</span><span class="p">,</span><span class="n">autoselect</span>
+<span class="nb">set</span> <span class="n">mouse</span><span class="o">=</span><span class="n">a</span>
+<span class="nb">set</span> <span class="n">whichwrap</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="o">&lt;</span><span class="p">,</span><span class="o">&gt;</span><span class="p">,[,]</span>
+<span class="nb">set</span> <span class="n">t_Co</span><span class="o">=</span><span class="mi">257</span> <span class="s2">&quot; iTerm2など既に256色環境なら無くても良い</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h4>チェックリスト<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<input type="checkbox" value="true">.vimrcを編集した</input>
+<br>
+<input type="checkbox" value="true">自分の好みの設定を追加した</input>
+<br>
+<br></div>
+</div>
+<div class="section" id="lunatic">
+<h3>Lunatic<a class="headerlink" href="#lunatic" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ここまで来たら、あとは「知らなくても問題ないが、知っているとイキれる」くらいのものを紹介する。</p>
+<div class="section" id="id15">
+<h4>文字置換<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>vimで文字を置換する基本のコマンドは、<code class="docutils literal notranslate"><span class="pre">:s/置換前/置換後/</span></code>である。試しに、サンプルファイルのvimという文字をvim_tsuyoiに置換してみよう。</p>
+<p>この方法では、カーソルのある行の一番はじめのvimという文字が置換される。</p>
+<p>しかし、文章全体で置換したいことも多いだろう。その場合は、<code class="docutils literal notranslate"><span class="pre">:%s/置換前/置換後/</span></code>である。(sの前に%を追加)</p>
+<p>文頭のvimが置換されただろう。実は、何も設定しないと1行に付き1回しか置換を行わない。行に含まれるすべての文字を置換するには、<code class="docutils literal notranslate"><span class="pre">:s/置換前/置換後/g</span></code>である。(最後に/gを追加)</p>
+<p>まとめると、文章内すべての文字を置換するためには、</p>
+<p><code class="docutils literal notranslate"><span class="pre">:%s/置換前/置換後/g</span></code></p>
+<p>である。</p>
+</div>
+<div class="section" id="id16">
+<h4>水平、垂直分割<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">:vs</span></code>とすると現在のファイルを横に追加で表示し、<code class="docutils literal notranslate"><span class="pre">:split</span></code>とすると下に追加で表示できる。また<code class="docutils literal notranslate"><span class="pre">:vs</span> <span class="pre">別ファイル名前</span></code>とすると2つのファイルを同時に見ながら編集できる。</p>
+<p>ウインドウを移動する場合は以下のようなコマンドが使えます。</p>
+<ul class="simple">
+<li><p>Ctrl-w w: 次のウインドウへ</p></li>
+<li><p>Ctrl-w W: 前のウインドウへ</p></li>
+<li><p>Ctrl-w h: 左へのウインドウへ(j/k/lなら下/上/右へ)</p></li>
+<li><p>ウインドウを閉じるときは:qとタイプします。</p></li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h4>画面スクロール<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<ul class="simple">
+<li><p>zz: 現在のカーソル位置を中央となるように画面がスクロール。</p></li>
+<li><p>zt: 現在のカーソル位置が一番上となるように画面がスクロール。</p></li>
+<li><p>Ctrl + u： 半画面分戻る。</p></li>
+<li><p>Ctrl + d： 半画面分進む。</p></li>
+<li><p>Ctrl + b： 1画面分戻る。</p></li>
+<li><p>Ctrl + f： 1画面分進む。</p></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h4>インデント<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<ul class="simple">
+<li><p>&gt;&gt;: インデントを追加。</p></li>
+<li><p>&lt;&lt;: インデントを削除。</p></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h4>チェックリスト<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<input type="checkbox" value="true">文字の置換が自由自在</input>
+<br>
+<input type="checkbox" value="true">画面分割ができる</input>
+<br>
+<input type="checkbox" value="true">スクロールが得意である。</input>
+<br>
+<br></div>
+</div>
+<div class="section" id="phantasm">
+<h3>Phantasm<a class="headerlink" href="#phantasm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これ以上のカスタマイズは通常のvimでは不可能だろう。しかし、プラグインを導入することでさらなるカスタマイズが可能になる。</p>
+<p>(参考図)</p>
+<p><img alt="../_images/vim_custom.png" src="../_images/vim_custom.png" /></p>
+<p>ただし、いろいろ理解しておくこともあるため、注意も必要である。</p>
+<div class="section" id="id20">
+<h4>インストール<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>お手持ちの環境で、<code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">--version</span></code>とするといろいろ表示されるが、<code class="docutils literal notranslate"><span class="pre">-python</span></code>や<code class="docutils literal notranslate"><span class="pre">-python3</span></code>となっているだろうか？</p>
+<p>これは、pythonなどを無効にしてインストールしたという意味である。これから導入するプラグインは、これらが有効であるという前提のものが多い。このため、先にvimのインストールをし直しておく。</p>
+<div class="section" id="id21">
+<h5>linux<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+sudo yum install https://centos7.iuscommunity.org/ius-release.rpm <span class="c1"># リポジトリ追加</span>
+sudo yum install openssl-devel readline-devel zlib-devel <span class="c1"># リポジトリ追加</span>
+
+sudo yum install perl-ExtUtils-Embed <span class="c1"># パッケージの追加</span>
+sudo yum install lua-devel ncurses-devel <span class="c1"># パッケージの追加</span>
+sudo yum install python-devel python36u python36u-libs python36u-devel python36u-pip <span class="c1"># パッケージの追加</span>
+sudo yum install vim python cmake go mono rust
+curl -sL https://rpm.nodesource.com/setup_11.x <span class="p">|</span> bash - <span class="c1"># nodejsのみ別途インストール</span>
+sudo yum install nodejs
+
+sudo yum remove vim-enhanced <span class="c1"># 古いvimを消す</span>
+
+<span class="nb">cd</span> /tmp
+git clone https://github.com/vim/vim
+<span class="nb">cd</span> vim
+
+sudo ./configure <span class="se">\</span>
+   --enable-fail-if-missing <span class="se">\</span>
+   --with-features<span class="o">=</span>huge <span class="se">\</span>
+   --disable-selinux <span class="se">\</span>
+   --enable-luainterp <span class="se">\</span>
+   --enable-perlinterp <span class="se">\</span>
+   --enable-pythoninterp<span class="o">=</span>dynamic <span class="se">\</span>
+   --with-python-config-dir<span class="o">=</span>/usr/lib64/python2.7/config <span class="se">\</span>
+   --enable-python3interp<span class="o">=</span>dynamic <span class="se">\</span>
+   --with-python3-config-dir<span class="o">=</span>/usr/lib64/python3.6/config-3.6m-x86_64-linux-gnu <span class="se">\</span>
+   --enable-cscope <span class="se">\</span>
+   --enable-fontset <span class="se">\</span>
+   --enable-multibyte <span class="se">\</span>
+   <span class="nv">vi_cv_path_python3</span><span class="o">=</span>/usr/bin/python3.6
+
+sudo make
+sudo make install
+</pre></div>
+</div>
+<p>これで、vimがインストールされたはずだ。</p>
+<p><code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">--version</span></code>としたときに</p>
+<ul class="simple">
+<li><p>python</p></li>
+<li><p>python3</p></li>
+<li><p>lua</p></li>
+</ul>
+<p>これら3つが+になっていることを確認してほしい。</p>
+</div>
+<div class="section" id="id22">
+<h5>mac<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew update
+brew install vim python cmake go mono node rust
+</pre></div>
+</div>
+<p>だけでいけると思う。</p>
+<p>これで、vimがインストールされたはずだ。</p>
+<p><code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">--version</span></code>としたときに</p>
+<ul class="simple">
+<li><p>python</p></li>
+<li><p>python3</p></li>
+<li><p>lua</p></li>
+</ul>
+<p>これら3つが+になっていることを確認してほしい。</p>
+</div>
+</div>
+<div class="section" id="id23">
+<h4>プラグイン<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>CentOSがyum(CentOS8からはdnf)でパッケージをインストールできるように、vimにもプラグインを追加できるマネージャーがある。</p>
+<p>代表的なものは、</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/junegunn/vim-plug">vim-plug</a></p></li>
+<li><p><a class="reference external" href="https://github.com/VundleVim/Vundle.vim">Vundle</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tpope/vim-pathogen">vim-pathogen</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Shougo/neobundle.vim">NeoBundle</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Shougo/dein.vim">dein.vim</a></p></li>
+</ul>
+<p>などである。ネットで検索するとNeoBundleなどの記事が多く見つかると思うが、NeoBundleは作者がdein.vimに乗り換えるようアナウンスしている。</p>
+<p>ここでは軽くて記述が楽なvim-plugを使うことにする。</p>
+<div class="section" id="vim-plug">
+<h5>vim-plugの使い方<a class="headerlink" href="#vim-plug" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p>vimrcへ追記する必要がある
+<code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">plug#begin()</span></code>
+と
+<code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">plug#end()</span></code>
+の間に
+<code class="docutils literal notranslate"><span class="pre">Plug</span> <span class="pre">~</span></code>のようにプラグインを追加していくシステムのようです。
+例えばこんな感じ</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">call</span> <span class="n">plug</span><span class="c1">#begin()</span>
+<span class="n">Plug</span> <span class="s1">&#39;tpope/vim-sensible&#39;</span>
+<span class="n">call</span> <span class="n">plug</span><span class="c1">#end()</span>
+</pre></div>
+</div>
+<p>.vimrcを保存して終了</p>
+<p>.vimrcに記述しただけではプラグインが反映されないので、Installする必要があります。
+どうするかというと、、、</p>
+<p>vimを起動しコマンドで
+<code class="docutils literal notranslate"><span class="pre">:PlugInstall</span></code>
+と叩くと各プラグインのインストールが開始します。</p>
+<p>これで正常終了した感じで表示されればプラグインの機能が使えるようになります。</p>
+</div>
+</div>
+<div class="section" id="id24">
+<h4>.vimrc<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>筆者の<code class="docutils literal notranslate"><span class="pre">.vimrc</span></code>は以下のようにダウンロード出来る。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+mv .vimrc .vimrc_backup <span class="c1"># 現在の.vimrcをバックアップ</span>
+wget https://raw.githubusercontent.com/tanaty5828/dotfiles/master/.vimrc
+</pre></div>
+</div>
+<p>このあと、以下のコマンドを実行する必要がある。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/.vim/plugged/YouCompleteMe/
+/usr/bin/python3.6 ./Install.py -all
+vi +PlugInstall +qall
+</pre></div>
+</div>
+<p>おそらく最強のvimが完成するだろう</p>
+<div class="section" id="id25">
+<h5>注意<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p>この.vimrcではアイコンや特殊文字を使うため、ターミナルフォントにそれらが使えるものを指定したほうがいい。というかしないと文字化けがひどい。筆者が独自に合成したフォントは以下。</p>
+<p><a class="reference download internal" download="" href="../_downloads/6d60572cdb7af1589f1c3f2c3f73fe88/RictyDimDIsRegPow.ttf"><code class="xref download docutils literal notranslate"><span class="pre">RictyDimDisRegPow.ttf</span></code></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ssh.html" class="btn btn-neutral float-right" title="ssh" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linuxcommand.html" class="btn btn-neutral float-left" title="Linux commands (nessesary)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>VMDの使い方 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="VMDについて1" href="VMDusage1.html" />
+    <link rel="prev" title="GROMACS.mdpオプション" href="../GROMACS/GROMACSmdp.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VMDの使い方</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">VMDとは</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">目次</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VMDusage1.html">VMDについて1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VMDusage2.html">VMDについて2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VMDusage3.html">VMDについて3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>VMDの使い方</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vmd">
+<h1>VMDの使い方<a class="headerlink" href="#vmd" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>VMDとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここではVMDの使い方について記していく。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>VMDはVisual molecular dynamicsの略であり、分子の可視化ツールである。pdbやgroといった構造ファイルのほか、xtcやtrr,dcdといったトラジェクトリファイルを読み込むことができる。</p>
+</div>
+<p>単に構造を可視化するだけでなく、様々なコマンドを駆使することで初期構造を作ることにも役立つ。これらについては後述する。そのためVMDを上手く使えるようになると研究効率が上がるが、機能が豊富すぎる故に初めのハードルが高い。そのためこのページでは基本的な知識からマニアックな知識まで筆者が知っている限りを書いていこうと思う。</p>
+<p>既にVMDを扱っている人はインストールや初級編について読み飛ばして貰って構わない。</p>
+</div>
+<div class="section" id="id2">
+<h2>目次<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="VMDusage1.html">VMDについて1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage1.html#vmd">VMDのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage1.html#id1">VMD初級編</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage1.html#id2">おまけ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage1.html#id3">初級編まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VMDusage2.html">VMDについて2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage2.html#vmd">VMD中級編</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage2.html#id5">豆知識</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage2.html#id6">まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VMDusage3.html">VMDについて3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VMDusage3.html#vmd">VMD上級編</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="VMDusage1.html" class="btn btn-neutral float-right" title="VMDについて1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../GROMACS/GROMACSmdp.html" class="btn btn-neutral float-left" title="GROMACS.mdpオプション" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

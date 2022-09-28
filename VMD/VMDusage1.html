@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>VMDについて1 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="VMDについて2" href="VMDusage2.html" />
+    <link rel="prev" title="VMDの使い方" href="VMDindex.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+            
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linux1.html">Linux Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxq1.html">Linux Basic Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/linuxcommand.html">Linux commands (nessesary)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/vim_0.html">vi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/ssh.html">ssh</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="VMDindex.html">VMDの使い方</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="VMDindex.html#id1">VMDとは</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="VMDindex.html#id2">目次</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">VMDについて1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vmd">VMDのインストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">VMD初級編</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">おまけ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">初級編まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="VMDusage2.html">VMDについて2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VMDusage3.html">VMDについて3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="VMDindex.html">VMDの使い方</a> &raquo;</li>
+        
+      <li>VMDについて1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vmd1">
+<h1>VMDについて1<a class="headerlink" href="#vmd1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="vmd">
+<h2>VMDのインストール<a class="headerlink" href="#vmd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>VMDのサイトからソースコードを取ってくる。</p>
+<p>windows、mac、Linux用の中から自分のOSに適したものを選ぶ。筆者は1.9.3を使用しており、以下の名前のソースコードをダウンロードした。尚、ダウンロードにはアカウントの登録が必要である。</p>
+<p><code class="docutils literal notranslate"><span class="pre">vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz</span></code></p>
+<p>インストールしたいディレクトリに圧縮ファイルを置き、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ tar xvf vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz
+$ <span class="nb">cd</span> vmd-1.9.3
+$ vi configure
+
+<span class="c1">#configureの中の$install_bin_dir=&quot;/usr/local/bin&quot;と</span>
+<span class="c1">#$install_library_dir=&quot;/usr/local/lib/$install_name&quot;をそれぞれ自分の環境に直す。</span>
+<span class="c1">#例えばbinもlibもvmd-1.9.3の中にあるため筆者の場合は</span>
+<span class="c1">#$install_bin_dir=&quot;/home/hogehoge/apl/vmd-1.9.3/bin&quot;とした。</span>
+<span class="c1">#libについても同様</span>
+
+$ ./configure   <span class="c1">#./configureとすると以下のように出力される。</span>
+using configure.options: LINUXAMD64 OPENGL OPENGLPBUFFER FLTK TK ACTC CUDA IMD LIBSBALL XINERAMA XINPUT LIBOPTIX LIBOSPRAY LIBTACHYON VRPN NETCDF COLVARS TCL PYTHON PTHREADS NUMPY SILENT ICC
+
+<span class="c1">#そのためこのオプションをつけてconfigureを実行する。</span>
+
+$ ./configure LINUXAMD64 OPENGL OPENGLPBUFFER FLTK TK ACTC CUDA IMD LIBSBALL XINERAMA XINPUT LIBOPTIX LIBOSPRAY LIBTACHYON VRPN NETCDF COLVARS TCL PYTHON PTHREADS NUMPY SILENT ICC
+$ <span class="nb">cd</span> src
+$ make install
+Make sure /home/kawabata/apl/tmp/vmd-1.9.3/bin/vmd is <span class="k">in</span> your path.
+VMD installation complete.  Enjoy!
+
+<span class="c1">#上のような出力が出ていればインストールは成功している。</span>
+<span class="c1">#あとはbinにパスを通してvmdコマンドを実行してみよう。</span>
+</pre></div>
+</div>
+<p>上記の結果次のようなGUIが立ち上がればインストールは無事終了である。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pic1.png"><img alt="../_images/pic1.png" src="../_images/pic1.png" style="width: 50%;" /></a>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>VMD初級編<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">vmd</span></code>を実行すると上記の画像と共に下のようなGUIが表示されているはずだ。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pic2.png"><img alt="../_images/pic2.png" src="../_images/pic2.png" style="width: 30%;" /></a>
+</div>
+<p>このGUIは基本的にトラジェクトリの再生に使用する。分子を読み込んでいれば読み込んだ構造ファイルが表示される。試しに読み込んでみよう。読み込み方は2通りある。</p>
+<ol class="simple">
+<li><p>コマンドで<code class="docutils literal notranslate"><span class="pre">vmd</span> <span class="pre">hoge.pdb</span></code>などとする。</p></li>
+<li><p>コマンドで<code class="docutils literal notranslate"><span class="pre">vmd</span></code>として先のように分子を読み込まずにVMDのGUIを立ち上げたあと、左上の<strong>Fileタブ</strong>を押す。その後<strong>New Molecule</strong>=&gt;<strong>Browse...<strong>を押して目的のファイルをクリック、<strong>OK</strong>を押したあと</strong>Load</strong>を押す。</p></li>
+</ol>
+<p>1の方法の方が圧倒的に早く楽なため、基本的にこちらのやり方でロードするのが普通である。</p>
+<p>読み込むと以下のようになる。筆者はタンパク質を読み込んだ。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pic3.png"><img alt="../_images/pic3.png" src="../_images/pic3.png" style="width: 50%;" /></a>
+</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pic4.png"><img alt="../_images/pic4.png" src="../_images/pic4.png" style="width: 30%;" /></a>
+</div>
+<p>さて読み込むと&quot;VMD Main&quot;のGUIが変化した。</p>
+<p>&quot;Molecule&quot;のところには読み込んだ構造ファイルの名前が記されている。</p>
+<p>また一番左の&quot;ID&quot;はMolecule IDと呼ばれるものであり、VMDのコマンド(詳しくは上級編を参照)を使用する際に必要となるがここでは詳しくは述べない。</p>
+<p>&quot;Frames&quot;はその名の通り何フレーム読み込んでいるかを表す。現在は構造ファイルの静止画を1つ読み込んだだけであるので1と表示されているが、トラジェクトリを読み込む場合はそのトラジェクトリのフレーム分の数値が表示される。</p>
+<p>しかしこれだけではただ線が表示されているだけであり、はっきり言って見にくい。そのためグラフィックを変更して自分の見やすいように調整してみよう。グラフィックを変更する場合は<strong>Graphicsタブ</strong>を押す。すると次のようなGUIが出現する。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pic5.png"><img alt="../_images/pic5.png" src="../_images/pic5.png" style="width: 10%;" /></a>
+</div>
+<p>この&quot;Graphical Representations&quot;のGUIはVMDを触る上でマスターすべき最初の難関である。慣れてしまえばなんてことはないが、初めはこのGUIの見方が分からない。そのため使い方を解説していく。</p>
+<div class="section" id="rep">
+<h3>Rep<a class="headerlink" href="#rep" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>画像中央の緑色のついた&quot;Lines Name all&quot;と書かれたものが、Repと呼ばれるものである。</p>
+<p>これはどんな描写形式でトラジェクトリを再生するかを選ぶためのものである。このRepは&quot;Create Rep&quot;をクリックすることでさらに追加できる。すなわち描写形式をいくつも作っておけるということである。</p>
+<p>反対に消したいときは消したいRepをクリックした後に&quot;Delete Rep&quot;をクリックすることで消すことができる。</p>
+<p>また消したくはないがこの描写形式をやめたいという時はやめたいRepをダブルクリックすることでそのRepの描写を非表示にすることができる。</p>
+<p>以下でRepのStyle, Color, Selectionについて述べる。</p>
+</div>
+<div class="section" id="style">
+<h3>Style<a class="headerlink" href="#style" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>分子や原子をどんな表示形式にするかを選ぶことができる。表示形式の変更はDrawing Methodの下矢印マークをクリックすることで変えられる。以下主要なものについて簡単に記述しておく。</p>
+<p><strong>Lines</strong>: 極めて細い線で結合を表示し、結合の種類によって色分けが行われる(後述の&quot;Color&quot;を&quot;name&quot;にしている場合)。もっとも動作が軽いstyleであるため、容量の大きいトラジェクトリを再生するのに役立つ。</p>
+<p><strong>Bonds</strong>: Linesと色分けは同じであるが、結合が太く分子模型のように描写される。結合に関して見たい時はこのstyleで見たらいいと思われる。</p>
+<p><strong>Hbonds</strong>: 少しマニアックかもしれないが、水素結合を見ることができる。と言っても水素結合はトポロジーに記述されている共有結合ではないため単純にH-OやH-Nの原子間距離と、角度が定義の範囲を満たしていれば結合として表示される。定義の範囲はそれぞれ&quot;Distance Cutoff&quot;と&quot;Angle Cutoff&quot;を変えることで変更できる。デフォルトで適切と思われる値になっているが、H-Nといった特定の水素結合に着目する場合はH-Nの水素結合距離を文献やネットで調べてその値に設定するとよい。</p>
+<p><strong>VDW</strong>: 最も使うsytleの1つである。分子を全て粒子として表示し、結合は表示しない。VDWによるRepとBondsなどのRepを組み合わせて使用することも多い。これにより原子が飛ぶといった計算が走らない時の要因を特定することができる。また水やイオンをBondsなどで表示するとかえって分かりづらいためVDWで表示して振る舞いを見ることが多い。</p>
+<p><strong>CPK</strong>: 未だに何の略か分からない。しかしこの描写が一番実際の分子を程よく表していると個人的には思っている。VDWにすると粒子同士が重なって見にくいことがある。VDWで表示する粒子半径を小さくすればよいだけではあるが、そんなことをしなくてもCPKにすると原子と結合が非常に見やすい。</p>
+<p><strong>Licorice</strong>: このstyleはT先輩リスペクトである。正直Bondsとほとんど同じである。但し、Licoriceの方がなんか見栄えがよく見える。そのため筆者は脂質分子をこのstyleにすることが多い。</p>
+<p><strong>NewCartoon</strong>: タンパク質を研究している人にとっては必須のstyleである。Cartoonよりもこちらのstyleを使う。二次構造がある場合にはα-ヘリックスまたはβシートでの表示がなされる。発表などではまずこのstyleを使うであろう。そうでないとBondsなどで表示してもタンパク質かどうかすら見ている人には分からない。但し逆に自分で分子の振る舞いを見る場合、NewCartoonでは残基や原子など本来の姿を見えなくしてしまうため注意が必要である。特に残基間の相互作用が気になる場合は個人的にはCPKがおすすめ。</p>
+<p><strong>QuickSurf</strong>: このstyleも割と発表などで使用する。分子などを粗く見ることで液体のように表示できる。そのため水分子をQuickSurfで表示すると、本物の水かのように見せられる。詳しくはT先輩のサイトにやり方が書いてあるのでそちらを参考にしてほしい。ここでは割愛する。</p>
+</div>
+<div class="section" id="color">
+<h3>Color<a class="headerlink" href="#color" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>そのままの意味で分子の色を変えることができる。こちらも色々種類があるが、主に使用するのは<strong>name</strong>と<strong>ColorID</strong>である。nameでは原子の種類ごとに自動で色分けがなされる。基本的にはこれで問題ないが、場合によっては見にくいため色を個別に変えたい場合がある。その際にはColorIDを使用する。ColorIDを選択すると隣に番号が表示される。この番号は各色の種類を示しており、32番まである。</p>
+<p>ぜひ自分好みの色を探してみてほしい。</p>
+</div>
+<div class="section" id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>&quot;Style&quot;も種類が豊富であったが、それ以上に奥が深いのがこのSelectionであろう。このSelectionでは表示したい分子の種類や原子の種類を選べるだけでなく、特定の座標の半径何Å以内の原子といった非常に様々な指定の仕方がある。それらを指定したい場合には<strong>Selected Atoms</strong>の欄にキーワードを打ち込めばよい。例えば先ほどの写真では&quot;all&quot;と打ち込まれており、これは全ての原子を表示できる。</p>
+<p>キーワードには主に以下のものがある。</p>
+<ul class="simple">
+<li><p>all: 全ての原子を表示</p></li>
+<li><p>protein: タンパク質を表示</p></li>
+<li><p>water: 水を表示</p></li>
+<li><p>lipid: 脂質を表示</p></li>
+<li><p>ion: イオンを表示</p></li>
+</ul>
+<p>※注意 lipidとしても表示されない脂質種もある。例えばPOPEは表示されるがPOPGは表示されないので注意が必要である。ionなどのキーワードにも同様に当てはまる。</p>
+<p>他にも多数のキーワードがあり、どんなキーワードがあるか知りたい場合は<strong>Selections</strong>のタブを押して”Singlewords”の一覧を見るとよい。</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pic6.png"><img alt="../_images/pic6.png" src="../_images/pic6.png" style="width: 10%;" /></a>
+</div>
+<p>キーワードには先に述べたものとは別に、キーワードと番号や名前を組み合わせて指定するものもある。これは画像下部の&quot;Keyword&quot;の一覧に表示されているものがそうである。具体的な一例を以下に挙げておく。</p>
+<ul class="simple">
+<li><p>name CA</p></li>
+<li><p>resname GLY</p></li>
+<li><p>index 27</p></li>
+<li><p>Chain A</p></li>
+</ul>
+<p>簡単に説明する。</p>
+<p><strong>name</strong>は原子のタイプ名の検索が可能である。上記の例ではCAというタイプの原子のみを選択している。</p>
+<p><strong>resname</strong>は残基名の検索であり、GLYやALAといった残基名と組み合わせて使う。またタンパク質でなくとも脂質や水、イオンといった分子種を選ぶ場合にも使用する。</p>
+<p><strong>index</strong>は全ての原子に対して0番から順番に番号を振った時の番号である。似たような機能にserialがあるがこちらは1番始まりである点で異なる。</p>
+<p><strong>Chain</strong>はpdbなどでChainIDの記述がある場合に選べるが、タンパク質を扱わない人には無縁かもしれない。</p>
+<p>キーワードは分かったがそもそもどんな原子タイプや残基名が使用可能か分からないという人は安心してほしい。上の写真の&quot;Keyword&quot;の中から選びたいキーワードをクリックすると、そのキーワードに対して使用可能な名前や数字が&quot;<strong>Value</strong>&quot;の方に表示される。ちなみにこの&quot;Value&quot;はVMDに元々組み込まれているものではなく、pdbやgroをVMDで読み込んだ際に原子タイプや残基名も読み取られ、それが&quot;Value&quot;に表示されている。</p>
+<p>さらに勘のいい人は上の画像を見て&quot;Singlewords&quot;のカラクリにも気づいたかもしれない。画像ではlipidという単語を選択しているが、その際に&quot;Macro definition&quot;に<strong>resname DLPE DMPC</strong>...などと書かれていることに気づいただろうか？</p>
+<p>そうlipidというキーワードはresname DLPE DMPC...と選択するのと全く同義である。ちなみに&quot;Singlewords&quot;でキーワードをダブルクリックするとそのキーワードの定義がSelected Atomsに打ち込まれる。lipidをダブルクリックした場合には次のように打ち込まれる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">resname</span> <span class="pre">DLPE</span> <span class="pre">DMPC</span> <span class="pre">DPPC</span> <span class="pre">GPC</span> <span class="pre">LPPC</span> <span class="pre">PALM</span> <span class="pre">PC</span> <span class="pre">PGCL</span> <span class="pre">POPC</span> <span class="pre">POPE</span></code></p>
+<p>このためこの中にあるPOPCやPOPEはlipidとするだけで選択ができる。反対にPOPGやPOPSといったものはないため、選択ができない。これが「lipidとしても表示されない脂質種もある。」の理由である。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>おまけ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>&quot;Draw style&quot;のタブの中に&quot;Colorring Method&quot;や&quot;Drawing Method&quot;以外に&quot;<strong>Material</strong>&quot;の項目がある。</p>
+<p>これは名前の通り分子の材質を変えることができる。かなり癖の強いものが色々ある。基本的にデフォルトの&quot;Opaque&quot;で良いと思うがT先輩のオススメは&quot;AOshiny&quot;である。少し明るいが影がついて立体感が出る。</p>
+<p>ということでAOshinyを使いましょう。あとはどうしても分子がごちゃごちゃして内部が見にくいということがあるので必要に応じてTransparentで透明にするものアリ。&quot;Material&quot;も色々触ってみてください。</p>
+</div>
+<div class="section" id="id3">
+<h2>初級編まとめ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>初級編からかなり長くなったが、まだまだ紹介すべきことはたくさんある。そのため次のページでは中級編として紹介する。またここで紹介した以外にもStyleやColor、Selectionは様々な種類やキーワードがあるのでそれらを色々試してみてほしい。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="VMDusage2.html" class="btn btn-neutral float-right" title="VMDについて2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="VMDindex.html" class="btn btn-neutral float-left" title="VMDの使い方" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

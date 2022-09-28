@@ -1,0 +1,201 @@
+# Gitの使い方について3
+
+## 実践編
+
+さて、説明があまりにも長くなった。しかしここまで来れば後はコマンドを実行するだけである。一緒に進めていこう。
+
+まずはhttps://github.com/onefive13/sourceからクローンを行う。
+
+自分の手元のディレクトリで好きなところでクローンを行ってほしい。コマンドと出力結果を以下に示す。
+
+```
+$ git clone https://github.com/onefive13/source
+
+Cloning into 'source'...
+Username for 'https://github.com': onefive13
+Password for 'https://onefive13@github.com':
+remote: Enumerating objects: 160, done.
+remote: Counting objects: 100% (160/160), done.
+remote: Compressing objects: 100% (116/116), done.
+remote: Total 160 (delta 36), reused 158 (delta 36), pack-reused 0
+Receiving objects: 100% (160/160), 3.52 MiB | 1.51 MiB/s, done.
+Resolving deltas: 100% (36/36), done.
+```
+
+ここで`ls`をすると、sourceというディレクトリが作られている。これはonefive13のリポジトリの名前である。そのためディレクトリ内に入って`ls`すると以下のようになっている。
+
+```
+$ ls
+source
+$ cd source/ $$ ls
+GROMACS  Makefile  SPHINX  _build  _static  conf.py  index.rst  make.bat
+```
+
+これはホームページの原稿となるファイルやディレクトリである。詳しくはSphinxの使い方を見てほしい。
+
+ここでファイルを編集してみる。
+
+```
+$ git branch onefive13     ##ブランチの作成
+$ git checkout onefive13   ##ブランチの切り替え
+Switched to branch 'onefive13'
+
+
+$ mkdir TEST
+$ cd TEST/
+$ vi test.md                ##test.mdを編集
+
+$ cat test.md
+# This is a test.           ##注意！"This"の前の"#"はコメントアウトではなくMarkdownの見出し記号です
+
+$ cd ../
+$ vi index.rst              ##index.rstにtest.mdのパスを指定する
+
+$ cat index.rst
+.. bros. documentation master file, created by
+   sphinx-quickstart on Mon Mar  8 11:45:36 2021.
+      You can adapt this file completely to your liking, but it should at least
+	     contain the root `toctree` directive.
+
+		 Welcome to bros.'s documentation!
+		 =================================
+
+		 .. toctree::
+		    :maxdepth: 2
+			   :caption: Contents:
+
+			      /GROMACS/GROMACSのインストール.md
+				     /GROMACS/GROMACSindex1.rst
+					    /GROMACS/GROMACSindex2.rst
+						   /GROMACS/GROMACSmdpオプション.md
+						      /SPHINX/sphinx1.md
+							     /SPHINX/sphinx2.md
+								    /SPHINX/sphinx3.md
+									   /SPHINX/sphinx4.md
+									      /TEST/test.md
+										  ```
+
+										  この後`make html`というコマンドをしないとhtmlにはできないのですが、誰にでもできるような形にしたいので上記までの作業で編集は大丈夫です。ここまでして下されば筆者が`make html`を実行してウェブページに反映させておきます。
+
+										  但しSphinxの扱いが分かるようであれば、`make html`まで実行して下さい。その場合は実行後にhtmlも「homepage」というリポジトリに反映まで行って頂きます。(詳しいことは直接説明するので聞いて下さい。)
+
+										  またSphinxのセットアップをしていない場合はmake htmlをしても足りないパッケージがあるためにエラーが出ます。
+
+
+
+										  編集が終わったのでこれをadd。sourceというディレクトリに戻ったあとに実行する。
+
+										  ```
+										  $ cd ~/hogehoge/fugafuga/source  ##hogehoge等は自分のPC依存
+										  $ git add .
+										  $ git commit -m "test"           ## -mでどのような変更かのコメント
+										   
+										    Committer: onefive13 <hogehoge@fugafuga.localdomain>
+											Your name and email address were configured automatically based
+											on your username and hostname. Please check that they are accurate.
+											You can suppress this message by setting them explicitly:
+
+											    git config --global user.name "Your Name"
+												    git config --global user.email you@example.com
+
+													After doing this, you may fix the identity used for this commit with:
+
+													    git commit --amend --reset-author
+
+														 46 files changed, 249 insertions(+), 1 deletion(-)
+														  create mode 100644 TEST/test.md
+														   create mode 100644 _build/doctrees/TEST/test.doctree
+														    rewrite _build/doctrees/environment.pickle (87%)
+															 create mode 100644 _build/html/TEST/test.html
+															  create mode 100644 _build/html/_sources/TEST/test.md.txt
+															   rewrite _build/html/objects.inv (84%)
+															    rewrite _build/html/searchindex.js (98%)
+																```
+
+																commitまで完了したのであとはリモートリポジトリに反映する。
+
+																```
+																$ git push origin onefive13
+
+																Username for 'https://github.com': onefive13
+																Password for 'https://onefive13@github.com':
+																Enumerating objects: 108, done.
+																Counting objects: 100% (108/108), done.
+																Delta compression using up to 8 threads
+																Compressing objects: 100% (53/53), done.
+																Writing objects: 100% (58/58), 19.73 KiB | 381.00 KiB/s, done.
+																Total 58 (delta 44), reused 0 (delta 0)
+																remote: Resolving deltas: 100% (44/44), completed with 42 local objects.
+																remote:
+																remote: Create a pull request for 'onefive13' on GitHub by visiting:
+																remote:      https://github.com/onefive13/source/pull/new/onefive13
+																remote:
+																To https://github.com/onefive13/source
+																 * [new branch]      onefive13 -> onefive13
+																 ```
+
+																 さて、リモートリポジトリに本当に反映できたか確認してみる。
+
+																 <img src="C:\Users\kawabata\Pictures\Camera Roll\remote_repo.png" width="80%">
+
+																 赤い丸のところに自分が作成したブランチが表示され、且つそれをクリックした時に上のような画面が出ていれば反映できている。これでブランチの作成に成功した。一応ここまでのやり方をGitの使い方2において説明してきた。
+
+																 ただ、GitHub上で最後にもう1つやるべきことが残っている。それは「**プルリク**」である。プルリクは、自分のブランチでの作業が完了したので本家のmasterブランチに反映してねーという意味である。プルリクは右上の黄色い丸で囲んだところをクリックすればできる。
+
+																 <img src="C:\Users\kawabata\Pictures\Camera Roll\pull_req.png" width="80%">
+
+																 どのような変更を行ったのかをコメントでできれば書いてほしい。その後黄色の丸のところをクリックする。
+
+																 すると管理者にプルリクが来ているよーという通知が来るので管理者がどのような変更を行ったのかを確認して問題がなければ許可して**マージ**する。このマージも管理者が行うので、基本的にはここまでの手順で完了である！
+
+
+
+																 時間が経つと他の人が開発をしてローカルのリポジトリが古くなっている可能性があるため、pullコマンド等を使用してローカルリポジトリを最新にした後、これまでの手順を繰り返して再び開発を進めることになる。ただしこの辺りのコマンドの挙動が筆者もよく分かっておらず、コマンドを実行しても本当に最新になっているのか？などの疑念が晴れないでいる。
+
+																 そのため以下のようにするのが無難である。
+
+																 ```
+																 $ rm -rf ~/hogehoge/fugafuga/source
+
+																 $ git clone https://github.com/onefive13/source
+																 ```
+
+																 要するに力技である。上記の`clone`から再びbranch,checkout~の流れで新たな開発ができる。
+
+
+
+																 もしgit内で完結したければ、以下のようにするのが無難である。
+
+																 ```
+																 $ git checkout master(main)         ##masterまたはmainに切り替える
+																 $ git branch -d onefive13           ##onefive13のbranchを削除
+																 $ git pull origin master(main)      ##リモートリポジトリのmasterまたはmainブランチで最新のデータを手元のmasterブランチにもってくる。
+																 ```
+
+																 git pullは上にも書いたがリモートリポジトリの最新のデータを手元にもってくるコマンドである。
+
+																 その後git branch -dで元々開発のために作成したローカルリモートリポジトリのブランチを消している。ブランチを消してしまってもいいの？と思うかもしれないが、むしろ消さなければならない。消さないと古いバージョンに新たに開発を開始してしまう可能性があり、後々リモートリポジトリの最新バージョンと衝突が起きるかもしれない。そのため必ず最新のデータを用意して編集することを心掛けてほしい。またリモートリポジトリのブランチに関しては、管理者がマージを完了した時点でブランチを消している。
+
+																 でもデータ消えちゃうじゃん...と思うかもしれないが、管理者がマージした時点でその人のブランチはmasterブランチ、すなわち本家のブランチに反映されている。したがってその人のブランチで管理されていたデータは全てmasterブランチに存在している。そのためmasterブランチからダウンロード等すればよい。
+
+																 またローカルで書いたMarkdown等についてはローカルリポジトリとは全く関係のないディレクトリにコピーしておけばよい。筆者はそのようにしている。
+
+																 すなわち、
+
+																 ローカルリポジトリとは全く関係ないところで下書きを書く
+
+																 =>クローンしてローカルリポジトリを作成
+
+																 =>ローカルリポジトリでブランチを作成およびそのブランチに切り替える
+
+																 =>ローカルリポジトリのファイルに下書きをコピーする
+
+																 =>add,commit,push　
+
+																 という流れである。
+
+
+
+## まとめ
+
+さてGitを使っての開発はうまくできただろうか？筆者もまだまだ分からないことだらけだが、Gitにより安全に便利に開発ができることは間違いない。またこのウェブページの発展にはより多くの人の助けが必要である。ぜひ他の人にも知ってほしい！自分のページを読んで！という人がいたら書いていってほしい。

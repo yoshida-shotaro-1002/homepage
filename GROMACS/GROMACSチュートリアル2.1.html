@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. 系の作成 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="2. 力場パラメータとトポロジーの準備" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB2.2.html" />
+    <link rel="prev" title="GROMACSチュートリアル2" href="GROMACSindex2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="GROMACSindex2.html">GROMACSチュートリアル2</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GROMACSindex2.html#id1">目次</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. 系の作成</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#charmm-gui">アルコール分子の作成（CHARMM-GUI）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">アルコール二重膜系の作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB2.2.html">2. 力場パラメータとトポロジーの準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB2.3.html">3. mdpファイルの作成とシミュレーションの実行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACSmdp%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="GROMACSindex2.html">GROMACSチュートリアル2</a> &raquo;</li>
+        
+      <li>1. 系の作成</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1. 系の作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>任意のMDシミュレーションを開始するためには、まず大前提として系が用意されている必要がある。 ここでは直鎖アルコールの構造を作成し、それをボックス内に配置することで、アルコール分子の二重膜が含まれる系の作成をしてみたいと思う。</p>
+<p>なお、今回は系の作成を簡単にするために、自動で構造を生成してくれる外部サイトを利用する。 インターネット環境が必要となるので、通信環境の良いところで取り組んでほしい。</p>
+<ol class="simple">
+<li><p>アルコール分子の作成（CHARMM-GUI）</p></li>
+<li><p>アルコール二重膜系の作成</p></li>
+</ol>
+<p>今回作成する系は図のようになる。 アルコール分子が整列して二重膜を形成し、その両側にはバルクの水が存在するような系を作成する。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_system.png" width=50%><div class="section" id="charmm-gui">
+<h2>アルコール分子の作成（CHARMM-GUI）<a class="headerlink" href="#charmm-gui" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、シミュレーションする系に含まれる分子であるアルコール分子の構造を作成する。 簡単な分子構造を作成し、構造ファイルを書き出すには<strong>CHARMM-GUI</strong>が便利である。 CHARMM-GUIはWeb上で動くプログラムであり、PDBファイルの作成からシミュレーションのインプットファイルの作成まで、多くの便利な機能が備わっている。</p>
+<div class="admonition caution">
+<p class="admonition-title">注意</p>
+<p>最近のアップデートにより、CHARMM-GUIの利用にはメールアドレスとパスワードによるログインが必要となった。アカウント作成ページで名前・所属機関・メールアドレスの登録をして利用しよう。</p>
+</div>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/charmm_gui_top.png" width=80%><p>今回は<a class="reference external" href="http://www.charmm-gui.org/">CHARMM-GUIのトップページ</a>から「Input Generator」を選択し、その中の「Ligand Reader and Modeler」を利用する。 一番下までスクロールすると、次のような画面が現れるはずである。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/ligand_reader_modeler.png" width=80%><p>この画面の枠内では分子を描画することができる。今回はアルコール分子として、C16H33OHの構造式を描いてみることにする。</p>
+<p>枠の左側のツールを用いて直鎖アルカンを描画し、右側のツールで元素を変更する。 分子の骨格ができたら<strong>必ず枠上のHマークから分子に水素を付加</strong>しておくこと。 これを忘れると後にエラーとなってしまう。 最終的に下図のようになればOKである。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_modeling.png" width=80%><p>一番下の「Next Step: Search ligand」を押すと、次の画面に進む。 作成した分子と一致する構造がCHARMM-GUI上にあった場合や、似たような構造があった場合はここで表示される。 一致するものがなくても、その分子にオリジナルの名前（VMDではresnameで分類される）をつけることができる。 今回は「LAL」（Linear-chain Alcohol Ligand）という名前をつけておくことにする。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_rename.png" width=80%><p>「Next Step: Generate PDB」を押すと、プログラムの処理が始まる。 しばらくすると次のページへ移動し、PDBファイルやpsfファイル、インプットファイルなどが生成する。 これらは「download.tgz」から一括でダウンロードしておくとよい。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_download.png" width=80%><p>ダウンロードしたファイルを展開し、PDBファイルをVMDで確認すると、アルコール分子が正しく作成できていることがわかる。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_pdb.png" width=80%></div>
+<div class="section" id="id2">
+<h2>アルコール二重膜系の作成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまでで、系の構築に必要なアルコール分子の構造を作成することができた。 二重膜系を作成するためにはPACKMOLなどを使用して分子を並べてもよいが、今回は便利な二重膜系作成ツールがあったのでそちらを利用する。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/mengen_top.png" width=80%><p><a class="reference external" href="http://memgen.uni-goettingen.de/">MemGen</a>にアクセスし、先ほど作成したアルコールのPDBファイルをアップロードする。 オプションでは膜中の分子密度や水の量などを指定できるので、今回は次のように設定する。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">オプション</th>
+<th align="center">値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Lipids per monolayer</td>
+<td align="center">128</td>
+</tr>
+<tr>
+<td align="center">Water molecules per lipid</td>
+<td align="center">30</td>
+</tr>
+<tr>
+<td align="center">Add salt (mMolar)</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">Area per lipid (Å2)</td>
+<td align="center">20</td>
+</tr>
+</tbody>
+</table><p>設定が完了したら「Submit」を押すと、プログラムが動いて二重膜の構造を自動生成してくれる。 二重膜系のPDBファイルを「Download Membrane PDB」からダウンロードしておこう。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/mengen_pdb.png" width=80%><p>ダウンロードしたPDBファイルの名前をsystem.pdbに変更し、テキストエディターで内容を確認する。 今回は（多少数値は前後するであろうが）アルコール分子が256個、水分子が7680個含まれる系で、ボックスサイズは(x, y, z)=(53.666, 53.666, 124.570)であることがわかる。</p>
+<p>また、その次の行からは原子の種類と座標が記述されている。 詳しくは調べてほしいが、PDBファイルの形式は単なるスペース区切りではなく、何文字目がどの情報を表すかが厳密に決まっている。 GROMACSでPDB形式を扱うことはほぼないが、NAMD等を使用する際には必要となるので覚えておくとよい。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">pdb</span>
+<span class="n">REMARK</span> 
+<span class="n">REMARK</span>     <span class="n">MEMBRANE</span> <span class="n">PATCH</span> <span class="n">GENERATED</span> <span class="n">BY</span> <span class="n">WEBSERVER</span> <span class="n">MEMGEN</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">memgen</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">goettingen</span><span class="o">.</span><span class="n">de</span>
+<span class="n">REMARK</span>
+<span class="n">REMARK</span>     <span class="n">PLEASE</span> <span class="n">CITE</span><span class="p">:</span>
+<span class="n">REMARK</span>
+<span class="n">REMARK</span>     <span class="n">Christopher</span> <span class="n">J</span><span class="o">.</span> <span class="n">Knight</span> <span class="ow">and</span> <span class="n">Jochen</span> <span class="n">S</span><span class="o">.</span> <span class="n">Hub</span> 
+<span class="n">REMARK</span>     <span class="n">MemGen</span><span class="p">:</span> <span class="n">A</span> <span class="n">general</span> <span class="n">web</span> <span class="n">server</span> <span class="k">for</span> <span class="n">the</span> <span class="n">setup</span> <span class="n">of</span> <span class="n">lipid</span> <span class="n">membrane</span> <span class="n">simulation</span> <span class="n">systems</span>
+<span class="n">REMARK</span>     <span class="n">Bioinformatics</span><span class="p">,</span> <span class="mi">31</span><span class="p">:</span><span class="mi">2897</span><span class="o">-</span><span class="mi">2899</span> <span class="p">(</span><span class="mi">2015</span><span class="p">)</span>
+<span class="n">REMARK</span>
+<span class="n">REMARK</span>     <span class="n">THIS</span> <span class="n">PDB</span> <span class="n">FILE</span> <span class="n">CONTAINS</span><span class="p">:</span>  <span class="n">LAL</span>             <span class="mi">256</span>
+<span class="n">REMARK</span>                              <span class="n">Water</span>          <span class="mi">7680</span>
+<span class="n">REMARK</span>                              <span class="n">Na</span><span class="o">+</span>               <span class="mi">0</span>
+<span class="n">REMARK</span>                              <span class="n">Cl</span><span class="o">-</span>               <span class="mi">0</span>
+<span class="n">REMARK</span>
+<span class="n">CRYST1</span>   <span class="mf">53.666</span>   <span class="mf">53.666</span>  <span class="mf">124.570</span>  <span class="mf">90.00</span>  <span class="mf">90.00</span>  <span class="mf">90.00</span> <span class="n">P</span> <span class="mi">1</span>           <span class="mi">1</span>
+<span class="n">MODEL</span>        <span class="mi">1</span>
+<span class="n">ATOM</span>      <span class="mi">1</span> <span class="n">C1</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">2.640</span>  <span class="mf">54.580</span>  <span class="mf">63.460</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">2</span> <span class="n">C2</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">2.610</span>  <span class="mf">53.670</span>  <span class="mf">64.700</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">3</span> <span class="n">C3</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">2.670</span>  <span class="mf">54.470</span>  <span class="mf">66.010</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">4</span> <span class="n">C4</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">2.760</span>  <span class="mf">53.530</span>  <span class="mf">67.220</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">5</span> <span class="n">C5</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">3.190</span>  <span class="mf">54.280</span>  <span class="mf">68.480</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">6</span> <span class="n">C6</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">3.150</span>  <span class="mf">53.230</span>  <span class="mf">69.610</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">7</span> <span class="n">C7</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">3.450</span>  <span class="mf">53.890</span>  <span class="mf">70.960</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">8</span> <span class="n">C8</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">3.120</span>  <span class="mf">53.000</span>  <span class="mf">72.170</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+<span class="n">ATOM</span>      <span class="mi">9</span> <span class="n">C9</span>   <span class="n">LAL</span>     <span class="mi">1</span>       <span class="mf">3.290</span>  <span class="mf">53.950</span>  <span class="mf">73.360</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span>           <span class="n">C</span>
+</pre></div>
+</div>
+<p>同時にVMDでも系の構造を確認しておく。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_system.png" width=50%></div>
+<div class="section" id="id3">
+<h2>まとめ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまで、次の手順でアルコール二重膜系の構造を作成した。</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CHARMM-GUI</span></code>によりアルコール分子の構造を作成した。</p></li>
+<li><p>作成したアルコール分子を用いて<code class="docutils literal notranslate"><span class="pre">MemGen</span></code>で二重膜系を作成した。</p></li>
+</ol>
+<p>しかし、このアルコール分子はオリジナルの分子であるため、GROMACSにこの分子を認識させる必要がある。 次回はその点を含め、作成した系をGROMACSで扱う方法を見ていく。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB2.2.html" class="btn btn-neutral float-right" title="2. 力場パラメータとトポロジーの準備" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GROMACSindex2.html" class="btn btn-neutral float-left" title="GROMACSチュートリアル2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, S.Harada,I.Kawabata,S.Ikeda,K.Shibata.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

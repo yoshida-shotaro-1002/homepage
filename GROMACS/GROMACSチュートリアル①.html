@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. シミュレーションの準備 &mdash; bros.  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="prev" title="GROMACSチュートリアル" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> bros.
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html">GROMACSのインストール</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB.html">GROMACSチュートリアル</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB.html#id1">目次</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. シミュレーションの準備</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">タンパク質の構造を準備</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">シミュレーションボックスの作成と溶媒の追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">イオンの追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">まとめ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">bros.</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB.html">GROMACSチュートリアル</a> &raquo;</li>
+        
+      <li>1. シミュレーションの準備</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/GROMACS/GROMACSチュートリアル①.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1. シミュレーションの準備<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>タンパク質（Lysozyme）のシミュレーションを行うにあたって、まずは対象とする系を作成する必要がある。 系の作成は次の3つのステップで行う。</p>
+<ol class="simple">
+<li><p>タンパク質の構造を準備</p></li>
+<li><p>シミュレーションボックスの作成と溶媒の追加</p></li>
+<li><p>イオンの追加</p></li>
+</ol>
+<p>今回作成する系は図のようになる。 水とイオンが入ったボックスにタンパク質が入るような構造を作成する。</p>
+<p><img alt="Lysozyme in Water" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki_solv_ion.png" /></p>
+<div class="section" id="id2">
+<h2>タンパク質の構造を準備<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、タンパク質の構造ファイルをダウンロードする必要がある。 <a class="reference external" href="https://www.rcsb.org/">RCSB</a>のサイトからlysozyme（PDBコード：1AKI）を検索し、PDBファイルをダウンロードする。 サイトからダウンロードできない場合は<a class="reference external" href="https://shalad2.github.io/JellyPage/gromacs/download/1aki.pdb">ここ</a>からダウンロードしてほしい。
+このファイルをVMDで確認すると、タンパク質とその周りの結晶水の構造を確認することができる。</p>
+<p><img alt="1aki_water" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki_water.png" /></p>
+<p>今回は結晶水の構造は必要ないので、PDBファイルのHOHを含む行を<code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">-v</span></code>で除いておく。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="n">HOH</span> <span class="mi">1</span><span class="n">aki</span><span class="o">.</span><span class="n">pdb</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="n">AKI_clean</span><span class="o">.</span><span class="n">pdb</span>
+</pre></div>
+</div>
+<p>これで新しく作成したファイルをVMDで確認すると、結晶水が取り除かれている。</p>
+<p><img alt="1aki_water" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki_water.png" /></p>
+<p>Before : 1aki.pdb</p>
+<p><img alt="1aki" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki.png" /></p>
+<p>After : 1AKI_clean.pdb</p>
+<p>次に、タンパク質の構造ファイルからMD計算に使用する以下のファイルを作成する。</p>
+<ol class="simple">
+<li><p>トポロジーファイル（topol.top）</p></li>
+<li><p>位置拘束ファイル（posre.itp）</p></li>
+<li><p>GROMACSフォーマットの構造ファイル（1AKI_processed.gro）</p></li>
+</ol>
+<p>これらのファイルは<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">pdb2gmx</span></code>を使用してPDBファイルから一括で作成できる。 <code class="docutils literal notranslate"><span class="pre">-water</span></code>を指定することで、計算で使用する水モデルの種類を指定することができる。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">gmx pdb2gmxオプション</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-f</td>
+<td align="center">入力pdbファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-o</td>
+<td align="center">出力groファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-water</td>
+<td align="center">水モデルの指定（今回はSPE/C）</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">pdb2gmx</span> <span class="o">-</span><span class="n">f</span> <span class="mi">1</span><span class="n">AKI_clean</span><span class="o">.</span><span class="n">pdb</span> <span class="o">-</span><span class="n">o</span> <span class="mi">1</span><span class="n">AKI_processed</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">water</span> <span class="n">spce</span>
+</pre></div>
+</div>
+<p>コマンドを実行すると使用する力場を聞かれるので、今回はOPLS-AAを選択する。<code class="docutils literal notranslate"><span class="pre">15</span></code>と入力してEnterキーを押す。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Select</span> <span class="n">the</span> <span class="n">Force</span> <span class="n">Field</span><span class="p">:</span>
+<span class="n">From</span> <span class="s1">&#39;/usr/local/gromacs/share/gromacs/top&#39;</span><span class="p">:</span>
+<span class="mi">1</span><span class="p">:</span> <span class="n">AMBER03</span> <span class="n">protein</span><span class="p">,</span> <span class="n">nucleic</span> <span class="n">AMBER94</span> <span class="p">(</span><span class="n">Duan</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span><span class="p">,</span> <span class="n">J</span><span class="o">.</span> <span class="n">Comp</span><span class="o">.</span> <span class="n">Chem</span><span class="o">.</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">1999</span><span class="o">-</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2003</span><span class="p">)</span>
+<span class="mi">2</span><span class="p">:</span> <span class="n">AMBER94</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">Cornell</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span><span class="p">,</span> <span class="n">JACS</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">5179</span><span class="o">-</span><span class="mi">5197</span><span class="p">,</span> <span class="mi">1995</span><span class="p">)</span>
+<span class="mi">3</span><span class="p">:</span> <span class="n">AMBER96</span> <span class="n">protein</span><span class="p">,</span> <span class="n">nucleic</span> <span class="n">AMBER94</span> <span class="p">(</span><span class="n">Kollman</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span><span class="p">,</span> <span class="n">Acc</span><span class="o">.</span> <span class="n">Chem</span><span class="o">.</span> <span class="n">Res</span><span class="o">.</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">461</span><span class="o">-</span><span class="mi">469</span><span class="p">,</span> <span class="mi">1996</span><span class="p">)</span>
+<span class="mi">4</span><span class="p">:</span> <span class="n">AMBER99</span> <span class="n">protein</span><span class="p">,</span> <span class="n">nucleic</span> <span class="n">AMBER94</span> <span class="p">(</span><span class="n">Wang</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span><span class="p">,</span> <span class="n">J</span><span class="o">.</span> <span class="n">Comp</span><span class="o">.</span> <span class="n">Chem</span><span class="o">.</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1049</span><span class="o">-</span><span class="mi">1074</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="mi">5</span><span class="p">:</span> <span class="n">AMBER99SB</span> <span class="n">protein</span><span class="p">,</span> <span class="n">nucleic</span> <span class="n">AMBER94</span> <span class="p">(</span><span class="n">Hornak</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span><span class="p">,</span> <span class="n">Proteins</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">712</span><span class="o">-</span><span class="mi">725</span><span class="p">,</span> <span class="mi">2006</span><span class="p">)</span>
+<span class="mi">6</span><span class="p">:</span> <span class="n">AMBER99SB</span><span class="o">-</span><span class="n">ILDN</span> <span class="n">protein</span><span class="p">,</span> <span class="n">nucleic</span> <span class="n">AMBER94</span> <span class="p">(</span><span class="n">Lindorff</span><span class="o">-</span><span class="n">Larsen</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span><span class="p">,</span> <span class="n">Proteins</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">1950</span><span class="o">-</span><span class="mi">58</span><span class="p">,</span> <span class="mi">2010</span><span class="p">)</span>
+<span class="mi">7</span><span class="p">:</span> <span class="n">AMBERGS</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">Garcia</span> <span class="o">&amp;</span> <span class="n">Sanbonmatsu</span><span class="p">,</span> <span class="n">PNAS</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">2782</span><span class="o">-</span><span class="mi">2787</span><span class="p">,</span> <span class="mi">2002</span><span class="p">)</span>
+<span class="mi">8</span><span class="p">:</span> <span class="n">CHARMM27</span> <span class="nb">all</span><span class="o">-</span><span class="n">atom</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">CHARM22</span> <span class="n">plus</span> <span class="n">CMAP</span> <span class="k">for</span> <span class="n">proteins</span><span class="p">)</span>
+<span class="mi">9</span><span class="p">:</span> <span class="n">GROMOS96</span> <span class="mi">43</span><span class="n">a1</span> <span class="n">force</span> <span class="n">field</span>
+<span class="mi">10</span><span class="p">:</span> <span class="n">GROMOS96</span> <span class="mi">43</span><span class="n">a2</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">improved</span> <span class="n">alkane</span> <span class="n">dihedrals</span><span class="p">)</span>
+<span class="mi">11</span><span class="p">:</span> <span class="n">GROMOS96</span> <span class="mi">45</span><span class="n">a3</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">Schuler</span> <span class="n">JCC</span> <span class="mi">2001</span> <span class="mi">22</span> <span class="mi">1205</span><span class="p">)</span>
+<span class="mi">12</span><span class="p">:</span> <span class="n">GROMOS96</span> <span class="mi">53</span><span class="n">a5</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">JCC</span> <span class="mi">2004</span> <span class="n">vol</span> <span class="mi">25</span> <span class="n">pag</span> <span class="mi">1656</span><span class="p">)</span>
+<span class="mi">13</span><span class="p">:</span> <span class="n">GROMOS96</span> <span class="mi">53</span><span class="n">a6</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">JCC</span> <span class="mi">2004</span> <span class="n">vol</span> <span class="mi">25</span> <span class="n">pag</span> <span class="mi">1656</span><span class="p">)</span>                            
+<span class="mi">14</span><span class="p">:</span> <span class="n">GROMOS96</span> <span class="mi">54</span><span class="n">a7</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="n">Eur</span><span class="o">.</span> <span class="n">Biophys</span><span class="o">.</span> <span class="n">J</span><span class="o">.</span> <span class="p">(</span><span class="mi">2011</span><span class="p">),</span> <span class="mi">40</span><span class="p">,,</span> <span class="mi">843</span><span class="o">-</span><span class="mi">856</span><span class="p">,</span> <span class="n">DOI</span><span class="p">:</span> <span class="mf">10.1007</span><span class="o">/</span><span class="n">s00249</span><span class="o">-</span><span class="mi">011</span><span class="o">-</span><span class="mi">0700</span><span class="o">-</span><span class="mi">9</span><span class="p">)</span>
+<span class="mi">15</span><span class="p">:</span> <span class="n">OPLS</span><span class="o">-</span><span class="n">AA</span><span class="o">/</span><span class="n">L</span> <span class="nb">all</span><span class="o">-</span><span class="n">atom</span> <span class="n">force</span> <span class="n">field</span> <span class="p">(</span><span class="mi">2001</span> <span class="n">aminoacid</span> <span class="n">dihedrals</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>これで必要なファイルが作成されているはずだ。
+なお、作成したトポロジーファイルの詳細については「4. 【補足】トポロジーファイルの詳細」を参照してほしい。</p>
+</div>
+<div class="section" id="id3">
+<h2>シミュレーションボックスの作成と溶媒の追加<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">pdb2gmx</span></code>で作成したGROMACSフォーマットの構造ファイル（1AKI_processed.gro）にはまだタンパク質の構造しか含まれていない。 そこで次にタンパク質が入るようなシミュレーションボックスを作成し、その中を溶媒で満たす操作を行う。
+シミュレーションボックスの作成は<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">editconf</span></code>で行う。今回、シミュレーションボックスには周期的境界条件を満たす立方体を用いる。 この時、タンパク質とボックスの境界との距離を1.0 nm以上空けることで、周期的境界条件では隣のタンパク質との距離を2.0 nm以上確保することができる。 いくつかのオプションを指定してコマンドを実行する。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">gmx editconfオプション</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-f</td>
+<td align="center">入力構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-o</td>
+<td align="center">出力構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-c</td>
+<td align="center">タンパク質をボックスの中央に配置</td>
+</tr>
+<tr>
+<td align="center">-d</td>
+<td align="center">タンパク質とボックス境界との距離を指定</td>
+</tr>
+<tr>
+<td align="center">-bt</td>
+<td align="center">ボックスタイプの指定</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">editconf</span> <span class="o">-</span><span class="n">f</span> <span class="mi">1</span><span class="n">AKI_processed</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">o</span> <span class="mi">1</span><span class="n">AKI_newbox</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">d</span> <span class="mf">1.0</span> <span class="o">-</span><span class="n">bt</span> <span class="n">cubic</span>
+</pre></div>
+</div>
+<p>生成した1AKI_newbox.groをVMDで確認すると、シミュレーションボックスが定義されている。</p>
+<p><img alt="1aki_newbox" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki_newbox.png" /></p>
+<p>ボックスが定義できたので、続いて<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">solvate</span></code>により溶媒で系を満たす。 今回の溶媒は水であり、SPCモデルを用いている。 SPCの構造ファイル（spc216.gro）はGROMACSに標準でインストールされているので、特別にファイルを用意する必要はない。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">gmx solvateオプション</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-cp</td>
+<td align="center">タンパク質（溶質）構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-cs</td>
+<td align="center">溶媒（SPC水モデル）構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-o</td>
+<td align="center">出力構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-p</td>
+<td align="center">トポロジーファイルの指定</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">solvate</span> <span class="o">-</span><span class="n">cp</span> <span class="mi">1</span><span class="n">AKI_newbox</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">cs</span> <span class="n">spc216</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">o</span> <span class="mi">1</span><span class="n">AKI_solv</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span>
+</pre></div>
+</div>
+<p>これでボックス内を溶媒で満たすことができた。VMDで確認すると、水分子がタンパク質の周りに配置されている様子が見える。</p>
+<p><img alt="1aki_solv" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki_solv.png" /></p>
+<p>また、<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">solvate</span></code>ではオプションにトポロジーファイル（topol.top）を指定している。 溶媒の追加によりトポロジーファイルの[ molecules ]のセクションが更新されており、SOL（溶媒）が記述されていることがわかるだろう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">topol</span><span class="o">.</span><span class="n">top</span>
+<span class="p">[</span> <span class="n">molecules</span> <span class="p">]</span>
+<span class="p">;</span> <span class="n">Compound</span>  <span class="c1">#mols</span>
+<span class="n">Protein_A</span>       <span class="mi">1</span> 
+<span class="n">SOL</span>         <span class="mi">10832</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>イオンの追加<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>さらに、系に対してイオンを追加する。 トポロジーファイルを確認するとわかるが、タンパク質（lysozyme）の電荷は+8（qtot 8）であるため、イオンを加えて電荷を打ち消す必要がある。 イオンの追加には<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">genion</span></code>を用いるが、その入力ファイルには系の全原子のパラメータを含む形式であるtprファイルを作成しなければならない。 tprファイルは、系の構造ファイルとトポロジーファイルの両方を使用することで<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>によって作成することができる。
+加えて、<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>を実行するためにはさらに追加でmdpファイル（molecular dynamics parameter file）を用意する必要がある。 mdpファイルはMD計算で使用するパラメータの設定ファイルである。 mdpファイルは通常、MD計算の条件（温度、圧力、タイムステップなど）を記述し、<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>によって実際にMD計算を行う際の入力ファイル（tprファイル）を作成するために使用される。 ただし現時点ではイオンを追加するだけなので、今回使用するmdpファイルはその設定のみが記述されている。</p>
+<p>ions.mdpを<a class="reference external" href="https://shalad2.github.io/JellyPage/gromacs/download/ions.mdp">ここ</a>からダウンロードして<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>を実行する。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">gmx gromppオプション</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-f</td>
+<td align="center">入力mdpファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-c</td>
+<td align="center">入力構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-p</td>
+<td align="center">トポロジーファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-o</td>
+<td align="center">出力tprファイルの指定</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">grompp</span> <span class="o">-</span><span class="n">f</span> <span class="n">ions</span><span class="o">.</span><span class="n">mdp</span> <span class="o">-</span><span class="n">c</span> <span class="mi">1</span><span class="n">AKI_solv</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span><span class="n">o</span> <span class="n">ions</span><span class="o">.</span><span class="n">tpr</span>
+</pre></div>
+</div>
+<p>tprファイルは系の全原子の情報を記述したバイナリファイルであり、これを用いて系にイオンを追加する。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">gmx genionオプション</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-s</td>
+<td align="center">入力tprファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-o</td>
+<td align="center">出力構造ファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-p</td>
+<td align="center">トポロジーファイルの指定</td>
+</tr>
+<tr>
+<td align="center">-pname</td>
+<td align="center">追加する陽イオンの指定</td>
+</tr>
+<tr>
+<td align="center">-nname</td>
+<td align="center">追加する陰イオンの指定</td>
+</tr>
+<tr>
+<td align="center">-neutral</td>
+<td align="center">系全体の電荷が0になるようにイオンを追加</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">genion</span> <span class="o">-</span><span class="n">s</span> <span class="n">ions</span><span class="o">.</span><span class="n">tpr</span> <span class="o">-</span><span class="n">o</span> <span class="mi">1</span><span class="n">AKI_solv_ions</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span><span class="n">pname</span> <span class="n">NA</span> <span class="o">-</span><span class="n">nname</span> <span class="n">CL</span> <span class="o">-</span><span class="n">neutral</span>
+</pre></div>
+</div>
+<p>実行すると溶媒として利用する分子を聞かれるので、<code class="docutils literal notranslate"><span class="pre">13</span></code>（SOL）を選択する。 これにより、溶媒の水分子の一部をイオンに置き換えることができる。 今回は+8の電荷を打ち消すために8つのClイオンが追加されており、トポロジーファイルを確認すると[ molecules ]にイオンが反映されている。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">topol</span><span class="o">.</span><span class="n">top</span>    
+<span class="p">[</span> <span class="n">molecules</span> <span class="p">]</span>
+<span class="p">;</span> <span class="n">Compound</span>      <span class="c1">#mols</span>
+<span class="n">Protein_A</span>         <span class="mi">1</span>
+<span class="n">SOL</span>           <span class="mi">10636</span>
+<span class="n">CL</span>                <span class="mi">8</span>
+</pre></div>
+</div>
+<p>以上で、系の構築は完了である。VMDで確認してみると、下図のような構造が見られるであろう。</p>
+<p><img alt="1aki_solv_ion" src="https://shalad2.github.io/JellyPage/gromacs/images/1aki_solv_ion.png" /></p>
+</div>
+<div class="section" id="id5">
+<h2>まとめ<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これまでの内容をまとめる。系の構築のために以下の手順を踏んだ。</p>
+<ol class="simple">
+<li><p>タンパク質のPDBファイルを<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">pdb2gmx</span></code>によりGROMACSフォーマットに変換した。</p></li>
+<li><p>シミュレーションボックスを<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">editconf</span></code>で作成し、<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">solvate</span></code>によりボックス内を溶媒で満たした。</p></li>
+<li><p>ボックス内に<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">genion</span></code>でイオンを追加した。</p></li>
+</ol>
+<p>次回は作成した系を用いて実際にMD計算をしていく。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB.html" class="btn btn-neutral float-left" title="GROMACSチュートリアル" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, ikawabata.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

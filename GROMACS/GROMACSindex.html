@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GROMACSチュートリアル &mdash; bros.  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="1. シミュレーションの準備" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html" />
+    <link rel="prev" title="GROMACSのインストール" href="GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> bros.
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html">GROMACSのインストール</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GROMACSチュートリアル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">目次</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html">1. シミュレーションの準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html">2.MDシミュレーションの実行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html">3.シミュレーション結果の解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html">4.【補足】トポロジーファイルの詳細</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html">5.【補足】mdpファイルの詳細</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">bros.</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>GROMACSチュートリアル</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/GROMACS/GROMACSindex.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gromacs">
+<h1>GROMACSチュートリアル<a class="headerlink" href="#gromacs" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>このチュートリアルでは、水とイオンが入ったボックス内のタンパク質（lysozyme）を扱う。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>チュートリアルではGROMACS 2018.xシリーズを使用するため、手元のバージョンを確認しておく。</p>
+</div>
+<div class="section" id="id1">
+<h2>目次<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このチュートリアルの目標は、MDシミュレーションの流れを理解しながらGROMACSの基本的な使い方を習得することである。 そのため、シミュレーションに必要な設定ファイルの内容には触れていない。 ファイルの詳細については【補足】にまとめているので、より理解を深めるために参照してほしい。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html">1. シミュレーションの準備</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html#id2">タンパク質の構造を準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html#id3">シミュレーションボックスの作成と溶媒の追加</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html#id4">イオンの追加</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html#id5">まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html">2.MDシミュレーションの実行</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html#id1">エネルギー最小化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html#nvt">NVT平衡化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html#npt">NPT平衡化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html#production-run">本計算（Production Run）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.2.html#id2">まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html">3.シミュレーション結果の解析</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html#id2">トラジェクトリの修正</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html#rmsd">RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html#id3">回転半径</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.3.html#id4">まとめ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html">4.【補足】トポロジーファイルの詳細</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html#id2">力場パラメータ、分子タイプセクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html#id3">原子セクション、結合関連セクション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html#id4">位置拘束パラメータ、水・イオンの力場パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.4.html#id5">系全体の情報</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html">5.【補足】mdpファイルの詳細</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html#minim-mdp">minim.mdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html#nvt-mdp">nvt.mdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html#npt-mdp">npt.mdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html#md-mdp">md.mdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.5.html#id1">まとめ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>なお、本チュートリアルの内容は「GROMACS Tutorial1: Lysozyme in Water」を参考にしている。 初学者向けに全体の流れを重視しているため、詳細は <a class="reference external" href="http://www.mdtutorials.com/gmx/lysozyme/index.html">英語版のページ</a> を参照してほしい。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GROMACS%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB1.1.html" class="btn btn-neutral float-right" title="1. シミュレーションの準備" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html" class="btn btn-neutral float-left" title="GROMACSのインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, ikawabata.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

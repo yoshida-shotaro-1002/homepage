@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Gitの使い方1 &mdash; MDnotes  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Gitの使い方2" href="github2.html" />
+    <link rel="prev" title="Sphinxの使い方その4" href="../SPHINX/sphinx4.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MDnotes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACS%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinx1.html">Sphinxの使い方その1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinx2.html">Sphinxの使い方その2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinx3.html">Sphinxの使い方その3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinx4.html">Sphinxの使い方その4</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gitの使い方1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">説明に入る前に</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">GitHubって何？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="github2.html">Gitの使い方2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github3.html">Gitの使い方について3</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Gitの使い方1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git1">
+<h1>Gitの使い方1<a class="headerlink" href="#git1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>説明に入る前に<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず初めに、今回の説明では引用が多くなる気がするので引用あるいは参考にしたサイトのリンクを以下に載せておく。</p>
+<p>・「エンジニアHub」より</p>
+<p><a class="reference external" href="https://eh-career.com/engineerhub/entry/2017/01/31/110000">今日からはじめるGitHub ～ 初心者がGitをインストールして、プルリクできるようになるまでを解説</a></p>
+<p>・「ネビ活」より</p>
+<p><a class="reference external" href="https://nebikatsu.com/6381.html/">GitのCommitとは？AddやPushとの違いは？初心者向けに図解でやさしく解説！</a></p>
+<p>・「note.nkmk.me」より</p>
+<p><a class="reference external" href="https://note.nkmk.me/git-add-u-a-period/">git add -u と git add -A と git add . の違い</a></p>
+<p>筆者が色々調べている中でも良いと思ったサイトなのでかなり参考になるはずだ。というかこれらを見ればかなり分かるようになる。そのためこれらの外部サイトに任せるところは任せて、補足を付け足しながら実際にサイトを共同で作っていく流れを書いていこうと思う。</p>
+</div>
+<div class="section" id="github">
+<h2>GitHubって何？<a class="headerlink" href="#github" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>早速だが</p>
+<p><a class="reference external" href="https://eh-career.com/engineerhub/entry/2017/01/31/110000">今日からはじめるGitHub ～ 初心者がGitをインストールして、プルリクできるようになるまでを解説</a></p>
+<p>のサイトをまず見てみてほしい。すべて読まなくても「GitHubの基礎用語」程度まででよい。</p>
+<hr class="docutils" />
+<img src="C:\Users\kawabata\Pictures\Camera Roll\GitHub.jpg" width="80%"><p>さて筆者なりにも説明をしてみよう。</p>
+<p>まず、<strong>GitHub</strong>とは別物として<strong>Git</strong>がある。<strong>Git</strong>は<strong>分散型バージョン管理システム</strong>であり、これによりローカル(自分の手元のPC)でファイルを編集・変更し、その変更情報を登録・あるいは前の情報に復元等ができるということである。サイトの例にあったように複数の人が同時に同じ箇所の変更を行っていた場合不都合が生じる。</p>
+<p>例えばAさんとBさんが同時に変更を行うと、コードとして一貫性がなく全体として繋がらないコードになる可能性がある。あるいはAさんがたった今編集したコードをもとにBさんがさらに編集したとする。その後にAさんの書いたコードに間違いがあったことが発覚すると、Bさんの編集作業にまで影響が出る。</p>
+<p>しかし分散して管理していれば、AさんとBさんの変更は互いにすぐに影響が出るわけではなく、また誤りがあっても自分の分を修正するだけで済むということである。</p>
+<p>これに対して<strong>GitHub</strong>はGitを用いたソフトウェア開発プロジェクトのための<strong>共有ウェブサービス</strong>である。Gitで分散して各々が編集したものを統合するためのウェブサービスという認識を筆者はしている。使い方としてはまずGitHubのウェブ上にある大元のファイルを手元にコピーする。そのコピーファイルを編集等してその情報をGitで管理する。最後にコピーに対してした変更を大元にも反映する。こうすることで先に述べたような集中型のリスクを避けつつ変更した後の実行結果を手元で確認できるほか、また大元に反映する過程で他の共同開発者にその変更が適切かどうかをチェックしてもらえる利点もある。</p>
+<p>以上がGitHubとGitについての簡単な説明である。</p>
+<hr class="docutils" />
+<p>でもたかだかサイト作るのにそこまでする必要あるの？と思うかもしれない。GitHubを使う大きな理由はもう１つある。というよりこちらがメインの理由である。</p>
+<p>それは<strong>無料</strong>でサーバーを使えて自分のウェブページを公開できるということである。</p>
+<p>Sphinx等を使ってウェブページを作成しても、それを公開するための設備や環境がなければ意味がない。サイトを公開するためには基本的にレンタルサーバーを借りるか、あるいは自社(自宅)サーバーを用意するということになる。レンタルサーバーは当然利用にお金がかかるし、自社サーバーであればそのための高性能なパソコンが必要で、またそれをセッティング・メンテナンスする技術も必要だ。</p>
+<p>しかしGitHubを使えば、GitHub上にファイルをアップロードするだけで簡単にウェブページを公開できてしまう。しかも無料で。</p>
+<p>あとは何かとGitHubからコードをダウンロードしたりすることもあるのでGitHubについて知っておくことは損ではないし、共同開発っぽくてかっこいいし、T先輩リスペクトもある。</p>
+<p>ということでとにかくGitHubを使ってみよう！</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="github2.html" class="btn btn-neutral float-right" title="Gitの使い方2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../SPHINX/sphinx4.html" class="btn btn-neutral float-left" title="Sphinxの使い方その4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, S.Harada,I.Kawabata,S.Ikeda,K.Shibata.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
