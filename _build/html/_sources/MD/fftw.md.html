@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FFTW &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>FFTW</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fftw">
+<h1>FFTW<a class="headerlink" href="#fftw" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><img alt="_sources/MD/fftw.png" src="_sources/MD/fftw.png" /></p>
+<p>高速フーリエ変換ができるライブラリ？詳しいことはわかんないけど様々なMDソフトのインストールに必要になるためインストールしておくべし</p>
+<section id="id1">
+<h2>インストール方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="http://www.fftw.org/">FFTW3のサイト</a>にアクセス、Downloadingから<code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code>ファイルをダウンロードする。</p>
+<p>以下、<code class="docutils literal notranslate"><span class="pre">~/App/fftw3</span></code>にインストールするものとする。</p>
+<p>ダウンロードしたディレクトリに行って</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir ~/App/fftw3
+<span class="nb">cd</span> fftw-3.3.8 <span class="c1"># 2019現在。数字は異なる可能性あり。</span>
+./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/App/fftw3 --enable-threads --enable-float --enable-sse2
+make -j <span class="m">8</span> <span class="c1"># 8はパソコンのコア数。スパコンでやるときは使わないほうがいい。</span>
+
+<span class="c1"># エラーが出ていなければ、</span>
+make install
+</pre></div>
+</div>
+<p>これで単精度版がインストールできるが、倍精度版も同時にインストールしよう。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/App/fftw3 --enable-threads --enable-sse2
+make -j <span class="m">8</span> <span class="c1"># 8はパソコンのコア数。スパコンでやるときは使わないほうがいい。</span>
+
+<span class="c1"># エラーが出ていなければ、</span>
+make install
+</pre></div>
+</div>
+<p>少し時間はかかるがインストールできるはずだ。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

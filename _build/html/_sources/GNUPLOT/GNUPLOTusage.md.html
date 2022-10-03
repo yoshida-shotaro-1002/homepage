@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gnuplotの使い方 &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>gnuplotの使い方</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gnuplot">
+<h1>gnuplotの使い方<a class="headerlink" href="#gnuplot" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここではgnuplotの使い方について説明する。</p>
+<section id="id1">
+<h2>gnuplotとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>gnuplotとは無料で配布されているフリーのグラフ描画アプリケーションである。</p>
+<p>分子シミュレーションで何か解析を行った際、必ず定量的な数値が出てくる。それをグラフとしてプロットする際に用いる。</p>
+<p>実験の研究でも解析結果をまとめることがあると思うが、通常はExcelを使うはず。その代わりにgnuplotを使うということである。</p>
+<p>メリットとしては1度スクリプトを用意してしまえば、同じ解析結果をいくつもプロットする時に瞬時に作成できてしまうことである。Excelはグラフを作る度にラベルやらフォントやらグラフの色やらを直すのが面倒くさい。</p>
+<p>まあデフォルトの設定を変えたり、マクロを組むなり簡単にする方法はあると思うが、それを含めてもgnuplotの方が早い。</p>
+<p>あとはLinux上ではExcelは動かないし、その解析結果をいちいちWindowsにもっていくのも面倒くさい。そういう諸々の理由でgnuplotを使う。</p>
+</section>
+<section id="id2">
+<h2>gnuplotを早速使う(対話)<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最も簡単なgnuplotの使い方は以下である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gnuplot    #gnuplot起動
+$ p &quot;sample.txt&quot; w l
+</pre></div>
+</div>
+<p>sample.txtは以下からダウンロードできる。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>:download:`sample.txt &lt;item/sample.txt&gt;`
+</pre></div>
+</div>
+<p>グラフが表示されると以下のようになる。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/sample.png
+    :width: 50%
+</pre></div>
+</div>
+<p>簡単にコマンドの説明をしておく。</p>
+<ul class="simple">
+<li><p>p (もしくはplot): プロットするファイル名を指定。</p></li>
+<li><p>w l(もしくはwith line): ライン表示にする。</p></li>
+</ul>
+<p>ただし今の場合ラベルもない上に、色も赤になってしまっている。これらを変更するオプションもあるが、それは<strong>スクリプト</strong>で行う。</p>
+<p>gnuplotはシェルと同じで対話的に使うこともできる一方でスクリプトとしても使用できる。但し対話的な使い方はあくまで簡単にグラフを見たい時であり、基本的に発表用のグラフなどはスクリプトを使う。発表用に体裁を整えるのをいちいち何度もコマンド打ってやっていたら日が暮れてしまうためだ。そのため細かいオプションについては次の項で述べる。</p>
+</section>
+<section id="id3">
+<h2>gnuplotを早速使う(スクリプト)<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>スクリプトを1から書くのは難しい。ある程度テンプレートから自分の好みや、自分のプロットに必要なオプションを追加していきながら学んでいくのがよい。</p>
+<p>そのため筆者が動径分布の解析に用いているスクリプトを用いて説明していく。スクリプトとプロットに必要なデータのファイルを以下からダウンロードできるので、実際に手を動かしながら説明を読んで欲しい。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>:download:`gnuplotスクリプト &lt;item/RDF.gp&gt;`
+:download:`プロット用データ1 &lt;item/GR2_GG_POPE--POPE_AA.dat&gt;`
+:download:`プロット用データ2 &lt;item/GR2_GG_POPE--POPE_CG.dat&gt;`
+</pre></div>
+</div>
+<p>説明の都合上スクリプトをコードとして以下にも載せておく。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">terminal</span> <span class="n">pngcairo</span> <span class="n">enhanced</span> <span class="n">size</span> <span class="mi">600</span><span class="p">,</span><span class="mi">600</span> <span class="n">font</span> <span class="s2">&quot;Times New Roman, 18&quot;</span>
+<span class="nb">set</span> <span class="n">output</span> <span class="s2">&quot;rdf.png&quot;</span>
+<span class="c1">#set size square</span>
+<span class="c1">#set size ratio 0.50</span>
+<span class="nb">set</span> <span class="n">tmargin</span> <span class="n">at</span> <span class="n">screen</span> <span class="mf">0.85</span>
+<span class="nb">set</span> <span class="n">lmargin</span> <span class="n">at</span> <span class="n">screen</span> <span class="mf">0.20</span>
+<span class="nb">set</span> <span class="n">rmargin</span> <span class="n">at</span> <span class="n">screen</span> <span class="mf">0.80</span>
+<span class="nb">set</span> <span class="n">bmargin</span> <span class="n">at</span> <span class="n">screen</span> <span class="mf">0.25</span>
+<span class="nb">set</span> <span class="n">title</span> <span class="s2">&quot;RDF (POPE-POPE)&quot;</span> <span class="n">offset</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.0</span>
+<span class="nb">set</span> <span class="n">key</span> <span class="n">below</span> <span class="n">right</span> <span class="n">font</span> <span class="s1">&#39;Times New Roman,15&#39;</span>
+<span class="c1">#set key left at graph 0.25,-0.25 font &#39;Times New Roman,15&#39; </span>
+<span class="c1">#set key right top font &#39;Times New Roman,12&#39;</span>
+<span class="nb">set</span> <span class="n">xlabel</span> <span class="s2">&quot;r (nm)&quot;</span> <span class="n">offset</span> <span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span> <span class="n">font</span> <span class="s1">&#39;Times New Roman, 20&#39;</span>
+<span class="nb">set</span> <span class="n">ylabel</span> <span class="s2">&quot;g(r)&quot;</span> <span class="n">offset</span> <span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span> <span class="n">font</span> <span class="s1">&#39;Times New Roman, 20&#39;</span>
+<span class="nb">set</span> <span class="n">y2label</span> <span class="s2">&quot;coordinate number&quot;</span> <span class="n">offset</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">0.0</span> <span class="n">font</span> <span class="s1">&#39;Times New Roman, 20&#39;</span>
+<span class="nb">set</span> <span class="n">label</span> <span class="n">font</span> <span class="s2">&quot;Times New Roman, 18&quot;</span>
+<span class="c1">#set xrange [0:24] </span>
+<span class="c1">#set yrange [0:40.0]</span>
+<span class="c1">#set y2range [0:40.0]</span>
+<span class="nb">set</span> <span class="n">xtics</span> <span class="n">nomirror</span> 
+<span class="nb">set</span> <span class="n">ytics</span> <span class="n">nomirror</span> 
+<span class="nb">set</span> <span class="n">y2tics</span> <span class="n">nomirror</span> 
+<span class="c1">#set xtics 10</span>
+<span class="c1">#set mxtics 10</span>
+<span class="c1">#unset mxtics</span>
+<span class="c1">#set ytics 0.2</span>
+<span class="c1">#mxtics 2</span>
+<span class="c1">#unset mytics</span>
+<span class="nb">set</span> <span class="n">tics</span> <span class="n">font</span> <span class="s2">&quot;Times New Roman, 14&quot;</span>
+<span class="nb">set</span> <span class="nb">format</span> <span class="n">y</span> <span class="s2">&quot;</span><span class="si">%2.1f</span><span class="s2">&quot;</span>
+<span class="n">plot</span> <span class="s1">&#39;GR2_GG_POPE--POPE_CG.dat&#39;</span> <span class="n">u</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span> <span class="n">axis</span> <span class="n">x1y1</span> <span class="k">with</span> <span class="n">line</span> <span class="n">lt</span> <span class="n">rgbcolor</span> <span class="s2">&quot;red&quot;</span> <span class="n">title</span> <span class="s2">&quot;pSPICA&quot;</span><span class="p">,</span>\
+     <span class="s1">&#39;GR2_GG_POPE--POPE_AA.dat&#39;</span> <span class="n">u</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span> <span class="n">axis</span> <span class="n">x1y1</span> <span class="k">with</span> <span class="n">line</span> <span class="n">lt</span> <span class="n">rgbcolor</span> <span class="s2">&quot;orange&quot;</span> <span class="n">title</span> <span class="s2">&quot;AA&quot;</span><span class="p">,</span>\
+	 <span class="s1">&#39;GR2_GG_POPE--POPE_CG.dat&#39;</span> <span class="n">u</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span> <span class="n">axis</span> <span class="n">x1y2</span> <span class="k">with</span> <span class="n">line</span> <span class="n">lt</span> <span class="n">rgbcolor</span> <span class="s2">&quot;blue&quot;</span> <span class="n">title</span> <span class="s2">&quot;pSPICA&quot;</span><span class="p">,</span>\
+	 <span class="s1">&#39;GR2_GG_POPE--POPE_AA.dat&#39;</span> <span class="n">u</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span> <span class="n">axis</span> <span class="n">x1y2</span> <span class="k">with</span> <span class="n">line</span> <span class="n">lt</span> <span class="n">rgbcolor</span> <span class="s2">&quot;green&quot;</span> <span class="n">title</span> <span class="s2">&quot;AA&quot;</span>
+<span class="c1">#set terminal pop</span>
+</pre></div>
+</div>
+<p>スクリプトを使用する際は、<code class="docutils literal notranslate"><span class="pre">gnuplot</span> <span class="pre">RDF.gp</span></code>というように「gnuplot + 入力ファイル(スクリプト)」とすればよい。</p>
+<p>すると以下のようなrdf.pngが生成されるはずだ。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/rdf.png
+    :width: 50%
+</pre></div>
+</div>
+<p>上記の画像を元に説明していく。しかし、gnuplotを1から体系的に説明するのはその膨大さ故に不可能であるので、細かいオプションについては簡単に説明し、使用するコマンドの主要部分に要点を当てて説明する。</p>
+<p>尚、このプロットは全原子計算と粗視化計算においてそれぞれPOPE脂質同士の動径分布を解析したものである。動径分布に加えて配位数も同時にプロットしている。</p>
+<section id="terminal">
+<h3>terminal<a class="headerlink" href="#terminal" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>gnuplotはターミナルというものを切り替えることができ、自分が作成するファイルの種類や用途に応じてこれを切り替える。</p>
+<p>筆者が使用しているのはpng形式の画像を作成するためのモードである、「pngcairo」である。モードの切り替えには</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">terminal</span> <span class="pre">pngcairo</span></code>とすればよい。pngのターミナルになっていないのに、出力ファイル名の拡張子をpngとしてもpngを作れないので注意。</p>
+</section>
+<section id="output">
+<h3>output<a class="headerlink" href="#output" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>出力ファイル名の指定である。<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">output</span> <span class="pre">&quot;hoge.png&quot;</span></code>とすればよい。</p>
+</section>
+<section id="margin">
+<h3>margin<a class="headerlink" href="#margin" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>グラフの余白サイズを決める。アルファベットはそれぞれ以下の意味。</p>
+<ul class="simple">
+<li><p><strong>tmargin:</strong> グラフの大きさ(縦)</p></li>
+<li><p><strong>lmargin:</strong> 左部の余白</p></li>
+<li><p><strong>rmargin:</strong> グラフの大きさ(横)</p></li>
+<li><p><strong>bmargin:</strong> 下部の余白</p></li>
+</ul>
+<p>正直意味が分からない。が、以下のリンクによればそういうことらしい？</p>
+<p><a class="reference external" href="https://qiita.com/_shin_/items/38fc8dfd7dbc4226e64b">gnuplot小ワザまとめ</a></p>
+<p>普通に上部、左部、右部、下部の余白でよくないか...?と思うが確かに数値を色々試しているとそういう挙動ではなさそう。</p>
+<p>いずれにしても、値を色々変えながら最適なグラフの形を見つけていくのが現実的な使い方。コマンドは以下。</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">tmargin</span> <span class="pre">at</span> <span class="pre">screen</span> <span class="pre">0.85</span></code></p>
+</section>
+<section id="title">
+<h3>title<a class="headerlink" href="#title" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>グラフ上部にタイトルをつけることができるが、正直なくていい。</p>
+<p>気分で付けたりする。コマンドは <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">title</span> <span class="pre">&quot;Title</span> <span class="pre">name&quot;</span></code></p>
+</section>
+<section id="key">
+<h3>key<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>keyとは凡例のことである。1種類の解析結果しかない場合は必要ないが、同じ解析に対して複数種類の対象がある場合は凡例を付ける。この際凡例の位置を定義することができる。</p>
+<p>基本的にデフォルトではグラフ内の右上であるが、ものによってはグラフの線と凡例が重なることがある。そういう場合、筆者はグラフの下部に凡例を表示している。凡例の位置は以下のコマンドで決めることができる。</p>
+<ul class="simple">
+<li><p><strong>左右位置:</strong> { left | center | right }</p></li>
+<li><p><strong>上下位置:</strong> { top | center | bottom }</p></li>
+<li><p><strong>グラフ内外:</strong> { inside | outside }</p></li>
+</ul>
+<p>belowは上記のオプションとはまた別物であるが、説明は省く。というか筆者も理解できていない。とりあえずグラフの下部に凡例をつけるという認識でいい。</p>
+<p>また並び方も指定することができる。</p>
+<ul class="simple">
+<li><p><strong>凡例並べ方:</strong> { horizontal | vertical }</p></li>
+</ul>
+<p>verticalの場合は凡例を縦に並べる。反対にhorizontalは凡例を横に並べる。にも関わらず、horizontalはなぜか横の行をできるだけ少なく使おうとするらしい。maxrowsあるいはmaxcolsオプションで変更できるようだが、筆者は試したことない。</p>
+<p>凡例が必要ない場合は、<code class="docutils literal notranslate"><span class="pre">unset</span> <span class="pre">key</span></code>とすればよい。</p>
+</section>
+<section id="label">
+<h3>label<a class="headerlink" href="#label" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>その名の通りラベル名。xlabelであればx軸の、ylabelであればy軸の名前を決めることができる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">xlabel</span> <span class="pre">&quot;r</span> <span class="pre">(nm)&quot;</span></code>とすればよい。</p>
+</section>
+<section id="tics">
+<h3>tics<a class="headerlink" href="#tics" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ticsとは目盛りのこと。xticsではx軸に目盛りをつけることができる。</p>
+<p>mirrorオプションをつける場合、グラフの下側(x軸)だけでなく反対の上側にも目盛りをつけることができる。片方だけに目盛りをつけたければ、nomirrorとする。そのためコマンドは以下。</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">xtics</span> <span class="pre">nomirror</span></code></p>
+<p>また <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">xtics</span> <span class="pre">10</span></code>とした場合、10間隔で目盛りを刻むことができる。</p>
+<p>さらにmticxというコマンドもあり、目盛りの間により細かい副目盛りを刻むこともできる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">mtics</span> <span class="pre">10</span></code>とした場合、主目盛りの間隔の間に10個の副目盛りを刻む。mticsとticsでは引数に与える数字の意味が異なるので注意。</p>
+<p>目盛り(副目盛り)が必要ない場合は<code class="docutils literal notranslate"><span class="pre">unset</span> <span class="pre">(m)ticx</span></code>とする。</p>
+</section>
+<section id="format">
+<h3>format<a class="headerlink" href="#format" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>目盛りにつける数値の形式を決めることができる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">format</span> <span class="pre">y</span> <span class="pre">&quot;%2.1f&quot;</span></code>とした場合、**「y」<strong>軸目盛の数値を定義し、全</strong>「2」<strong>桁で小数点以下</strong>「１」**桁で表示するという意味である。</p>
+<p>ちなみにfは書式指定のための文字であり、「e, f, g」のいずれかを記述する。意味は以下の通り。</p>
+<ul class="simple">
+<li><p><strong>e:</strong> 指数表示</p></li>
+<li><p><strong>f:</strong> 小数表示</p></li>
+<li><p><strong>g:</strong> 自動</p></li>
+</ul>
+<p>ちなみに特に指定しなければデフォルトとしてgになるらしいが、どういう基準で自動的に表示方法が決まるのかは分からない。</p>
+<p>とにかくeかfを使い分ければよい。</p>
+</section>
+<section id="plot">
+<h3>plot<a class="headerlink" href="#plot" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>プロットのためのコマンド。最も重要なコマンドであり、オプションが訳分からないくらいある。ので、現状使いそうなオプションだけ紹介する。</p>
+<p>冒頭で述べたように基本的な使い方は<code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&quot;sample.txt&quot;</span> <span class="pre">w</span> <span class="pre">l</span></code>である。線ではなく点で表示したければ、with linesではなくwith pointsあるいは w p とすればよい。</p>
+<p>さて、ここにオプションを足していく。</p>
+<section id="using-x-y-u-x-y">
+<h4>using X:Y (U X:Y)<a class="headerlink" href="#using-x-y-u-x-y" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>プロットに使用する列を選択できる。<code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">X:Y</span></code>とするとファイルのX列目をx軸に、y列目をy軸にプロットする。</p>
+<p>しかし基本的に１つの解析では2列が普通であり(時間経過に対するエネルギー変化とか、動径に対する分布とか)、あまりこのオプションを使う機会は少ないかもしれない。</p>
+<p>入力ファイルに数値が2列しかなければこのオプションを使わなくてもデフォルトで1列目をx軸に、2列目をy軸にプロットしてくれる。</p>
+</section>
+<section id="axis">
+<h4>axis<a class="headerlink" href="#axis" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>けっこうマイナーなコマンド。</p>
+<p>今の例では動径に対して分布と配位数の2つがプロットされているためy方向のラベルが2つあるが、基本的にはx１つに対してy１つである。そのため通常はこのコマンドを使用しないが、今のような状況ではこのコマンドが必要になる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">x1y1</span></code>とした場合、下側のx軸と左側のy軸にプロットができる。<code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">x1y2</span></code>とした場合、下側のx軸と右側のy軸にプロットができる。</p>
+</section>
+<section id="lt-rgbcolor-red">
+<h4>lt rgbcolor &quot;red&quot;<a class="headerlink" href="#lt-rgbcolor-red" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">lt</span> <span class="pre">rgbcolor</span> <span class="pre">&quot;red&quot;</span></code>で線を赤色に変えるコマンド。色を変える変え方は何通りかあるが、筆者はこの書き方で書いている。</p>
+<p>そもそも**linetype(lt)**で1つのコマンドである。線の種類を変えることができ、色を変えるだけでなく線の太さなども変えることができる。また類似コマンドとしてpointtype(pt)もある。こちらは点種。点の色や形を変えることができる。</p>
+<p>ただこれらについて説明していると日が暮れるので、とりあえずここまでにする。</p>
+<p>linetypeコマンドに対してrgbcolorというオプションがあり、色の名称を指定することでその色に線の色を変更可能。</p>
+<p>ちなみに色はかなり細かく分類されており、絶妙な色でもググれば名前が色々出てくるので時間がある時に眺めてみるとよい。</p>
+</section>
+<section id="id4">
+<h4>title<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>凡例の名前である。特に言うことなし。タイトルが不要であればnotitleとすればよい。</p>
+</section>
+<section id="id5">
+<h4>,<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>これは画面についたゴミではない。１つのコマンド(？)である。プロットしたい対象がいくつかある場合、「,」で区切ることで複数のプロットが可能になる。</p>
+</section>
+<section id="id6">
+<h4>\<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>これもゴミではない。行の末尾につけることで「１行で本当は書きたいけど長すぎてスクリプトが見にくくなる」という時に、「\」を書くことで、次の行とまとめて１行と見なしてくれる。</p>
+</section>
+<section id="offset">
+<h4>offset<a class="headerlink" href="#offset" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>コマンドというより、各コマンドに含まれるオプションである。offsetに数値を渡すことでその数値に応じてラベルなどの文字の位置を制御できる。これもmarginと同じで色々数値を変えながらプロットしていき、最適な数値を見つけるべし。</p>
+</section>
+<section id="font">
+<h4>font<a class="headerlink" href="#font" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>こちらも各コマンドに含まれるオプション。文字の種類や大きさを変えることができる。文字の種類は何を使うという決まりはないが、筆者は&quot;Times New Roman&quot;を使っている。あとは&quot;arial&quot;とかがメジャーかもしれない。フォントも特に決まりはなく、発表の資料で見えるサイズなら何でもいい。こういうのは研究室によってちゃんと決まっているはずなのだが、あいにくうちの研究室はガバガバなので何も言われていない。</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

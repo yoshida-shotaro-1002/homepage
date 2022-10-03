@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VMDについて3 &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>VMDについて3</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vmd3">
+<h1>VMDについて3<a class="headerlink" href="#vmd3" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="vmd">
+<h2>VMD上級編<a class="headerlink" href="#vmd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまでの知識があればVMDの操作で困ることはまず困らないであろう。しかし実際の研究ではより込み入った知識が必要となる時がある。必ずしも必要ではないかもしれないが、役に立つと思われる知識を載せていこうと思う。</p>
+<section id="id1">
+<h3>VMDでの画像保存<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これまではVMDを使用して分子を可視化することに重点を置いてきた。しかしミーティングや発表などではその可視化した画を見せることもよくある。そのための方法について説明する。</p>
+<p><strong>・GUIを用いる方法</strong></p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic4.png
+    :width: 30%
+</pre></div>
+</div>
+<p>まずは上の画像のようなVMD main GUIを開いて欲しい。</p>
+<p>そして次に<strong>Fileタブ</strong>をクリックする。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic10.png
+    :width: 10%
+</pre></div>
+</div>
+<p>さらに出てきた項目の中から<strong>Render</strong>をクリックする。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic11.png
+    :width: 10%
+</pre></div>
+</div>
+<p>このGUIの説明を少ししておく。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">scene</span> <span class="pre">using</span></code></p>
+<p>分子の写り方を変えることができる。デフォルトは<strong>Snapshot</strong>。筆者はいつもこれで保存している。特に理由がなければこれでいい気もする。T先輩曰く<strong>Tachylon</strong>がおすすめ。影がついて立体的に見えて見栄えがよい。発表用の画像はこれで保存することもある。ただし書き出しに少し時間がかかるため筆者は普段使いはしていない。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Filename</span></code></p>
+<p>ファイルの名前。上記の名前だとfugafuga.tgaというファイル名になる。VMDの出力はtgaというファイルである。拡張子を外して名前を変えたとしてもtgaとして出力された気がする。</p>
+<p>そのため通常使用するpngなどに変換する必要がある。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">Command</span></code></p>
+<p>ここにコマンドを入力すると先に述べたようなtgaからpngへの変換ができるらしい。ただし筆者はいつも別の方法を使用しているので使ったことがない。これについて知りたければT先輩のページに載っているのでそちらを参考にしてほしい。</p>
+<p>では変換したい場合どうするかというと、筆者は<strong>ImageMagick</strong>というツールを使用している。</p>
+<p>これは画像を扱うための様々なコマンドが入ったパッケージである。こちらをインストールすると<strong>mogrify</strong>というコマンドが使用できるようになる。インストールのためには、以下のコマンドをターミナルで叩けばよい。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo dnf install epel-release
+$ sudo ndf install ImageMagick
+</pre></div>
+</div>
+<p>インストール後</p>
+<p><code class="docutils literal notranslate"><span class="pre">mogrify</span> <span class="pre">-fuzz</span> <span class="pre">10%</span> <span class="pre">-transparent</span> <span class="pre">white</span> <span class="pre">-density</span> <span class="pre">2000</span> <span class="pre">-format</span> <span class="pre">png</span> <span class="pre">*tga</span></code></p>
+<p>とすればカレントディレクトリのtgaファイルを一括でpng形式に変換できる。</p>
+<p>詳しいImageMagickの使い方や、mogrigyのオプションの意味については適宜調べて欲しい。</p>
+</section>
+<section id="vmdgif">
+<h3>VMDでGIFを作る<a class="headerlink" href="#vmdgif" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>どうしても静止画では現象を説明しにくい場合がある。しかし動画にするほどではないという時がある。そんな時にはGIFを作るとよい。</p>
+<p>VMDでは標準でGIFを作る機能が備わっているので紹介する。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic11.png
+    :width: 30%
+</pre></div>
+</div>
+<p>Main GUIの<strong>Extensions</strong>タブをクリックする。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic12.png
+    :width: 30%
+</pre></div>
+</div>
+<p>さらに<strong>Visualization</strong>をクリックする。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic13.png
+    :width: 10%
+</pre></div>
+</div>
+<p>そして<strong>Movie Maker</strong>をクリックする。</p>
+<p>これにより<strong>Movie Generator</strong> のGUIが表示される。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic14.png
+    :width: 10%
+</pre></div>
+</div>
+<p>このGUIを用いたGIFの作り方について順番に説明していく。</p>
+<section id="render">
+<h4>Render<a class="headerlink" href="#render" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>分子の写り方のデザインを変更できる。「VMDでの画像保存」の項目で説明した<code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">scene</span> <span class="pre">using</span></code>と同じである。但し&quot;Tachyon&quot;は綺麗だがGIFの場合はより時間がかかる。そのため時間がない場合は&quot;Snapshot&quot;をお勧めする。</p>
+</section>
+<section id="movie-settings">
+<h4>Movie Settings<a class="headerlink" href="#movie-settings" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>&quot;Trajectory&quot;にチェックを入れよう。</p>
+<p>またデフォルトでチェックが入っている<code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">image</span> <span class="pre">files</span></code>はこのままでよい。チェックを外すと、GIFを作成するために撮られた一枚一枚のスナップショットがすべて残る。またこのチェックを外していても、一時的にディレクトリにスナップショットのファイルが生成されていく。ディレクトリが一時的ではあるが荒らされるので、専用のディレクトリを作って実行することをお勧めする。</p>
+</section>
+<section id="format">
+<h4>Format<a class="headerlink" href="#format" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>&quot;Animated GIF&quot;にチェックを入れる。</p>
+<p>ここから先の画像のウインドウの説明に戻る。</p>
+</section>
+<section id="set-working-directory">
+<h4>Set working directory<a class="headerlink" href="#set-working-directory" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>GIFを保存したいディレクトリを指定する。先ほど述べたように、専用のディレクトリを作ることを推奨する。</p>
+</section>
+<section id="name-of-movie">
+<h4>Name of movie<a class="headerlink" href="#name-of-movie" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>GIFファイルの名前をつける。</p>
+</section>
+<section id="rotation-angle">
+<h4>Rotation angle<a class="headerlink" href="#rotation-angle" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>デフォルトのまま。</p>
+</section>
+<section id="trajectory-step-size">
+<h4>Trajectory step size<a class="headerlink" href="#trajectory-step-size" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>これは何フレーム間隔でgifに保存していくかを決めるためのものである。</p>
+<p>例えば1200フレームのトラジェクトリを10フレーム間隔でGIFにするとしよう。すると120枚のスナップショットをGIFファイルでパラパラ漫画のように再生することになる。さらにGIFは1秒で24フレーム分(24枚のスナップショット)を表示すると決まっているらしい。</p>
+<p>したがって120(フレーム) ÷ 24(フレーム/秒) = 5(秒)となり、GIFを初めから終わりまで再生するのにかかる時間は5秒ということになる。</p>
+<p>このため、<code class="docutils literal notranslate"><span class="pre">Trajectory</span> <span class="pre">step</span> <span class="pre">size</span></code>に「10」と入力した場合、<code class="docutils literal notranslate"><span class="pre">Movie</span> <span class="pre">duration</span> <span class="pre">(seconds)</span></code>には自動的に5という値が入力される。</p>
+</section>
+<section id="movie-duration">
+<h4>Movie duration<a class="headerlink" href="#movie-duration" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>逆に何秒のGIFを作りたいかで間隔を一義的に決めてもらうこともでき、その場合は<code class="docutils literal notranslate"><span class="pre">Movie</span> <span class="pre">duration</span></code>に再生時間を入力すればよい。</p>
+<p>あとはMake Movieを押して完成を待つだけである！</p>
+</section>
+<section id="gif">
+<h4>GIF ~無限再生編~<a class="headerlink" href="#gif" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>ネットなどに落ちているGIFは永遠に再生され続けるのに、VMDで作成したGIFは3回ループすると終わってしまう。これはGIFファイルのループ回数が3と定められているためである。無限ループにしたければ、<a class="reference external" href="https://ezgif.com/loop-count">ezgif.com</a>を使いましょう。</p>
+<p>ファイルをアップロードして、<code class="docutils literal notranslate"><span class="pre">Loop</span> <span class="pre">count</span></code>に「0」と入力する。「0」は無限ループを意味しており、有限の回数にしたければその回数を入力すればよい。</p>
+<p>その後<code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">loop</span> <span class="pre">count!</span></code>ボタンをクリックすれば、無限ループするGIF画像を作成することができる。</p>
+<p>ただし、35MB以上のGIFに対応していない。そしてVMDで作成するGIFはしばしば35MBを越えがちである。</p>
+<p>そのため筆者は妥協してGIFで再生するスナップショットの枚数を減らしてGIFを作った。</p>
+<p>しかしどうしてもスナップショットを削りたくない時もある。このような場合はスクリプトを組んでVMDでスナップショットを大量に撮影し、Linuxのパッケージである<code class="docutils literal notranslate"><span class="pre">ImageMagick</span></code>のコマンドを使って(この際もシェルスクリプトを組む)GIFを作ることが必要になる。</p>
+<p>これについては超上級編で取り扱う予定である。(やる気があれば)</p>
+</section>
+</section>
+<section id="tcl-tk">
+<h3>Tcl/Tkを使おう！<a class="headerlink" href="#tcl-tk" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ついにTcl/Tkを使う時が来た。</p>
+<p>Tclは1988年にJohn K. Ousterhout博士によって開発されたプログラミング言語の１種である。そしてTkはそのTcl言語を用いたGUI作成用ツールキットである。Tclは「ティーシーエル」と呼んでもいいが、通称は「ティクル」である。
+VMDにはこのTkが搭載されており、Tkコンソールと呼ばれるCUIでTcl言語を使用できる。VMDのコマンドと言われるものはTclによって作られたいわば関数であり、これらもTkコンソールで使用できる。</p>
+<p>早速Tkコンソールを開いてみよう。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic15.png
+    :width: 30%
+</pre></div>
+</div>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic16.png
+    :width: 20%
+</pre></div>
+</div>
+<p>上記画像のようなウインドウが立ち上がるはずだ。試しに1+1と打ってみよう。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic17.png
+    :width: 20%
+</pre></div>
+</div>
+<p>2と返ってくる。プログラミング言語の一種であるため、当然四則演算もできる。</p>
+<p>ただしTclはシンプルなプログラミング言語であり、解析用のスクリプトなどは当たり前だがC++やPythonで組むべきである。</p>
+<p>そんな役に立たないプログラミング言語を1から学ぶのは面倒だと思うかもしれないが、Tclをマスターとまでは行かなくても、VMDのコマンドを使えるようにする、for文, if文の構造制御を使えるようにする、だけでも十分活用できる。さらに関数を定義してオリジナルのスクリプトを組めると尚良いが。</p>
+<p>ここではTcl言語の基本について1から教える訳ではない。VMDのコマンドを中心として、必要最低限の知識を説明する。</p>
+<p>したがってTcl使い方というよりは、VMDを使うためのTclの使い方という認識で読んで欲しい。</p>
+<section id="id2">
+<h4>初期構造を作る<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>筆者は初期構造の作成のためにTclを使うことが大半である。そのためここでは簡単な初期構造の作製を例に説明しながら、VMDのコマンドについても紹介していく。</p>
+<p>まずは水溶液系を切り取るだけの構造作りを行う。この構造作りははっきり言って意味がないが、構造を切り取ることができればある程度思うように構造を作製できるため、ぜひ知識を理解して応用していって欲しい。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic18.png
+    :width: 20%
+</pre></div>
+</div>
+<p>まず画像のような水の系を用意する。この立方体から小さい立方体を切り出すことにする。ちなみに青色の線は周期境界の箱であり、</p>
+<p>コマンドで以下のように入力すれば表示できる。</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="w">  </span><span class="nv">pbc</span><span class="w"> </span>box
+</pre></div>
+</div>
+<p>さて、早速だがVMDで最も重要なコマンド<strong>atomselect</strong>を紹介する。</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

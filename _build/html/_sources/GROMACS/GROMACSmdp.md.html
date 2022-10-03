@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GROMACS.mdpオプション &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>GROMACS.mdpオプション</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gromacs-mdp">
+<h1>GROMACS.mdpオプション<a class="headerlink" href="#gromacs-mdp" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここではGROMACSでMDシミュレーションを実行する時に必要となるmdpファイルの設定について、その内容を日本語で解説する。 より詳しく知りたい場合は<a class="reference external" href="https://manual.gromacs.org/documentation/2018/user-guide/mdp-options.html">公式ドキュメント</a>を参照してほしい。</p>
+<section id="id1">
+<h2>一般情報・前処理<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="title">
+<h3>title<a class="headerlink" href="#title" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>シミュレーションの名前を定義する。任意の名前を指定できる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="n">OPLS</span> <span class="n">NVT</span> <span class="n">SIMULATION</span>
+</pre></div>
+</div>
+</section>
+<section id="define">
+<h3>define<a class="headerlink" href="#define" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>プリプロセッサに渡す定義を指定する。基本的には次の2つが指定できる。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">define</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-DFLEXIBLE</td>
+<td align="center">水モデルに剛体モデルではなくフレキシブルモデルを使用する</td>
+</tr>
+<tr>
+<td align="center">-DPOSRES</td>
+<td align="center">posre.itpなどに設定された位置拘束を適用する</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">define</span> <span class="o">=</span> <span class="o">-</span><span class="n">DFLEXIBLE</span>
+<span class="p">;</span><span class="n">define</span> <span class="o">=</span> <span class="o">-</span><span class="n">DPOSRES</span>    <span class="n">コメントアウトして必要な時のみ有効にする</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>実行制御<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="integrator">
+<h3>integrator<a class="headerlink" href="#integrator" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>演算アルゴリズムを指定する。MDシミュレーションを実行する時は基本的に<code class="docutils literal notranslate"><span class="pre">md</span></code>を使用する。 一方、エネルギー最小化には<code class="docutils literal notranslate"><span class="pre">steep</span></code>を使用することが多い。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrator</span> <span class="o">=</span> <span class="n">md</span>
+<span class="n">integrator</span> <span class="o">=</span> <span class="n">steep</span>    <span class="c1"># 最急降下法アルゴリズム</span>
+</pre></div>
+</div>
+</section>
+<section id="nsteps">
+<h3>nsteps<a class="headerlink" href="#nsteps" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>シミュレーションのステップ数を指定する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nsteps</span> <span class="o">=</span> <span class="mi">50000</span>
+</pre></div>
+</div>
+</section>
+<section id="dt">
+<h3>dt<a class="headerlink" href="#dt" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>シミュレーションのタイムステップを指定する。**単位は[ps]**であることに注意。 一般的な全原子のシミュレーションでは、タイムステップは1[fs]や2[fs]とすることが多い。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.002</span>    <span class="c1"># 2[fs]</span>
+</pre></div>
+</div>
+<p>シミュレーション時間（どのくらいの時間のMD計算を行うか）は<code class="docutils literal notranslate"><span class="pre">nsteps</span></code>と<code class="docutils literal notranslate"><span class="pre">dt</span></code>の組み合わせによって決定する。 次の例は50[ns]のシミュレーションを実行する時の設定である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 50[ns]のシミュレーション設定</span>
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">25000000</span>
+<span class="n">dt</span>     <span class="o">=</span> <span class="mf">0.002</span>         <span class="c1"># 2[fs] x 25000000[steps]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2>エネルギー最小化<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="emtol">
+<h3>emtol<a class="headerlink" href="#emtol" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>エネルギー最小化において、系の最大力がこの値よりも小さくなった場合に収束したと判定する。 デフォルトは10.0[kJ mol-1 nm-1]である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">emtol</span> <span class="o">=</span> <span class="mf">1000.0</span>
+</pre></div>
+</div>
+</section>
+<section id="emstep">
+<h3>emstep<a class="headerlink" href="#emstep" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>エネルギーの初期ステップサイズを指定する。デフォルトは0.01[nm]である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">emstep</span> <span class="o">=</span> <span class="mf">0.01</span>
+</pre></div>
+</div>
+<p>エネルギー最小化は以下のような設定とともに、非結合相互作用を定義して行うことが一般的である。 具体的なmdpファイルの内容はGROMACSのチュートリアルを確認してほしい。 なお、初期構造に原子のオーバーラップがあった場合、この段階で系のエネルギーが跳ね上がるので、原因となる原子を取り除くか、初期構造を操作する必要が出てくる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 一般的なエネルギー最小化のパラメータ設定</span>
+<span class="n">md</span>     <span class="o">=</span> <span class="n">steep</span>
+<span class="n">emtol</span>  <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="n">emstep</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">50000</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2>出力制御<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="nstxout">
+<h3>nstxout<a class="headerlink" href="#nstxout" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>座標をトラジェクトリファイルに書き込むステップ間隔を指定する。出力ファイルはtrr形式となる。 デフォルトでは0（出力しない）設定なので注意すること。しかし、最終構造の座標は常に出力される。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstxout</span> <span class="o">=</span> <span class="mi">500</span>
+</pre></div>
+</div>
+</section>
+<section id="nstvout">
+<h3>nstvout<a class="headerlink" href="#nstvout" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>速度をトラジェクトリファイルに書き込むステップ間隔を指定する。 <code class="docutils literal notranslate"><span class="pre">nstxout</span></code>と同様にtrr形式であり、デフォルトでは出力しない。 最終速度は常に出力される。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstvout</span> <span class="o">=</span> <span class="mi">500</span>
+</pre></div>
+</div>
+</section>
+<section id="nstfout">
+<h3>nstfout<a class="headerlink" href="#nstfout" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>力をトラジェクトリファイルに書き込むステップ間隔を指定する。デフォルトでは出力しない。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstfout</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</section>
+<section id="nstlog">
+<h3>nstlog<a class="headerlink" href="#nstlog" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>エネルギーをログファイルに書き込むステップ間隔を指定する。 デフォルトは1000 [steps]であり、最終エネルギーは常に出力される。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstlog</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</section>
+<section id="nstcalcenergy">
+<h3>nstcalcenergy<a class="headerlink" href="#nstcalcenergy" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>エネルギーを計算するステップ間隔を指定する。次の<code class="docutils literal notranslate"><span class="pre">nstenergy</span></code>でファイルに出力することができる。 デフォルトは100 [steps]であり、0 [steps]を指定することはできない。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstcalcenergy</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</section>
+<section id="nstenergy">
+<h3>nstenergy<a class="headerlink" href="#nstenergy" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>エネルギーをバイナリのエネルギーファイルに書き込むステップ間隔を指定する。 デフォルトは1000 [steps]であり、<code class="docutils literal notranslate"><span class="pre">nstcalcenergy</span></code>の整数倍の値のみが指定できる。 最終エネルギーは常に出力される。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstenergy</span> <span class="o">=</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+</section>
+<section id="nstxout-compressed">
+<h3>nstxout-compressed<a class="headerlink" href="#nstxout-compressed" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>非可逆圧縮をした座標をトラジェクトリファイルに書き込むステップ間隔を指定する。 出力ファイルはxtc形式となる。 デフォルトでは0（出力しない）となっているが、trr形式よりもファイルサイズが小さいため、座標のみの解析を行う場合は同時に出力しておくことが多い。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nstxout</span><span class="o">-</span><span class="n">compressed</span> <span class="o">=</span> <span class="mi">500</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2>結合情報（拘束条件）<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="constraints">
+<h3>constraints<a class="headerlink" href="#constraints" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>結合または角度の拘束を指定する。構造制御を行う場合や、結合のダイナミクスが目的のタイムスケールで必要ない場合などに使用する。 指定できるものの一部を次に示す。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">constraints</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">none</td>
+<td align="center">拘束を行わない 結合や角度は全てポテンシャル関数で記述される</td>
+</tr>
+<tr>
+<td align="center">h-bonds</td>
+<td align="center">水素原子との結合に拘束条件を適用する</td>
+</tr>
+<tr>
+<td align="center">all-bonds</td>
+<td align="center">全ての結合に拘束条件を適用する</td>
+</tr>
+<tr>
+<td align="center">h-angles</td>
+<td align="center">全ての結合に加えて、水素原子を含む角度を結合拘束として適用する</td>
+</tr>
+<tr>
+<td align="center">all-angles</td>
+<td align="center">全ての結合と角度に拘束条件を適用する</td>
+</tr>
+</tbody>
+</table><p>基本的なシミュレーションの場合は<code class="docutils literal notranslate"><span class="pre">constraints</span> <span class="pre">=</span> <span class="pre">h-bonds</span></code>を指定することが多い印象である。</p>
+</section>
+<section id="constraint-algorithm">
+<h3>constraint_algorithm<a class="headerlink" href="#constraint-algorithm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>結合拘束を行う時に使用するアルゴリズムを指定する。以下の2つがある。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">constraint_algorithm</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">LINCS</td>
+<td align="center">LINCSアルゴリズム</td>
+</tr>
+<tr>
+<td align="center">SHAKE</td>
+<td align="center">SHAKEアルゴリズム</td>
+</tr>
+</tbody>
+</table><p>LINCSアルゴリズムがデフォルトとなっており、こちらの方が高速であるが、角度の拘束条件を扱う場合はSHAKEアルゴリズムを使用する必要がある。</p>
+</section>
+<section id="continuation">
+<h3>continuation<a class="headerlink" href="#continuation" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>拘束条件を新しく適用するか、適用せずに以前のものを引き継ぐかを指定できる。 新しいシミュレーションの場合には<code class="docutils literal notranslate"><span class="pre">continuation</span> <span class="pre">=</span> <span class="pre">no</span></code>、以前からの継続または再計算（rerun）の場合には<code class="docutils literal notranslate"><span class="pre">continuation</span> <span class="pre">=</span> <span class="pre">yes</span></code>を指定すればよい。</p>
+<p>以上3つが必須である。次の例は、NVT平衡化が終わった後にNPT平衡化をしたい場合の設定例である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 結合拘束条件</span>
+<span class="n">constraints</span>           <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>
+<span class="n">constraint_algorithm</span>  <span class="o">=</span> <span class="n">LINCS</span>
+<span class="n">continuation</span>          <span class="o">=</span> <span class="n">yes</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2>近接原子情報<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="cutoff-scheme">
+<h3>cutoff-scheme<a class="headerlink" href="#cutoff-scheme" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>近接原子を探索し、相互作用のペアリストを作成するための方法を指定する。 <code class="docutils literal notranslate"><span class="pre">Verlet</span></code>と<code class="docutils literal notranslate"><span class="pre">group</span></code>があるが、基本的に前者を使用する印象。</p>
+</section>
+<section id="nstlist">
+<h3>nstlist<a class="headerlink" href="#nstlist" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ペアリストの更新頻度を指定する。デフォルトは10[steps]となっている。 0[steps]にするとリストは一度だけ作成され、その後は更新されない。 エネルギー最小化ではデフォルトでよいが、本計算では20[steps]や40[steps]にするとパフォーマンスがよいらしい。</p>
+</section>
+<section id="ns-type">
+<h3>ns_type<a class="headerlink" href="#ns-type" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>近接原子の探索タイプを指定する。 <code class="docutils literal notranslate"><span class="pre">grid</span></code>と<code class="docutils literal notranslate"><span class="pre">simple</span></code>が選択できる。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">ns_type</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">grid</td>
+<td align="center">ボックス内にグリッドを作成し、近接グリッドの原子をチェックする。 大きな系では<code>simple</code>よりも速い。</td>
+</tr>
+<tr>
+<td align="center">simple</td>
+<td align="center">単純にペアリストが生成した時、ボックス内の全ての原子をチェックする。</td>
+</tr>
+</tbody>
+</table></section>
+<section id="rlist">
+<h3>rlist<a class="headerlink" href="#rlist" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>近接原子ペアリストのカットオフ距離を指定する。デフォルトは1[nm]である。 <code class="docutils literal notranslate"><span class="pre">cutoff-scheme</span> <span class="pre">=</span> <span class="pre">Verlet</span></code>の場合は無視されるらしい。</p>
+<p>ペアリストに関しては<code class="docutils literal notranslate"><span class="pre">nstlist</span></code>の数値だけ調整して、次の3つを設定すればよいだろう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 近接原子情報</span>
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span> <span class="o">=</span> <span class="n">Verlet</span>
+<span class="n">nstlist</span>       <span class="o">=</span> <span class="mi">20</span>
+<span class="n">ns_type</span>       <span class="o">=</span> <span class="n">grid</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="lj">
+<h2>非結合情報（LJ相互作用、クーロン相互作用）<a class="headerlink" href="#lj" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="coulombtype">
+<h3>coulombtype<a class="headerlink" href="#coulombtype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>クーロン相互作用の計算タイプを指定する。特にこだわりがなければ<code class="docutils literal notranslate"><span class="pre">PME</span></code>を指定しておこう。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">coulombtype</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Cut-off</td>
+<td align="center"><code>rlist</code>と<code>rcoulomb</code>を使用した通常のカットオフ。 "rlist &gt;= rcoulomb"である必要がある。</td>
+</tr>
+<tr>
+<td align="center">Ewald</td>
+<td align="center">古典的なエワルドの方法。実空間のカットオフ<code>rcoulomb</code>は<code>rlist</code>と同じにする必要がある。</td>
+</tr>
+<tr>
+<td align="center">PME</td>
+<td align="center">高速でスムーズなパーティクルメッシュエワルド法。実空間はエワルドに似ているが、逆空間はフーリエ変換を使用する。</td>
+</tr>
+</tbody>
+</table></section>
+<section id="rcoulomb">
+<h3>rcoulomb<a class="headerlink" href="#rcoulomb" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>クーロン相互作用のカットオフ距離を指定する。デフォルトは1[nm]。</p>
+</section>
+<section id="vdwtype">
+<h3>vdwtype<a class="headerlink" href="#vdwtype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>LJ相互作用の計算タイプを指定する。基本的に<code class="docutils literal notranslate"><span class="pre">Cut-off</span></code>を指定する。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">vdwtype</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Cut-off</td>
+<td align="center"><code>rlist</code>と<code>rvdw</code>を使用したツインレンジカットオフ。"rvdw &gt;= rlist"である必要がある。</td>
+</tr>
+<tr>
+<td align="center">PME</td>
+<td align="center">LJ相互作用のための高速スムーズパーティクルメッシュエワルド法。</td>
+</tr>
+</tbody>
+</table></section>
+<section id="vdw-modifier">
+<h3>vdw-modifier<a class="headerlink" href="#vdw-modifier" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>LJポテンシャルを修正する。カットオフで力をスムーズに0とするための<code class="docutils literal notranslate"><span class="pre">Force-switch</span></code>やポテンシャルを0とするための<code class="docutils literal notranslate"><span class="pre">Potential-switch</span></code>が利用できる。 これらのオプションは<code class="docutils literal notranslate"><span class="pre">rvdw-switch</span></code>から<code class="docutils literal notranslate"><span class="pre">rvdw</span></code>までの範囲に適用される。</p>
+</section>
+<section id="rvdw-switch">
+<h3>rvdw-switch<a class="headerlink" href="#rvdw-switch" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>LJポテンシャルスイッチングの開始点（開始距離）。デフォルトは0[nm]で、スイッチングを使用する場合のみ指定する。</p>
+</section>
+<section id="rvdw">
+<h3>rvdw<a class="headerlink" href="#rvdw" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>LJ相互作用のカットオフ距離を指定する。デフォルトは1[nm]。</p>
+</section>
+<section id="dispcorr">
+<h3>DispCorr<a class="headerlink" href="#dispcorr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>長距離分散補正の指定。エネルギーと圧力に使用する<code class="docutils literal notranslate"><span class="pre">EnerPres</span></code>とエネルギーのみに使用する<code class="docutils literal notranslate"><span class="pre">Ener</span></code>がある。</p>
+<p>クーロン相互作用とLJ相互作用の例を示す。LJはスイッチングを使用することが多い。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># クーロン相互作用</span>
+<span class="n">coulombtype</span>  <span class="o">=</span> <span class="n">PME</span>
+<span class="n">rcoulomb</span>     <span class="o">=</span> <span class="mf">1.2</span>
+<span class="c1"># LJ相互作用</span>
+<span class="n">vdwtype</span>      <span class="o">=</span> <span class="n">Cut</span><span class="o">-</span><span class="n">off</span>
+<span class="n">vdw</span><span class="o">-</span><span class="n">modifier</span> <span class="o">=</span> <span class="n">Force</span><span class="o">-</span><span class="n">switch</span>
+<span class="n">rvdw</span><span class="o">-</span><span class="n">switch</span>  <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">rvdw</span>         <span class="o">=</span> <span class="mf">1.2</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id7">
+<h2>温度制御・圧力制御<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="tcoupl">
+<h3>tcoupl<a class="headerlink" href="#tcoupl" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>温度制御の方法を指定する。 参照温度は<code class="docutils literal notranslate"><span class="pre">ref_t</span></code>、カップリング時定数は<code class="docutils literal notranslate"><span class="pre">tau_t</span></code>で指定する。 <code class="docutils literal notranslate"><span class="pre">tc_grps</span></code>を指定すると、選択したグループごとに別々に温度制御を適用することができる。 下記は<code class="docutils literal notranslate"><span class="pre">tcoupl</span></code>に指定できる温度制御法の一部である。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">tcoupl</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">no</td>
+<td align="center">温度制御を行わない</td>
+</tr>
+<tr>
+<td align="center">Berendsen</td>
+<td align="center">Berendsenサーモスタットによる温度制御</td>
+</tr>
+<tr>
+<td align="center">Nose-Hoover</td>
+<td align="center">Nose-Hooverサーモスタットによる温度制御</td>
+</tr>
+<tr>
+<td align="center">V-rescale</td>
+<td align="center">速度スケーリングを用いた温度制御</td>
+</tr>
+</tbody>
+</table><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nose-Hooverサーモスタットによる温度制御</span>
+<span class="n">tcoupl</span>   <span class="o">=</span> <span class="n">Nose</span><span class="o">-</span><span class="n">Hoover</span>
+<span class="n">tc_grps</span>  <span class="o">=</span> <span class="n">Other</span>    <span class="n">Water</span>
+<span class="n">tau_t</span>    <span class="o">=</span> <span class="mf">1.0</span>      <span class="mf">1.0</span>
+<span class="n">ref_t</span>    <span class="o">=</span> <span class="mi">310</span>      <span class="mi">310</span>
+</pre></div>
+</div>
+</section>
+<section id="pcoupl">
+<h3>pcoupl<a class="headerlink" href="#pcoupl" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>圧力制御の方法を指定する。 参照圧力は<code class="docutils literal notranslate"><span class="pre">ref_p</span></code>、カップリング時定数は<code class="docutils literal notranslate"><span class="pre">tau_p</span></code>で指定する。 また、<code class="docutils literal notranslate"><span class="pre">compressibility</span></code>も同時に指定する。 一般には、300[K]における水の値である4.5x10-5[bar-1]が用いられる。 <code class="docutils literal notranslate"><span class="pre">pcoupl</span></code>で指定できる圧力制御法の一部を以下に示す。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">pcoupl</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">no</td>
+<td align="center">圧力制御を行わない体積一定）</td>
+</tr>
+<tr>
+<td align="center">Berendsen</td>
+<td align="center">Berendsenバロスタットによる圧力制御</td>
+</tr>
+<tr>
+<td align="center">Parrinello-Rahman</td>
+<td align="center">Parrinello-Rahmanバロスタットによる圧力制御</td>
+</tr>
+</tbody>
+</table><p>ここが重要であるが、圧力制御を行うには<code class="docutils literal notranslate"><span class="pre">pcoupltype</span></code>で制御タイプを指定する必要がある。 主に使用するのは次の2つである。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">pcoupltype</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">isotropic</td>
+<td align="center">等方性の制御タイプ</td>
+</tr>
+<tr>
+<td align="center">semiisotropic</td>
+<td align="center">半等方性の制御タイプ xy方向とz方向で独立している</td>
+</tr>
+</tbody>
+</table><p>isotropicを使用する場合は<code class="docutils literal notranslate"><span class="pre">ref_p</span></code>と<code class="docutils literal notranslate"><span class="pre">compressibility</span></code>のそれぞれに1つずつの値を設定する。 一方でsemiisotropicを使用する場合は、それぞれに2つずつの値を設定する必要がある。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 等方性圧力制御</span>
+<span class="n">pcoupl</span>          <span class="o">=</span> <span class="n">Parrinello</span><span class="o">-</span><span class="n">Rahman</span>
+<span class="n">pcoupltype</span>      <span class="o">=</span> <span class="n">isotropic</span>
+<span class="n">tau_p</span>           <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">ref_p</span>           <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">compressibility</span> <span class="o">=</span> <span class="mf">4.5e-5</span>
+
+<span class="c1"># 半等方性圧力制御</span>
+<span class="n">pcoupl</span>          <span class="o">=</span> <span class="n">Parrinello</span><span class="o">-</span><span class="n">Rahman</span>
+<span class="n">pcoupltype</span>      <span class="o">=</span> <span class="n">semiisotropic</span>
+<span class="n">tau_p</span>           <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">ref_p</span>           <span class="o">=</span> <span class="mf">1.0</span>       <span class="mf">1.0</span>
+<span class="n">compressibility</span> <span class="o">=</span> <span class="mf">4.5e-5</span>    <span class="mf">4.5e-5</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

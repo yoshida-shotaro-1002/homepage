@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Packmol &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Packmol</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="packmol">
+<h1>Packmol<a class="headerlink" href="#packmol" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="http://m3g.iqm.unicamp.br/packmol/home.shtml">Packmol</a>は、シミュレーションの初期構造を作成する際に便利なソフトウェア。</p>
+<p>例えば、水(TIP3P)とイオン(Na+)のランダムな配置の水溶液を作成したい時などに有用である。</p>
+<section id="id1">
+<h2>インストール方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>適当なディレクトリ(<code class="docutils literal notranslate"><span class="pre">~/App/</span></code>)で、</p>
+<p>ダウンロードして、</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/m3g/packmol.git
+<span class="nb">cd</span> packmol
+make
+</pre></div>
+</div>
+<p>で、使用できるようになるはず。</p>
+<p>あとはパスなりエイリアスなり通せばいいと思う。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 以下を~/.bashrcに追記</span>
+<span class="nb">alias</span> <span class="nv">packmol</span><span class="o">=</span><span class="s1">&#39;~/App/packmol/packmol&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>使い方<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="id3">
+<h3>完全にランダムな配置<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ここでは、水1000分子の中に尿素400分子を入れた水溶液を作成する。</p>
+<p>必要なものは、</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://m3g.iqm.unicamp.br/packmol/examples/water.pdb">水のpdb</a></p></li>
+<li><p><a class="reference external" href="http://m3g.iqm.unicamp.br/packmol/examples/urea.pdb">尿素のpdb</a></p></li>
+<li><p><a class="reference external" href="http://m3g.iqm.unicamp.br/packmol/examples/mixture-comment.inp">packmol用のインプットファイル</a></p></li>
+</ul>
+<p>それぞれダウンロードしておいて欲しい。</p>
+<p>インプットファイルは、以下のようになっている。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># A mixture of water and urea</span>
+<span class="c1">#</span>
+
+<span class="c1"># All the atoms from diferent molecules will be separated at least 2.0</span>
+<span class="c1"># Anstroms at the solution.</span>
+
+tolerance <span class="m">2</span>.0
+
+<span class="c1"># The file type of input and output files is PDB</span>
+
+filetype pdb
+
+<span class="c1"># The name of the output file</span>
+
+output mixture.pdb
+
+<span class="c1"># 1000 water molecules and 400 urea molecules will be put in a box</span>
+<span class="c1"># defined by the minimum coordinates x, y and z = 0. 0. 0. and maximum</span>
+<span class="c1"># coordinates 40. 40. 40. That is, they will be put in a cube of side</span>
+<span class="c1"># 40. (the keyword &quot;inside cube 0. 0. 0. 40.&quot;) could be used as well.</span>
+
+structure water.pdb 
+  number <span class="m">1000</span> 
+  inside box <span class="m">0</span>. <span class="m">0</span>. <span class="m">0</span>. <span class="m">40</span>. <span class="m">40</span>. <span class="m">40</span>. 
+end structure
+
+structure urea.pdb
+  number <span class="m">400</span>
+  inside box <span class="m">0</span>. <span class="m">0</span>. <span class="m">0</span>. <span class="m">40</span>. <span class="m">40</span>. <span class="m">40</span>. 
+end structure
+</pre></div>
+</div>
+<section id="tolerance">
+<h4>tolerance<a class="headerlink" href="#tolerance" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>各分子をどのくらい離して配置するかの値[Å]。3.0くらいでいいと思う。</p>
+</section>
+<section id="filetype">
+<h4>filetype<a class="headerlink" href="#filetype" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>pdbにしておいて。</p>
+</section>
+<section id="output">
+<h4>output<a class="headerlink" href="#output" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>出力ファイル名。自由にどうぞ。</p>
+</section>
+<section id="structure">
+<h4>structure~<a class="headerlink" href="#structure" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>structureから、end structureまでを一つの分子として認識する。</p>
+<section id="id4">
+<h5>structure<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p>利用する分子のpdb名。</p>
+</section>
+<section id="number">
+<h5>number<a class="headerlink" href="#number" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<p>何分子入れるか。</p>
+</section>
+<section id="inside-box">
+<h5>inside box<a class="headerlink" href="#inside-box" title="このヘッドラインへのパーマリンク">¶</a></h5>
+<ol class="simple">
+<li><ol class="simple">
+<li><ol class="simple">
+<li><ol class="simple">
+<li><ol class="simple">
+<li><ol class="simple">
+<li><p>だと0&lt;x&lt;40, 0&lt;y&lt;40, 0&lt;z&lt;40の箱の中に配置することになる。</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>実行は、</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>packmol &lt; mixture-comment.inp
+</pre></div>
+</div>
+<p>とインプットファイルを読み込ませて実行する。数秒でmixture.pdbが作成されているはず。vmdで確認しよう。</p>
+</section>
+</section>
+</section>
+<section id="id5">
+<h3>方向を固定して配置<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<section id="constrain-rotation">
+<h4>constrain_rotation<a class="headerlink" href="#constrain-rotation" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>structure...end structureの間に<code class="docutils literal notranslate"><span class="pre">constrain_rotation</span> <span class="pre">軸</span> <span class="pre">角度</span> <span class="pre">誤差</span></code>を入れる。</p>
+<p>例えば、z軸に並行に配置したい場合、</p>
+<p><code class="docutils literal notranslate"><span class="pre">constrain_rotation</span> <span class="pre">x</span> <span class="pre">0.</span> <span class="pre">5.</span></code>
+<code class="docutils literal notranslate"><span class="pre">constrain_rotation</span> <span class="pre">y</span> <span class="pre">0.</span> <span class="pre">5.</span></code></p>
+<p>とする。</p>
+</section>
+</section>
+</section>
+<section id="tips">
+<h2>tips<a class="headerlink" href="#tips" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="seed">
+<h3>seed<a class="headerlink" href="#seed" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>packmolは同じ粒子数で実行した場合、配置が完全に同じ系ができてしまう。</p>
+<p>粒子数が同じで異なる初期配置を何個か作成したい場合、ランダムシード値を指定することで解決する。</p>
+<p>この時、-1を指定すると毎回異なる配置が作成されるため便利。</p>
+<p>使い方) インプットの最後に<code class="docutils literal notranslate"><span class="pre">seed</span> <span class="pre">-1</span></code></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

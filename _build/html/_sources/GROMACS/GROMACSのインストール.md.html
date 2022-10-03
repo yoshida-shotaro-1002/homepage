@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GROMACSのインストール &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>GROMACSのインストール</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gromacs">
+<h1>GROMACSのインストール<a class="headerlink" href="#gromacs" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここではGROMACSのインストール方法をまとめている。</p>
+<div class="highlight-important:: GROMACSのバージョンはgromacs-XXXとして表記しているので、基本的には最新のものを選んでインストールする。 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<section id="id1">
+<h2>インストール手順<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、GROMACSをダウンロードする必要がある。 <a class="reference external" href="https://manual.gromacs.org/documentation/">GROMACS documentation</a>にアクセスし、適切なバージョンのDownloadから「gromacs-XXX.tar.gz」をダウンロードする。 または<code class="docutils literal notranslate"><span class="pre">wget</span></code>を用いてターミナルで直接ダウンロードしてもよい。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># GROMACSのインストール先へ移動</span>
+<span class="c1"># インストール先のディレクトリにgromacs-XXX.tar.gzを用意しておく</span>
+<span class="nb">cd</span> ~/App
+<span class="c1"># ターミナルで直接ダウンロードする場合はここで</span>
+<span class="c1"># wget  https://ftp.gromacs.org/gromacs/gromacs-XXX.tar.gz</span>
+tar -xzvf gromacs-XXX.tar.gz
+<span class="nb">cd</span> gromacs-XXX
+</pre></div>
+</div>
+<p>gromacs-XXXのディレクトリへ移動したら<code class="docutils literal notranslate"><span class="pre">ls</span></code>で中身を確認しておく。</p>
+<p>次に、ビルド用のディレクトリとGROMACSをcmakeするディレクトリを作成する。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir build
+mkdir gmx_install
+</pre></div>
+</div>
+<p>作成したbuildディレクトリへ移動し、<code class="docutils literal notranslate"><span class="pre">cmake</span></code>を行う。 この時、GROMACSの様々なオプションを指定してインストールすることが多い。 ここではその一例を示す。</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">GROMACSインストールオプション</th>
+<th align="center">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-DGMX_BUILD_OWN_FFTW=ON</td>
+<td align="center">GROMACSがFFTWを自動的にダウンロード、ビルドすることを許可</td>
+</tr>
+<tr>
+<td align="center">-DREGRESSIONTEST_DOWNLOAD</td>
+<td align="center">GROMACSのテストをダウンロードする（make checkで実行）</td>
+</tr>
+<tr>
+<td align="center">-DCMAKE_INSTALL_PREFIX=xxx</td>
+<td align="center">GROMACSをcmakeするパスの指定</td>
+</tr>
+<tr>
+<td align="center">-DGMX_MPI=ON</td>
+<td align="center">並列計算を利用してビルドする</td>
+</tr>
+<tr>
+<td align="center">-DGMX_GPU=ON</td>
+<td align="center">GPU版のGROMACSをインストールする</td>
+</tr>
+<tr>
+<td align="center">-DCMAKE_C_COMPILER=xxx</td>
+<td align="center">使用するCコンパイラのパスの指定（環境変数CCでも設定可）</td>
+</tr>
+<tr>
+<td align="center">-DCMAKE_CXX_COMPILER=xxx</td>
+<td align="center">使用するC++コンパイラのパスの指定（環境変数CXXでも設定可）</td>
+</tr>
+<tr>
+<td align="center">-DGMX_DOUBLE=ON</td>
+<td align="center">GROMACSを倍精度で構築する</td>
+</tr>
+<tr>
+<td align="center">-DGMX_SIMD=xxx</td>
+<td align="center">GROMACSを実行するノードのSIMDレベルの指定</td>
+</tr>
+</tbody>
+</table><p>ローカルのPCにインストールする場合は系の構築や解析に使用する程度であり、大きな計算には使用しないので、次のオプションを指定すればよいと思う。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ローカルでのcmakeの例</span>
+<span class="nb">cd</span> builds
+cmake ../ <span class="se">\</span>
+-DGMX_BUILD_OWN_FFTW<span class="o">=</span>ON <span class="se">\</span>
+-DREGRESSIONTEST_DOWNLOAD<span class="o">=</span>ON <span class="se">\</span>
+-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/App/gromacs-XXX/gmx_install <span class="se">\</span>
+-DGMX_MPI<span class="o">=</span>OFF <span class="se">\</span>
+-DGMX_DOUBLE<span class="o">=</span>OFF <span class="se">\</span>
+-DGMX_GPU<span class="o">=</span>OFF
+</pre></div>
+</div>
+<p>一方、スパコンなどにインストールする場合は並列計算を使用するため<code class="docutils literal notranslate"><span class="pre">-DGMX_MPI=ON</span></code>とする。GPUが利用できる場合は<code class="docutils literal notranslate"><span class="pre">-DGMX_GPU=ON</span></code>も指定しておく。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># スパコンでのcmakeの例</span>
+<span class="nb">cd</span> build
+cmake ../ <span class="se">\</span>
+-DGMX_BUILD_OWN_FFTW<span class="o">=</span>ON <span class="se">\</span>
+-DREGRESSIONTEST_DOWNLOAD<span class="o">=</span>ON <span class="se">\</span>
+-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/App/gromacs-XXX/gmx_install <span class="se">\</span>
+-DGMX_MPI<span class="o">=</span>ON <span class="se">\</span>
+-DCMAKE_C_COMPILER<span class="o">=</span>mpicc <span class="se">\</span>
+-DCMAKE_CXX_COMPILER<span class="o">=</span>mpicxx <span class="se">\</span>
+-DGMX_GPU<span class="o">=</span>ON <span class="se">\</span>
+-DGMX_SIMD<span class="o">=</span>AVX_256
+</pre></div>
+</div>
+<p>cmakeが終了したら続けて<code class="docutils literal notranslate"><span class="pre">make</span></code>を行う。 マルチプロセッサ環境であれば、<code class="docutils literal notranslate"><span class="pre">-j</span></code>を付けて並列コンパイルをすることで高速化ができる。 GROMACSのテストをダウンロードしている場合は同時に<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">check</span></code>を行う。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -j <span class="m">4</span>
+<span class="c1"># GROMACSのテストをダウンロードした場合はチェックを実行</span>
+make check
+</pre></div>
+</div>
+<p>最後に<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>をする。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make install
+</pre></div>
+</div>
+<p>終了するとgmx_installにGROMACSの実行ファイルが生成しているはずである。 .bashrcにパスを通してインストールは完了である。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>.bashrc
+<span class="c1"># ホームディレクトリの.bashrcを編集</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/App/gromacs-XXX/gmx_install/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>正しくインストールされていれば、次のコマンドでGROMACSのバージョンが表示されるだろう。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># .bashrcの編集後にパスを更新</span>
+<span class="nb">source</span> ~/.bashrc
+<span class="c1"># GROMACSが正しく動作するか確認（バージョン確認）</span>
+gmx --version
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

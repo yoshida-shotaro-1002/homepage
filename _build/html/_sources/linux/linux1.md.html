@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Basic &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Linux Basic</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linux-basic">
+<h1>Linux Basic<a class="headerlink" href="#linux-basic" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>このページでは、Linuxの基礎知識を解説します。</p>
+<p>まずは、パソコンを触って慣れましょう！</p>
+<p>パソコンは「習うより慣れろ」です。壊しても大丈夫なので、いろいろ触って見よう！</p>
+<section id="linux">
+<h2>Linuxとは？<a class="headerlink" href="#linux" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>簡単に言えば、&quot;Windows&quot;や&quot;Mac&quot;のような種類のことです。</p>
+<p>難しい言葉を使えば、&quot;OS(Operating System)&quot;というものになります。</p>
+<p>Windowsにも</p>
+<ul class="simple">
+<li><p>Windows 10</p></li>
+<li><p>Windows 8</p></li>
+<li><p>Windows vista</p></li>
+</ul>
+<p>のように、いろいろな種類があるように、Linuxにも様々な種類があります。</p>
+<p>これをディストリビューションといい、みなさんのパソコンには[CentOS]がインストールしてあります。他にも、[Fedora]や[Debian]、[Ubuntu]や[Linux Mint]などもありその数は100を超えると言われています。</p>
+<p><img alt="_sources/LINUX/img1262.jpg" src="_sources/LINUX/img1262.jpg" /></p>
+<p><strong>CentOS</strong>の例（みなさんのパソコン）</p>
+<p><img alt="_sources/LINUX/img1269.jpg" src="_sources/LINUX/img1269.jpg" /></p>
+<p><strong>Ubuntu</strong>の例（ウプントゥと発音します。）</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>
+.. note::
+
+    わからないことは「Centos OOOO インストール」などで検索すると答えが出てくるでしょう。
+</pre></div>
+</div>
+</section>
+<section id="guicui">
+<h2>GUIとCUI<a class="headerlink" href="#guicui" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>私たちが Windowsで慣れ親しんでいるような、ウィンドウを表示してマウスで操作するスタイルが
+「GUI ( Graphical User Interface )」です。</p>
+<p>GUI に対して、キーボードでコマンド(command :命令)を入力し、 その結果を文字で受け取るスタイルが「 CUI ( Character User Interface )」になります。</p>
+<p><img alt="_sources/LINUX/img1430.jpg" src="_sources/LINUX/img1430.jpg" /></p>
+<p>CUIの一例（映画とかで見るハッカーがパソコンを操作している画面をイメージしてください）</p>
+<p>Linuxはマウスをつかって操作することもできますが、キーボードを使ってコマンドを入力することが一般的になってくるでしょう。</p>
+<p>ここでは、CUIの使い方を初心者の方でもわかるように解説をしていきますが、わからないことは簡単なことでも先輩に聞いて見ましょう。</p>
+<p>先輩たちは教えたがりなので優しく教えてくれます。</p>
+</section>
+<section id="terminal">
+<h2>端末：Terminal<a class="headerlink" href="#terminal" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>実際問題、CUIのみを使って操作することはほとんどなく、GUI 環境でコマンドラインを使用したい場合は、「端末ウィンドウ」を使用します。</p>
+<p>以下のように、「端末」を起動してみましょう！</p>
+<p><img alt="_sources/LINUX/img1484.jpg" src="_sources/LINUX/img1484.jpg" /></p>
+<p>「study」や「localhost」の名前は異なりますが、カーソルが点滅している白い画面が出てきたでしょうか？</p>
+<p>これは「端末」や「ターミナル」と呼ばれ、GUIからCUIを操作で来る優れものです。以降基本的に研究や輪講の課題はこのターミナルで行うことになります。</p>
+</section>
+<section id="id1">
+<h2>コマンドを実行しよう<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここでコマンドを入力して[ Enter ]キーを押すと、実行結果が表示されます。試しに、<code class="docutils literal notranslate"><span class="pre">df</span></code>と入力して[ Enter ]キーを押して見ましょう。（以下の図を参照。）</p>
+<p><img alt="_sources/LINUX/img1492.jpg" src="_sources/LINUX/img1492.jpg" /></p>
+<p>似たような画面が出てきたら成功です。ちなみに<code class="docutils literal notranslate"><span class="pre">df</span></code>はディスク使用量を表示するコマンドです。</p>
+<section id="id2">
+<h3>（応用）プロンプトの読み方<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ターミナルにはさまざまな情報が表示されています。例えば、今回使用している画面では「 [study&#64;localhost ~]$ 」 と表示されています。</p>
+<p>この [] の中に書かれている内容は「 ユーザー名 &#64; ホスト名 カレントディレクトリ」という意味になります。</p>
+<p>「 ~ (チルダ)」記号は、ホームディレクトリという意味です。</p>
+<p>最後の記号は、 いわばコマンドプロンプトの 目印 のようなもので、一般ユーザーで実行している場合は「 $ 」記号が表示されるように設定されています 。</p>
+<p>root ユーザーという特別なユーザーで実行している場合は「 # 」という記号が表示されます。</p>
+<p>つまり、
+「 [study&#64;localhost ~]$ 」というプロンプトからは「現在、一般ユーザーとしてコマンドラインを使っており、 study という名前で localhost というホストにログインしている。カレントディレクトリはホームディレクトリ」ということが分かります。</p>
+<hr class="docutils" />
+<p>皆さんにとって重要なのは、<strong>カレントディレクトリ</strong>ぐらいです。ディレクトリはWindowsで言うならばフォルダを意味し、今現在自分がどこのフォルダにいるかということを示します。</p>
+<p><strong>ホームディレクトリ</strong>とはWindowsの「PC」フォルダにほぼ当たります。つまり以下の２つの画像は両方ともホームディレクトリにいるという意味です。</p>
+<p><img alt="_sources/LINUX/win_home.png" src="_sources/LINUX/win_home.png" /></p>
+<p><img alt="_sources/LINUX/img1484.jpg" src="_sources/LINUX/img1484.jpg" /></p>
+</section>
+</section>
+<section id="id3">
+<h2>基本的なコマンドを練習しよう<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>そもそも覚えておくべきコマンドに<code class="docutils literal notranslate"><span class="pre">ls</span></code>や<code class="docutils literal notranslate"><span class="pre">cd</span></code>、<code class="docutils literal notranslate"><span class="pre">mkdir</span></code>などがあります。</p>
+<p>ここではその使い方を説明します。</p>
+<p>まずは、上を参考にターミナルを開きましょう。</p>
+<section id="pwd">
+<h3><code class="docutils literal notranslate"><span class="pre">pwd</span></code><a class="headerlink" href="#pwd" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ターミナルでは常に 自分がどのディレクトリにいるか を意識する必要があります。これは<code class="docutils literal notranslate"><span class="pre">pwd</span></code>というコマンドで確認できます。</p>
+<p>ターミナルに<code class="docutils literal notranslate"><span class="pre">pwd</span></code>と入力し、[Enter]キーを押してみましょう。</p>
+<p><img alt="_sources/LINUX/img1692.jpg" src="_sources/LINUX/img1692.jpg" /></p>
+<p>似たような表示になりましたか？これは自分が今<code class="docutils literal notranslate"><span class="pre">/home/study</span></code> という場所に居ることを示しています。</p>
+<p>(先程も言いましたが、<code class="docutils literal notranslate"><span class="pre">~</span></code>はホームディレクトリを表す特別な記号で、<code class="docutils literal notranslate"><span class="pre">/home/study</span></code>と全く同じ意味です。)</p>
+</section>
+<section id="ls">
+<h3><code class="docutils literal notranslate"><span class="pre">ls</span></code><a class="headerlink" href="#ls" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>カレントディレクトリのファイルやディレクトリが一覧表示されます。Windowsのファイルを開いて、どんなファイルがあるかな〜と眺めているのと同じですね。上と同様にターミナルに<code class="docutils literal notranslate"><span class="pre">ls</span></code>と入力し、[Enter]キーを押してみましょう。</p>
+<p><img alt="_sources/LINUX/img1697-2.jpg" src="_sources/LINUX/img1697-2.jpg" /></p>
+<p>英語ではなく、日本語で「デスクトップ」「ドキュメント」と表示さてれているかもしれませんが、同じことです。</p>
+<hr class="docutils" />
+<p>またコマンドには様々なオプションをつけて実行することができます。オプションは<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>のように<code class="docutils literal notranslate"><span class="pre">コマンド　-オプション</span></code>　と入力し、実行します。</p>
+<p>同様にターミナルに<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>と入力し、[Enter]キーを押してみましょう。</p>
+<p><img alt="_sources/LINUX/img1685.jpg" src="_sources/LINUX/img1685.jpg" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>の<code class="docutils literal notranslate"><span class="pre">-l</span></code>オプションは、ファイルの属性や所有者、最終更新日などの詳細を表示するオプションです。</p>
+</section>
+<section id="cd">
+<h3><code class="docutils literal notranslate"><span class="pre">cd</span></code><a class="headerlink" href="#cd" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>カレントディレクトリは「 cd 」コマンド( Change Directory )を使って、「 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ディレクトリ名</span></code>」で移動すること
+ができます。</p>
+<p>例えば、 カレントディレクトリ下の「 Pictures 」ディレクトリに移動する場合は、「 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Pictures</span></code> 」とします。</p>
+<p>（日本語環境の方は<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ピクチャ−</span></code>だと思われる。）</p>
+<p>なお、このときに 「 cd P 」 まで入力して [ Tab ] キーを押すと、ディレクトリ名が補完されて 「 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Pictures/</span></code> 」
+と自動で入力されるので「 cd P 」→[ Tab ]キー→[ Enter ]キーで移動できます。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>study@localhost ~<span class="o">]</span>$ <span class="nb">cd</span> Pictures
+<span class="o">[</span>study@localhost Pictures<span class="o">]</span>$
+</pre></div>
+</div>
+<p>このように、＄の前の表示が変わっただろうか？これは自分が今<code class="docutils literal notranslate"><span class="pre">Pictures</span></code>ディレクトリにいることを示している。</p>
+<p>この状態で、今居るディレクトリと表示する<code class="docutils literal notranslate"><span class="pre">pwd</span></code>コマンドを使えば、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>study@localhost Pictures<span class="o">]</span>$ <span class="nb">pwd</span>
+/home/study/Pictures
+<span class="o">[</span>study@localhost Pictures<span class="o">]</span>$
+</pre></div>
+</div>
+<p>と、表示されるだろう。</p>
+<hr class="docutils" />
+<p>また、今居るディレクトリは<code class="docutils literal notranslate"><span class="pre">.</span></code>で、一つ上のディレクトリは<code class="docutils literal notranslate"><span class="pre">..</span></code>で表すことができる。</p>
+<p>つまり、一つ上のディレクトリに行きたいときは<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>で移動できる。</p>
+<p>（慣例的に<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>とする人が多いが同じことである。）</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pictures</span></code>ディレクトリからひとつ上のホームディレクトリに戻ってみよう</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>study@localhost Pictures<span class="o">]</span>$ <span class="nb">cd</span> ../
+<span class="o">[</span>study@localhost ~<span class="o">]</span>$ <span class="nb">pwd</span>
+/home/study
+</pre></div>
+</div>
+<p>ホームディレクトリにもどることができた。</p>
+</section>
+<section id="mkdir">
+<h3><code class="docutils literal notranslate"><span class="pre">mkdir</span></code><a class="headerlink" href="#mkdir" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これは、新しいディレクトリを作成するコマンドです。</p>
+<p>Windowsでの「新しいフォルダの作成」と同じです。</p>
+<p>使い方は、<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">新しいディレクトリ名</span></code>です。</p>
+<p>ホームディレクトリに、<code class="docutils literal notranslate"><span class="pre">test</span></code>というディレクトリを作成し、そこに移動してみましょう。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>study@localhost ~<span class="o">]</span>$ mkdir <span class="nb">test</span>
+<span class="o">[</span>study@localhost ~<span class="o">]</span>$ ls <span class="c1">#何があるか確認してみる。</span>
+...................... <span class="nb">test</span> <span class="c1">#testがどこかにあるはず。</span>
+<span class="o">[</span>study@localhost ~<span class="o">]</span>$　<span class="nb">cd</span> <span class="nb">test</span>
+<span class="o">[</span>study@localhost test<span class="o">]</span>$ <span class="nb">pwd</span>
+/home/study/test
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>これまでにも何度か登場してきた「ディレクトリ」という言葉を、 ここであらためておさらいしましょう。</p>
+<p>コンピュータではさまざまなデータを扱いますが、これらは基本的に全て「ファイル」として HDD などの記憶
+媒体に保存されています。そして、これらのファイルがどこにあるかを整理したものが 「ディレクトリ ( directory ) になります。</p>
+<p>ディレクトリは階層化されています。つまり、ディレクトリの中にディレクトリがあり、そのディレクトリの中にま
+たディレクトリがある......というような管理が可能になっています。</p>
+<p>このディレクトリの中にあるディレクトリを「サブディレクトリ」と呼びます。また、 サブディレクトリ側から見た場合、自分自身の 1 つ上の階層のディレクトリを「親ディレクトリ」と呼びます。</p>
+<p>ディレクトリは「 / 」記号で表します。例えば、「 home 」ディレクトリの下に「 study 」ディレクトリがあり、そ
+こに「 file.txt 」というファイルがあった場合は、「 home/study/file.txt 」のように表すことができます。</p>
+</section>
+</section>
+<section id="tab">
+<h2>Tabキーの補完について<a class="headerlink" href="#tab" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまでディレクトリ名などをタイピングしてもらってましたが、Linuxでは便利な補完機能（予測変換機能）があります。</p>
+<section id="id4">
+<h3>補完：候補が１個しかない場合<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コマンドラインでは、コマンド名、オプション、ファイル名......とたくさんの項目をキーボードで入力しますが、
+この中のコマンド名とファイル名については「補完機能」を利用することができます。（予測変換のこと）</p>
+<p>では、実際にやってみましょう。ファイル名やコマンド名を途中まで入力したところで[ Tab ]キーを押すと続き
+が補完されます。[ Tab ]キーの代わりに[ Ctrl ]+[ I ]キーを押しても OK です。</p>
+<p>例えば、「 ifco 」と入力して[ Tab ]キーを押すと、コマンド名が補完されて「 ifconfig 」となります。</p>
+<p>（下の図を参照）</p>
+<p>コマンド名の後にオプションなどを指定することを想定して、スペースも自動で入ります。</p>
+<p><img alt="_sources/LINUX/img1540.jpg" src="_sources/LINUX/img1540.jpg" /></p>
+<p><img alt="_sources/LINUX/img1541.jpg" src="_sources/LINUX/img1541.jpg" /></p>
+<p>ちなみに、 ifconfig は、ネットワークインタフェースを設定したり、設定情報を参照したりするためのコマンドで
+す。[ Enter ]キーを押して実行すると、ネットワークに割り当てられている IP アドレスなどを確認できます。</p>
+</section>
+<section id="id5">
+<h3>補完：候補が複数ある場合<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>補完候補となるコマンドが複数ある場合は、
+[ Tab ]キーを押すと候補が表示される代わりにビープ音が鳴ります(※音が出るかどうかは設定によって異なります)。</p>
+<p>もう一度[ Tab ]キーを押すと候補が一覧表示されるので、続きの文字を入力して再度[ Tab ]キーを押しましょう。</p>
+<p><img alt="_sources/LINUX/img1548.jpg" src="_sources/LINUX/img1548.jpg" /></p>
+<p><img alt="_sources/LINUX/img1549.jpg" src="_sources/LINUX/img1549.jpg" /></p>
+<p>補完候補が多過ぎる場合は「 Display all 111 possibilities ?( y or n )」のように確認メッセージが表示され
+ます。[ y ]キーで全ての候補を表示するか、[ n ]キーで補完を中断します。</p>
+<p><img alt="_sources/LINUX/img1550.jpg" src="_sources/LINUX/img1550.jpg" /></p>
+</section>
+<section id="id6">
+<h3>ファイル名の補完<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コマンドライン上では、コマンドと同様、ファイル名にも補完機能が働きます。例えば、「 cat 」コマンドで「 /etc/shells 」ファイルを表示したい場合( <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/etc/shells</span></code> )「 cat /e 」まで入力して[ Tab ]キーを押すと「 cat /etc/ 」まで補完され、続いて「 she 」と入力して[ Tab ]キーを押すと続きが補完されます。</p>
+</section>
+</section>
+<section id="id7">
+<h2>コマンドの編集<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コマンドラインは、左右の矢印キー([←][→])やショートカットキーで編集できます。例えば、「 cat /etc/shells 」まで入力した後で、 cat コマンドに「 -n 」オプションを付けたくなったならば、キー操作で cat の後ろまで戻って「 -n 」を入力して[ Enter ]キーで実行する、 というようなことができます。</p>
+<p><img alt="_sources/LINUX/img1555.jpg" src="_sources/LINUX/img1555.jpg" /></p>
+<p>以下によく使うキーボードショートカットを示しますが、無理して覚える必要はないです。</p>
+<p><img alt="_sources/LINUX/img1556.jpg" src="_sources/LINUX/img1556.jpg" /></p>
+<p><img alt="_sources/LINUX/img1563.jpg" src="_sources/LINUX/img1563.jpg" /></p>
+</section>
+<section id="id8">
+<h2>コマンド履歴：ヒストリ機能<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>前にタイピングしたコマンドをもう一回使いたいといったことがありませんか？</p>
+<p>以前入力したコマンドは、 上下の矢印キー(↑][↓]) または [ Ctrl ]+[ P ]キーと[ Ctrl ]+[ N ]キーで呼び出すことができます。これが「ヒストリ」と呼ばれる機能です。もちろん、呼び出したコマンドを編集して実行することも可能です。</p>
+<p><img alt="_sources/LINUX/img1571.jpg" src="_sources/LINUX/img1571.jpg" /></p>
+<p>「 <code class="docutils literal notranslate"><span class="pre">history</span></code> 」コマンドでは、過去の入力したコマンドのリストを番号付きで表示することができます</p>
+<p><img alt="_sources/LINUX/img1572.jpg" src="_sources/LINUX/img1572.jpg" /></p>
+</section>
+<section id="what-should-i-do-after-reading-this-page">
+<h2>What should I do after reading this page?<a class="headerlink" href="#what-should-i-do-after-reading-this-page" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="id9">
+<h3>Linuxのコマンドについてより詳しくなりたい<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>:doc:`/linux/linuxcommand`
+</pre></div>
+</div>
+</section>
+<section id="vi">
+<h3>vi(テキストエディタ)の使い方を知りたい<a class="headerlink" href="#vi" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>プログラムを書くためのWordみたいなもの。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>:doc:`/linux/vim_0`
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

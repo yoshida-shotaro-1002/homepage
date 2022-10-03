@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GROMACSチートシート &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>GROMACSチートシート</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gromacs">
+<h1>GROMACSチートシート<a class="headerlink" href="#gromacs" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="id1">
+<h2>計算準備編<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="ndx">
+<h3>ndxファイルを作る<a class="headerlink" href="#ndx" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">make_ndx</span> <span class="pre">-f</span> <span class="pre">initial.gro</span> <span class="pre">-o</span> <span class="pre">index.ndx</span></code></p>
+<p>この時コマンド内でもグループを作る方法が色々ある。
+例を載せておく。
+「a P」とすることで、全ての&quot;P&quot;という原子を選択できる。
+「1 | 2 | 3」とすることで、グループ1または2または3に含まれている原子が選択できる。
+これにより、これらがi番目のグループとして登録される。
+また名前を変えるには、「name i(グループ番号) Phosphorous(つけたいグループ名)」とすればよい
+あとは&quot;q&quot;を押してセーブする。</p>
+<p>またEnterを押せば登録されたグループのリストを確認できる。</p>
+<p>さらに-nオプションで既存のindexファイルを読み込んで新たなindexファイルを作ることもできる。</p>
+</section>
+<section id="gropdb">
+<h3>系を複製したいとき(groファイルだけでなくpdbファイルも可)<a class="headerlink" href="#gropdb" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">genconf</span> <span class="pre">-f</span> <span class="pre">input.gro</span> <span class="pre">-o</span> <span class="pre">double.gro</span> <span class="pre">-nbox</span> <span class="pre">2</span> <span class="pre">1</span> <span class="pre">1</span></code></p>
+<p>これで系をx軸方向に2倍、y,z軸方向に1倍ずつ、つまり元の系を2倍に複製できる。
+pdbでもできるらしいので便利。
+これ周期境界設定していないと同じ位置に重なってうまく複製できないので注意！！！！！！！！</p>
+</section>
+<section id="gro">
+<h3>groファイルの残基番号を修正したいとき<a class="headerlink" href="#gro" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">editconf</span> <span class="pre">-f</span> <span class="pre">initial.gro</span> <span class="pre">-o</span> <span class="pre">number.gro</span> <span class="pre">-resnr</span> <span class="pre">1</span></code></p>
+<p>-resnrは何番から付け直すかを指定できる。</p>
+<p>但しうまく直らない場合もあるのでその都度生成したファイルの中身を確認すること。</p>
+</section>
+</section>
+<section id="id2">
+<h2>計算編<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="id3">
+<h3>速度テストしたいとき<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">mdrun</span> <span class="pre">-deffnm</span> <span class="pre">npt</span> <span class="pre">-nsteps</span> <span class="pre">1000</span></code></p>
+<p>とすると、強制的に1000stepで終了できる。
+いちいち.mdpファイルを編集しなくていいから助かる。</p>
+</section>
+<section id="run">
+<h3>途中で終了してしまったrunの再開<a class="headerlink" href="#run" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">mdrun</span> <span class="pre">-deffnm</span> <span class="pre">npt</span> <span class="pre">-cpi</span> <span class="pre">npt.cpt</span></code></p>
+<p>npt.cptはチェックポイントファイルでありMD計算の一定間隔で状態を記録・updateしている。
+そのためこれを使ってリスタートすると、このチェックポイントファイルの状態からスタートする。
+ちなみに<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">check</span> <span class="pre">-f</span> <span class="pre">npt.cpt</span></code>でどのステップのものか確認できるらしい！
+便利すぎる...
+ちなみにnpt_prev.cptは最新の1つ前のcptだと思われる。</p>
+</section>
+</section>
+<section id="id4">
+<h2>解析準備編<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="id5">
+<h3>周期境界条件を直す<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">trjconv</span> <span class="pre">-s</span> <span class="pre">npt.tpr</span> <span class="pre">-f</span> <span class="pre">npt.xtc</span> <span class="pre">-o</span> <span class="pre">npt_noPBC.xtc</span> <span class="pre">-pbc</span> <span class="pre">mol</span></code></p>
+<p>必要に応じて-centerオプションを使う。</p>
+</section>
+<section id="id6">
+<h3>トラジェクトリのフレームを落とす<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>トラジェクトリのフレームを落としたい時は-skipオプションで以下のようにする。</p>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">trjconv</span> <span class="pre">-f</span> <span class="pre">npt_noPBC.xtc</span> <span class="pre">-o</span> <span class="pre">npt_cut.xtc</span> <span class="pre">-skip</span> <span class="pre">10</span></code></p>
+<p>これで10フレーム間隔でトラジェクトリを少なくできる。</p>
+</section>
+<section id="id7">
+<h3>トラジェクトリを結合したいとき<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">trjcat</span> <span class="pre">-f</span> <span class="pre">npt1.xtc</span> <span class="pre">npt2.xtc</span> <span class="pre">npt3.xtc</span> <span class="pre">-o</span> <span class="pre">npt_all.xtc</span> <span class="pre">-settime</span></code></p>
+<p>これでnpt1.xtcからnpt3.xtcまでを全て結合できる。
+この時settimeとしてひたすらにcを入力するあるいはcatとしないと、トラジェクトリを連結してくれない。</p>
+<p>なんかトラジェクトリを重ねてしまって(?)、生成後のトラジェクトリのフレーム数も一致しない。</p>
+<p>この辺りは少しよく分かっていない。</p>
+</section>
+</section>
+<section id="id8">
+<h2>解析編<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="id9">
+<h3>系の物理量を調べる<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">energy</span> <span class="pre">-f</span> <span class="pre">npt.edr</span> <span class="pre">-o</span> <span class="pre">pressure.xvg</span></code></p>
+<p>例えばこのコマンドを実行した後に18 0(バージョンによってナンバー違う)を入力すると時間に対しての圧力が出力できる。
+圧力のみならず、温度、密度、ポテンシャルエネルギー、系の全ての合計のエネルギー(total energy)、さらには熱浴も込みでの合計のエネルギー(conserved energy)、ボックスのz軸方向の長さなども調べれてしまう。
+このコマンドはやばい。
+あと拘束のエネルギー(restraint potential)も調べれるはずだけど、特に距離に関してはbondsで拘束していたのでこのコマンドで調べれなかった。
+distant restraintを使っていたらこれで調べれていたかもしれない。</p>
+</section>
+<section id="id10">
+<h3>拡散係数を調べる<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>まず、計算前に周期境界で変になる結合を直したほうがいい。</p>
+<p>実際のコマンドとしては
+<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">msd</span> <span class="pre">-f</span> <span class="pre">npt.xtc</span> <span class="pre">-s</span> <span class="pre">npt.tpr</span> <span class="pre">-o</span> <span class="pre">msd.xvg</span> <span class="pre">(-tu</span> <span class="pre">ns)</span></code></p>
+<p>ちなみに例えば500 psの計算であればその内の10%と90%すなわち50ps-450psがmsd計算に使用される。
+これはそれぞれ-beginfitと-endfitで使用したい時刻を決めれる。
+またmsdの計算ではどれくらいの時間幅を考えるかを決める必要があり、デフォルトでは10 psとなっている。
+理想を言えば500 psを1 ps刻みでやりたいが、計算コストがかかるのとそこまで時間幅を短くする意味もない。
+そのためこの場合は0,10,20,...,490,500という時間幅の平均二乗変位をプロットすることになる。</p>
+</section>
+<section id="id11">
+<h3>動径分布を調べる<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">rdf</span> <span class="pre">-f</span> <span class="pre">npt.xtc</span> <span class="pre">-s</span> <span class="pre">npt.tpr</span> <span class="pre">-n</span> <span class="pre">rdf.ndx</span> <span class="pre">-o</span> <span class="pre">rdf.xvg</span></code></p>
+<p>ちなみに-exclオプションを使うと、結合している原子同士のrdfを考えなくなるっぽい。つまりOH2をrefにしてH1とH2をselにすると
+何のピークもない結果が得られるらしい。
+計算時間が少なくて短いからか、ネットのやつとは一致しなかったけど多分使用の仕方は問題なさそう。</p>
+<p>但しgroファイルを使ってrdfを求めようとすると、原子の質量や原子半径が分からないために残基や原子名から推測して使用されるらしい。
+これはlammpsで粗視化計算したものを無理やりgroにした場合にはこの方法は使えないということ。またトラジェクトリに結合が変になってるやつがあるとまずいって。そうなるとやっぱりlammpsはlammpsでrdf求める必要がある。</p>
+<p>追記: 質量に関してはpSPICAでもpsfファイルに書いてあるから問題ない。但しlammpsだと不便すぎるのでMPDynを使うことにした。
+また細かいオプションについても理解したので記しておく。</p>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">rdf</span> <span class="pre">-f</span> <span class="pre">npt.xtc</span> <span class="pre">-s</span> <span class="pre">npt.tpr</span> <span class="pre">-o</span> <span class="pre">rdf.xvg</span> <span class="pre">-n</span> <span class="pre">rdf.ndx</span> <span class="pre">-rmax</span> <span class="pre">8</span> <span class="pre">-bin</span> <span class="pre">0.1</span></code></p>
+<p>-rmaxはrdfをどの程度の距離まで測るか。この場合は8 nmまで測り、またその測る刻みを0.1 nmにするということ。</p>
+</section>
+<section id="id12">
+<h3>二次元密度マップを調べる<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>動径分布は距離の情報を与えてくれはするが、分子がどの位置に集まるとかは当然のことながら分からない。</p>
+<p>そういう場合は二次元(x,y平面)でマップを作れば一目瞭然である。コマンドは以下。</p>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">densmap</span> <span class="pre">-f</span> <span class="pre">npt.xtc</span> <span class="pre">-s</span> <span class="pre">npt.tpr</span> <span class="pre">-n</span> <span class="pre">analy.ndx</span> <span class="pre">-o</span> <span class="pre">map.xpm</span> <span class="pre">-dmax</span> <span class="pre">2</span></code></p>
+<p>xpmという形式でマップを出力する。-dmaxは密度(グレースケール)の最大値。</p>
+<p>さらにこのxpmを<strong>xpm2ps</strong>コマンドを使うことでepsに変換しつつ、マップを綺麗に整えることが可能。コマンドは以下。</p>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">xpm2ps</span> <span class="pre">-f</span> <span class="pre">map.xpm</span> <span class="pre">-di</span> <span class="pre">input.m2p</span> <span class="pre">-o</span> <span class="pre">map.eps</span> <span class="pre">-title</span> <span class="pre">ylabel</span> <span class="pre">-rainbow</span> <span class="pre">blue</span></code></p>
+<p>blueにすると密度の低い方から高い方を青から赤にできる。逆にしたければ-rainbow redにする。</p>
+<p>さらにこのコマンド実行時には<strong>input.m2p</strong>というインプットを読み込む。これはグラフの設定をするファイルで、gnuplotのような</p>
+<p>イメージをもっておくと分かりやすい。インプットの中身は次のように設定している。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Command</span> <span class="n">line</span> <span class="n">options</span> <span class="n">of</span> <span class="n">xpm2ps</span> <span class="n">override</span> <span class="n">the</span> <span class="n">parameters</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">file</span>
+<span class="n">black</span><span class="o">&amp;</span><span class="n">white</span>              <span class="o">=</span> <span class="n">no</span>           <span class="p">;</span> <span class="n">Obsolete</span>
+<span class="n">titlefont</span>                <span class="o">=</span> <span class="n">Times</span><span class="o">-</span><span class="n">Roman</span>  <span class="p">;</span> <span class="n">A</span> <span class="n">PostScript</span> <span class="n">Font</span>
+<span class="n">titlefontsize</span>            <span class="o">=</span> <span class="mi">10</span>           <span class="p">;</span> <span class="n">Font</span> <span class="n">size</span> <span class="p">(</span><span class="n">pt</span><span class="p">)</span>
+<span class="n">legend</span>                   <span class="o">=</span> <span class="n">yes</span>          <span class="p">;</span> <span class="n">Show</span> <span class="n">the</span> <span class="n">legend</span>
+<span class="n">legendfont</span>               <span class="o">=</span> <span class="n">Times</span><span class="o">-</span><span class="n">Roman</span>  <span class="p">;</span> <span class="n">A</span> <span class="n">PostScript</span> <span class="n">Font</span>
+<span class="n">legendlabel</span>              <span class="o">=</span>              <span class="p">;</span> <span class="n">Used</span> <span class="n">when</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">none</span> <span class="ow">in</span> <span class="n">the</span> <span class="o">.</span><span class="n">xpm</span>
+<span class="n">legend2label</span>             <span class="o">=</span>              <span class="p">;</span> <span class="n">Used</span> <span class="n">when</span> <span class="n">merging</span> <span class="n">two</span> <span class="n">xpm</span><span class="s1">&#39;s </span>
+<span class="n">legendfontsize</span>           <span class="o">=</span> <span class="mf">30.0</span>           <span class="p">;</span> <span class="n">Font</span> <span class="n">size</span> <span class="p">(</span><span class="n">pt</span><span class="p">)</span>
+<span class="n">xbox</span>                     <span class="o">=</span> <span class="mi">1</span>         <span class="p">;</span> <span class="n">x</span><span class="o">-</span><span class="n">size</span> <span class="n">of</span> <span class="n">a</span> <span class="n">matrix</span> <span class="n">element</span>
+<span class="n">ybox</span>                     <span class="o">=</span> <span class="mi">1</span>          <span class="p">;</span> <span class="n">y</span><span class="o">-</span><span class="n">size</span> <span class="n">of</span> <span class="n">a</span> <span class="n">matrix</span> <span class="n">element</span>
+<span class="n">matrixspacing</span>            <span class="o">=</span> <span class="mf">20.0</span>         <span class="p">;</span> <span class="n">Space</span> <span class="n">between</span> <span class="mi">2</span> <span class="n">matrices</span>
+<span class="n">xoffset</span>                  <span class="o">=</span> <span class="mf">100.0</span>          <span class="p">;</span> <span class="n">Between</span> <span class="n">matrix</span> <span class="ow">and</span> <span class="n">bounding</span> <span class="n">box</span>
+<span class="n">yoffset</span>                  <span class="o">=</span> <span class="mf">100.0</span>          <span class="p">;</span> <span class="n">Between</span> <span class="n">matrix</span> <span class="ow">and</span> <span class="n">bounding</span> <span class="n">box</span>
+<span class="n">x</span><span class="o">-</span><span class="n">major</span>                  <span class="o">=</span> <span class="mi">20</span>           <span class="p">;</span> <span class="n">Major</span> <span class="n">ticks</span> <span class="n">on</span> <span class="n">x</span> <span class="n">axis</span> <span class="n">every</span> <span class="o">..</span> <span class="n">frames</span>
+<span class="n">x</span><span class="o">-</span><span class="n">minor</span>                  <span class="o">=</span> <span class="mi">5</span>            <span class="p">;</span> <span class="n">Id</span><span class="o">.</span> <span class="n">Minor</span> <span class="n">ticks</span>
+<span class="n">x</span><span class="o">-</span><span class="n">firstmajor</span>             <span class="o">=</span> <span class="mi">0</span>            <span class="p">;</span> <span class="n">First</span> <span class="n">frame</span> <span class="k">for</span> <span class="n">major</span> <span class="n">tick</span>
+<span class="n">x</span><span class="o">-</span><span class="n">majorat0</span>               <span class="o">=</span> <span class="n">no</span>           <span class="p">;</span> <span class="n">Major</span> <span class="n">tick</span> <span class="n">at</span> <span class="n">first</span> <span class="n">frame</span>
+<span class="n">x</span><span class="o">-</span><span class="n">majorticklen</span>           <span class="o">=</span> <span class="mi">0</span>          <span class="p">;</span> <span class="n">x</span><span class="o">-</span><span class="n">majorticklength</span>
+<span class="n">x</span><span class="o">-</span><span class="n">minorticklen</span>           <span class="o">=</span> <span class="mi">0</span>          <span class="p">;</span> <span class="n">x</span><span class="o">-</span><span class="n">minorticklength</span>
+<span class="n">x</span><span class="o">-</span><span class="n">label</span>                  <span class="o">=</span> <span class="n">X</span>             <span class="p">;</span> <span class="n">Used</span> <span class="n">when</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">none</span> <span class="ow">in</span> <span class="n">the</span> <span class="o">.</span><span class="n">xpm</span>
+<span class="n">x</span><span class="o">-</span><span class="n">fontsize</span>               <span class="o">=</span> <span class="mf">0.1</span>           <span class="p">;</span> <span class="n">Font</span> <span class="n">size</span> <span class="p">(</span><span class="n">pt</span><span class="p">)</span>
+<span class="n">x</span><span class="o">-</span><span class="n">font</span>                   <span class="o">=</span> <span class="n">Times</span><span class="o">-</span><span class="n">Roman</span>  <span class="p">;</span> <span class="n">A</span> <span class="n">PostScript</span> <span class="n">Font</span> 
+<span class="n">x</span><span class="o">-</span><span class="n">tickfontsize</span>           <span class="o">=</span> <span class="mf">0.1</span>          <span class="p">;</span> <span class="n">Font</span> <span class="n">size</span> <span class="p">(</span><span class="n">pt</span><span class="p">)</span>
+<span class="n">x</span><span class="o">-</span><span class="n">tickfont</span>               <span class="o">=</span> <span class="n">Helvetica</span>    <span class="p">;</span> <span class="n">A</span> <span class="n">PostScript</span> <span class="n">Font</span>
+<span class="n">y</span><span class="o">-</span><span class="n">major</span>                  <span class="o">=</span> <span class="mi">20</span>
+<span class="n">y</span><span class="o">-</span><span class="n">minor</span>                  <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span><span class="o">-</span><span class="n">firstmajor</span>             <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span><span class="o">-</span><span class="n">majorat0</span>               <span class="o">=</span> <span class="n">no</span>
+<span class="n">y</span><span class="o">-</span><span class="n">majorticklen</span>           <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span><span class="o">-</span><span class="n">minorticklen</span>           <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span><span class="o">-</span><span class="n">label</span>                  <span class="o">=</span> <span class="n">Y</span>
+<span class="n">y</span><span class="o">-</span><span class="n">fontsize</span>               <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">y</span><span class="o">-</span><span class="n">font</span>                   <span class="o">=</span> <span class="n">Times</span><span class="o">-</span><span class="n">Roman</span>
+<span class="n">y</span><span class="o">-</span><span class="n">tickfontsize</span>           <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">y</span><span class="o">-</span><span class="n">tickfont</span>               <span class="o">=</span> <span class="n">Helvetica</span>
+</pre></div>
+</div>
+<p>但しこの設定はけっこう融通が効かない。例えばラベルとグラフの位置を調節できないので、文字の大きさを大きくしていくとグラフと被る。そのためラベルの大きさを0.1にすることでほとんどラベルを見えなくして、パワポなどに載せる時にテキストボックスで自分で書いている。またメモリを付けたければtickfontsizeをいじればいいが、つけるとシンプルに汚くなる。そのためこれも同様に0.1にして見えなくする。ちなみにメモリを消すというオプションはないようである。また0はプログラムに認識されないため0.1にする。</p>
+</section>
+<section id="id13">
+<h3>傾斜角を調べる<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>タンパク質のN末端からC末端へ向かうベクトルとz軸とのなす角を調べたかったので調べていたところこのコマンドを発見した。</p>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">gangle</span> <span class="pre">-f</span> <span class="pre">npt.xtc</span> <span class="pre">-s</span> <span class="pre">npt.tpr</span> <span class="pre">-n</span> <span class="pre">analy.ndx</span> <span class="pre">-oall</span> <span class="pre">tiltangle.xvg</span> <span class="pre">-g1</span> <span class="pre">vector</span> <span class="pre">-g2</span> <span class="pre">z</span> <span class="pre">-tu</span> <span class="pre">ns</span></code></p>
+<p>-g1 でベクトルと定義し、コマンド実行後にどのグループを用いるかを選ぶ。例えばanaly.ndxの中に[ PROTEIN1 ]というグループが登録されており、このリストでは1番(N末)と54番(C末)のみが定義されている。このグループを選ぶと1番の粒子から54番の粒子へ向かうベクトルが定義される。また-g2ではz軸オプションを指定しているためz軸方向のベクトルを定義できる。そしてこの2つのベクトルのなす角を計算することができる。-oavにすると時間経過の累積平均になるので、-oallにすることで実際のトラジェクトリ内での角度を出力できる。</p>
+</section>
+<section id="id14">
+<h3>４つの原子からなる二面角を調べる<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">angle</span> <span class="pre">-f</span> <span class="pre">step6.1_equilibration.xtc</span> <span class="pre">-n</span> <span class="pre">dihedral.ndx</span> <span class="pre">-all</span> <span class="pre">-type</span> <span class="pre">dihedral</span> <span class="pre">-ov</span> <span class="pre">dihedraltest.xvg</span></code></p>
+<p>-f は入力ファイル、-nは4つの原子を指定するために必要なインデックスファイル、-allは(そのグループの？)平均値と別に個々の二面角を出してくれるらしいけど、今は４つの原子しかないから(４つの原子を１グループに.ndxでしている)同じ値が２列表示されてる。
+-allオプション外すと一列しか表示されなかった。
+-typeでどういう角度を調べるかを変えれる！これがないとデフォルトで結合角になるらしく、４つの原子をインデックスで指定してても３つの原子がないとか言われる。
+なので-type dihedralとする必要がある。
+もし指定しなければ結合角を調べることができるはず。
+-ovは出力に関するオプションで、何を求めるかによって変わるが、単なる角度の出力なら-ovでいいはず</p>
+</section>
+<section id="id15">
+<h3>２つの原子の距離を調べる<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">distance</span> <span class="pre">-f</span> <span class="pre">step6.6_equilibration.xtc</span> <span class="pre">-n</span> <span class="pre">distance.ndx</span> <span class="pre">-oav</span> <span class="pre">distave.xvg</span></code>　(ndxで見たいものを別々のグループに記述する必要があるらしい)でいけるはず。</p>
+<p>このコマンド結局使ったかどうか忘れたからちょっと怪しいかもしれない。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VMDについて2 &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>VMDについて2</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vmd2">
+<h1>VMDについて2<a class="headerlink" href="#vmd2" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="vmd">
+<h2>VMD中級編<a class="headerlink" href="#vmd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>さて、前回まででVMDの簡単な使い方について説明した。</p>
+<p>ここでは実際にVMDを使っていく上で実用的な知識を紹介する。</p>
+<section id="id1">
+<h3>VMDの読み込み<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>初級編で<code class="docutils literal notranslate"><span class="pre">vmd</span> <span class="pre">hoge.pdb</span></code>とすればpdbを読み込めると説明した。トラジェクトリを読み込む場合も基本的には同様であるが、トラジェクトリファイルだけでは原子や残基の名前がないために上手く表示されない。そのためトラジェクトリを読み込む場合には</p>
+<p><strong>構造ファイル(pdb,psfなど) + トラジェクトリファイル(xtc,dcd,trrなど)</strong></p>
+<p>のようにして読み込む必要がある。</p>
+<p>さらに例えばmd1.xtcに続くmd2.xtcを読み込みたい場合、</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ vmd hoge.pdb md1.xtc md2.xtc
+</pre></div>
+</div>
+<p>とすれば読み込むことができる。</p>
+</section>
+<section id="vmd-1-9-x-opengl-display-gui">
+<h3>VMD 1.9.X OpenGL Display GUIの機能<a class="headerlink" href="#vmd-1-9-x-opengl-display-gui" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic3.png
+    :width: 50%
+</pre></div>
+</div>
+<p>上記の画像のGUIを以下では<strong>Display GUI</strong>と呼ぶことにする。これまで初級編では主に<strong>Graphical Representations GUI</strong>の使い方を説明してきた。しかしDisplay GUIにもボタンはないが便利な機能が存在する。代表的なものを以下に載せておく。実際にVMDを立ち上げて試してみてほしい。</p>
+<section id="display-gui">
+<h4>「1」キー を押してDisplay GUI上で原子をクリック:　原子の情報を表示。<a class="headerlink" href="#display-gui" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic7.png
+    :width: 50%
+</pre></div>
+</div>
+<p>「1」キーを押すとDisplay GUI上でのカーソルの形が変わる。その状態で原子をクリックすると上の画像のように選択原子の&quot;resname&quot;と&quot;resid&quot;及び&quot;name&quot;が表示される。さらに後ろのターミナルに注目してほしい。ターミナルにはindexやchain、またx,y,z座標といったさらに詳しい情報が表示される。</p>
+<p>もし表示を消したい場合には再度同じ原子をクリックすることで表示が消える。</p>
+<p>しかしターミナルはVMDのGUIと重なって見にくいという場合がある。その場合は<strong>VMD main GUI</strong>の&quot;Graphics&quot;タブ =&gt; &quot;Labels...&quot; の順番でクリックして欲しい。すると以下のようなGUIが新たに表示される。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic8.png
+    :width: 20%
+</pre></div>
+</div>
+<p>ここにもターミナルに表示されている情報が全く同様に表示される。同じならターミナルで見ればいいという人もいるかもしれないがこのGUIを表示するメリットは他にもある。</p>
+<p>先ほど原子情報の表示をやめたい時は同じ原子をクリックすればいいと述べたが、原子数が多い系では同じ原子を再度クリックすることは容易ではなく、中々表示を消せないどころか他の原子の情報を誤って表示してしまいかえって手間を増やすことになりかねない。そのような時に<strong>Labels GUI</strong>で<code class="docutils literal notranslate"><span class="pre">PHE</span> <span class="pre">12:HZ</span></code>と表示されている部分をクリックして選択し、その後**<code class="docutils literal notranslate"><span class="pre">Hide</span></code>**を押すことで非表示にできる。</p>
+<p>また原子の選択項目をLabel GUI上から非表示にするだけでなく消したい場合は<code class="docutils literal notranslate"><span class="pre">Delete</span></code>をクリックすればよい。</p>
+</section>
+<section id="display-gui2">
+<h4>「2」キーを押してDisplay GUI上で原子を2つクリック:　原子間距離を表示<a class="headerlink" href="#display-gui2" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>題の通り、[2]キーを押して距離を測りたい原子を2つクリックすることで原子間距離を表示することができる。</p>
+<p>単位はÅで表示される。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pic9.png
+    :width: 20%
+</pre></div>
+</div>
+</section>
+<section id="r-gui">
+<h4>「r」 キーを押してGUI上でドラッグ:　分子を回転<a class="headerlink" href="#r-gui" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>通常VMDを立ち上げた時はこのモードである。そのため「1」キーや「2」キーのモードから通常のモードに戻りたい時は「r」を押すことで戻せる。</p>
+</section>
+<section id="tgui">
+<h4>「t」キーを押してGUI上でドラッグ:　分子を平行移動<a class="headerlink" href="#tgui" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>系の端などに着目したい時は「t」キーを押してドラッグすることで視点を移動することができる。</p>
+</section>
+<section id="c">
+<h4>「c」キーを押して原子をクリック:　回転中心を選択<a class="headerlink" href="#c" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>VMDを立ち上げた際ドラッグして系を回転させる際の中心は系の重心になっているはずだ。その回転中心を変えたい時には「c」を押した後に回転中心にしたい原子をクリックすればよい。特定の残基や原子にズームして見たい時などに有効。</p>
+</section>
+</section>
+<section id="graphical-representations-gui">
+<h3>Graphical Representations GUI のより高度な原子選択<a class="headerlink" href="#graphical-representations-gui" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>初級編では原子や残基といった分子の特定部分を指定する基本的な方法について紹介した。ここではより発展的な方法について紹介する。</p>
+<section id="selected-atoms">
+<h4>Selected Atomsの文法<a class="headerlink" href="#selected-atoms" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Graphical Representationsの&quot;Selected Atoms&quot;の指定ではプログラミング言語のように「かつ」、「または」、「でない(否定)」の文法が使用できる。例えば以下のように行う。</p>
+<p>・「かつ」:　<code class="docutils literal notranslate"><span class="pre">chain</span> <span class="pre">A</span> <span class="pre">and</span> <span class="pre">resname</span> <span class="pre">GLY</span></code></p>
+<p>・「または」:　<code class="docutils literal notranslate"><span class="pre">protein</span> <span class="pre">or</span> <span class="pre">lipid</span></code></p>
+<p>・「でない」:　<code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">lipid</span></code></p>
+<p>また必要に応じて「()」を使用することもできるが使用する機会は多くない。このページの「<strong>ある距離以内の原子の選択</strong>」の項目で「()」を使った例について取り上げるのでそちらの例を参考にしてほしい。</p>
+</section>
+<section id="id2">
+<h4>複数原子や残基の選択<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>上記文法を学んだからといって無闇に乱用するのは避けよう。例えば以下の例。</p>
+<p><code class="docutils literal notranslate"><span class="pre">resname</span> <span class="pre">POPE</span> <span class="pre">or</span> <span class="pre">resname</span> <span class="pre">POPG</span> <span class="pre">or</span> <span class="pre">resname</span> <span class="pre">POPC</span></code></p>
+<p>これはPOPE, POPG, POPCに含まれる全ての原子を表示するためのキーワードである。このような場合は次のように書くことができる。</p>
+<p><code class="docutils literal notranslate"><span class="pre">resname</span> <span class="pre">POPE</span> <span class="pre">POPG</span> <span class="pre">POPC</span></code></p>
+<p>また原子のindex(0始まりの番号)についてはさらに便利な指定がある。例えば5番から9番を選択したい時は</p>
+<p><code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">5</span> <span class="pre">to</span> <span class="pre">9</span></code></p>
+<p>と書くことができる。residやserialでも同様にできるはずなので試してみてほしい。</p>
+</section>
+<section id="id3">
+<h4>ある距離以内の原子の選択<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>便利なキーワードに&quot;within X of&quot;がある。これは半径 X Åにある原子を選択する際に役立つ。利用例としては以下の通り。</p>
+<p><code class="docutils literal notranslate"><span class="pre">water</span> <span class="pre">within</span> <span class="pre">10</span> <span class="pre">of</span> <span class="pre">(index</span> <span class="pre">3626</span> <span class="pre">to</span> <span class="pre">3628)</span></code></p>
+<p>少しこれまでの知識を活かした例を載せた。また先に述べた「()」を含んだ指定の仕方でもある。</p>
+<p>意味としてはindex番号が3626から3628までの原子のそれぞれにおいて10Å以内にある水分子を表示するという意味である。原子全てを表示するとかえって見にくいということがあるのでこれにより必要な分子だけを表示できる。</p>
+<p><strong>※注意</strong></p>
+<p>上記の文法で分子を指定してトラジェクトリを再生するのは推奨しない。使い方としてはあくまでも特定の1フレームにおいて用いる使い方が好ましい。具体的例を出してその訳を説明する。</p>
+<p>例えば<code class="docutils literal notranslate"><span class="pre">ion</span> <span class="pre">within</span> <span class="pre">5</span> <span class="pre">of</span> <span class="pre">(index</span> <span class="pre">0</span> <span class="pre">1)</span></code>と指定したとしよう。そしてその際に実際に5Å以内にいたイオンのindexが3,4,5だったとしよう。この場合指定をしたフレームでは5Å以内にいたかもしれないが、次のフレームやその後のフレームでは5Å以内にいない可能性がある。にも関わらず、トラジェクトリを再生すると常にindex 3,4,5が表示され続ける。つまり<strong>トラジェクトリの各フレームにおいて5Å以内にいるイオンを表示するのは不可能である</strong>ということである。 代わりに<strong>その指定を行ったフレームのみでこの文法は有効であり、次のフレームに移った時に新たに5Å以内にいるイオンを読み込み直すというような操作は行われない</strong>ということである。</p>
+<p>この点を知らずにトラジェクトリを再生すると別のものを見ているということになりかねないので注意が必要である。</p>
+</section>
+<section id="or">
+<h4>ある座標より大きいor小さい原子の指定<a class="headerlink" href="#or" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>&quot;Selected Atoms&quot;では不等号も使用が可能である。具体的には以下のように使用する。</p>
+<p><code class="docutils literal notranslate"><span class="pre">water</span> <span class="pre">and</span> <span class="pre">z&lt;10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">15</span> <span class="pre">or</span> <span class="pre">x&gt;30</span></code></p>
+<p>こちらはVMDで見るというよりは、初期構造の作製によく用いる。初期構造の作製の仕方は上級編で説明するのでそちらを参考にしてほしい。</p>
+</section>
+<section id="id4">
+<h4>分子が条件で分断されないように選択<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>こちらも上級編でまた改めて説明するが、先にこちらでも説明をしておく。例えば１つ上の項目で学んだように<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">15</span> <span class="pre">or</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">30</span></code>としたとする。この場合もしとある水分子のH原子がx=14にあり、O原子がx=15にあるとH原子のみが表示される。表示だけなら大した問題ではないかもしれないが、構造を作る際には分子が切断されることになるため致命的な問題となる。このような場合には以下のようにする。</p>
+<p><code class="docutils literal notranslate"><span class="pre">same</span> <span class="pre">residue</span> <span class="pre">as</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">15</span> <span class="pre">or</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">30</span></code></p>
+<p>こうすることで同一の&quot;residue&quot;として見なされる分子や残基が指定した境界(x=15やx=30)を跨いでいる際、その境界を超えていても切断されないように表示してくれる。つまりx=15にあるO原子も表示されるようになるということである。</p>
+<p>構造を作る際にはかなり重要であるのでぜひ知っておいて欲しい。</p>
+</section>
+</section>
+</section>
+<section id="id5">
+<h2>豆知識<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">charge</span> <span class="pre">&gt;=</span> <span class="pre">0.15</span></code></p>
+<p>とすると電荷の大きさが0.15より大きい原子のみを表示できる。マニアックかもしれないが、個人的にタンパク質でイオン化している残基を見る際に役立つ。</p>
+</section>
+<section id="id6">
+<h2>まとめ<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまで読んでいればVMDの扱いには基本的には困らないレベルにはなっているかと思う。</p>
+<p>他にも筆者の知らない機能などはまだまだあると思うので、ぜひ調べて使ってみてほしい。</p>
+<p>次のページではコマンドを用いた構造の作り方などさらに高いレベルのVMDの使い方を紹介する。</p>
+<p>初めは難しいかもしれないが多くの人にとっては知っておくべき知識であると思うのでぜひ読んで欲しい。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
