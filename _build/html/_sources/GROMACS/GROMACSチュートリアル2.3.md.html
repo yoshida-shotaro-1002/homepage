@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. mdpファイルの作成とシミュレーションの実行 &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>3. mdpファイルの作成とシミュレーションの実行</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mdp">
+<h1>3. mdpファイルの作成とシミュレーションの実行<a class="headerlink" href="#mdp" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>前回まででアルコール二重膜系を作成し、CHARMM36力場を使用したGROMACSでのシミュレーションを開始できるまでに至った。 今回は実際にMDシミュレーションを行うが、シミュレーションの設定をメインに解説し、好きな条件でシミュレーションを実行できるようになることを目標とする。 シミュレーションの手順はチュートリアル1と同様、下記のように進めていく。</p>
+<ol class="simple">
+<li><p>エネルギー最小化（00_em）</p></li>
+<li><p>NVT平衡化（01_nvt）</p></li>
+<li><p>NPT平衡化（02_npt）</p></li>
+<li><p>本計算（03_npt）</p></li>
+</ol>
+<p>また、このページで解説したmdpファイルの設定について、より詳しい解説は【GROMACS.mdpオプション】のページで紹介している。 GROMACSの操作に慣れてきたら参考にしてほしい。</p>
+<section id="em">
+<h2>エネルギー最小化（00_em）<a class="headerlink" href="#em" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まずは、作成した構造のエネルギー最小化を行う。 設定条件を記述したmdpファイルは次のようになる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">00</span><span class="n">_em</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">integrator</span>  <span class="o">=</span> <span class="n">steep</span>
+<span class="n">emtol</span>       <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="n">emstep</span>      <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">nsteps</span>      <span class="o">=</span> <span class="mi">50000</span>
+
+<span class="n">nstlist</span>         <span class="o">=</span> <span class="mi">10</span>
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>   <span class="o">=</span> <span class="n">Verlet</span>
+<span class="n">ns_type</span>         <span class="o">=</span> <span class="n">grid</span>
+<span class="n">coulombtype</span>     <span class="o">=</span> <span class="n">PME</span>
+<span class="n">rcoulomb</span>        <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">rvdw</span>            <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">pbc</span>             <span class="o">=</span> <span class="n">xyz</span>
+</pre></div>
+</div>
+<p>エネルギー最小化には最急降下法を用いるので<code class="docutils literal notranslate"><span class="pre">integrator</span> <span class="pre">=</span> <span class="pre">steep</span></code>とし、系の最大力Fmaxが1000 kJ mol-1 nm-1以下となるまで緩和を行う。 この時、同時にステップ間隔と最大ステップ数を指定している。</p>
+<p>また、次に非結合相互作用（LJ相互作用、クーロン相互作用）に関する設定している。 近接原子の定義、探し方、更新頻度などを設定した後、それらが遠距離の場合と近距離の場合で異なる相互作用の取り扱いをしている。 <code class="docutils literal notranslate"><span class="pre">coulombtype</span> <span class="pre">=</span> <span class="pre">PME</span></code>は遠距離クーロン相互作用にパーティクルメッシュエワルド法を使用する設定である。 また、<code class="docutils literal notranslate"><span class="pre">rcoulomb</span></code>と<code class="docutils literal notranslate"><span class="pre">rvdw</span></code>は近距離クーロン相互作用及び近距離LJ相互作用のカットオフ距離である。</p>
+<p>最後、<code class="docutils literal notranslate"><span class="pre">pbc</span> <span class="pre">=</span> <span class="pre">xyz</span></code>は周期的境界条件を3次元に適用している。</p>
+<p>このmdpファイルと作成した二重膜系の構造を用いて<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>と<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">mdrun</span></code>を実行する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">grompp</span> <span class="o">-</span><span class="n">f</span> <span class="mi">00</span><span class="n">_em</span><span class="o">.</span><span class="n">mdp</span> <span class="o">-</span><span class="n">c</span> <span class="n">system</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span><span class="n">o</span> <span class="mi">00</span><span class="n">_em</span><span class="o">.</span><span class="n">tpr</span>
+<span class="n">gmx</span> <span class="n">mdrun</span> <span class="o">-</span><span class="n">deffnm</span> <span class="mi">00</span><span class="n">_em</span>
+</pre></div>
+</div>
+<p>計算が終了すると、エネルギー最小化された系の構造が得られる。 エネルギー最小化過程のポテンシャルエネルギー変化を出力してみた。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">energy</span> <span class="o">-</span><span class="n">f</span> <span class="mi">00</span><span class="n">_em</span><span class="o">.</span><span class="n">tpr</span> <span class="o">-</span><span class="n">o</span> <span class="n">potential</span><span class="o">.</span><span class="n">xvg</span>
+</pre></div>
+</div>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_em_plot.png" width=50%></section>
+<section id="nvt-01-nvt">
+<h2>NVT平衡化（01_nvt）<a class="headerlink" href="#nvt-01-nvt" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>エネルギー最小化ができたら、NVT平衡化を行う。 mdpファイルには温度制御の設定を記述する必要があり、またシミュレーションの長さに合わせてステップ数を決定する。 今回はNose-Hooverの方法で温度制御を行い、310.15 Kで125.0 psのNVT計算を行う設定をした。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">01</span><span class="n">_nvt</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">integrator</span>              <span class="o">=</span> <span class="n">md</span>
+<span class="n">dt</span>                      <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">nsteps</span>                  <span class="o">=</span> <span class="mi">125000</span>
+<span class="n">nstxtcout</span>               <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstxout</span>                 <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstvout</span>                 <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstfout</span>                 <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstcalcenergy</span>           <span class="o">=</span> <span class="mi">100</span>
+<span class="n">nstenergy</span>               <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">nstlog</span>                  <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>           <span class="o">=</span> <span class="n">Verlet</span>
+<span class="n">nstlist</span>                 <span class="o">=</span> <span class="mi">20</span>
+<span class="n">rlist</span>                   <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">coulombtype</span>             <span class="o">=</span> <span class="n">PME</span>
+<span class="n">rcoulomb</span>                <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">vdwtype</span>                 <span class="o">=</span> <span class="n">Cut</span><span class="o">-</span><span class="n">off</span>
+<span class="n">vdw</span><span class="o">-</span><span class="n">modifier</span>            <span class="o">=</span> <span class="n">Force</span><span class="o">-</span><span class="n">switch</span>
+<span class="n">rvdw_switch</span>             <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">rvdw</span>                    <span class="o">=</span> <span class="mf">1.2</span>
+
+<span class="n">tcoupl</span>                  <span class="o">=</span> <span class="n">Nose</span><span class="o">-</span><span class="n">Hoover</span>
+<span class="n">tc_grps</span>                 <span class="o">=</span> <span class="n">SYSTEM</span>
+<span class="n">tau_t</span>                   <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">ref_t</span>                   <span class="o">=</span> <span class="mf">310.15</span>
+
+<span class="n">constraints</span>             <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>
+<span class="n">constraint_algorithm</span>    <span class="o">=</span> <span class="n">LINCS</span>
+
+<span class="n">nstcomm</span>                 <span class="o">=</span> <span class="mi">100</span>
+<span class="n">comm_mode</span>               <span class="o">=</span> <span class="n">linear</span>
+<span class="n">comm_grps</span>               <span class="o">=</span> <span class="n">SYSTEM</span>
+
+<span class="n">gen</span><span class="o">-</span><span class="n">vel</span>                 <span class="o">=</span> <span class="n">yes</span>
+<span class="n">gen</span><span class="o">-</span><span class="n">temp</span>                <span class="o">=</span> <span class="mf">310.15</span>
+<span class="n">gen</span><span class="o">-</span><span class="n">seed</span>                <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">refcoord_scaling</span>        <span class="o">=</span> <span class="n">com</span>
+</pre></div>
+</div>
+<p>上から順番に見ていく。まず、MD計算を行うので<code class="docutils literal notranslate"><span class="pre">integrator</span> <span class="pre">=</span> <span class="pre">md</span></code>とし、タイムステップは<code class="docutils literal notranslate"><span class="pre">dt</span> <span class="pre">=</span> <span class="pre">0.001</span></code>としている。 このタイムステップの単位はpsなので、設定したタイムステップは1 fsとなる。 <code class="docutils literal notranslate"><span class="pre">nsteps</span> <span class="pre">=</span> <span class="pre">125000</span></code>とすれば、0.001 ps × 125000 = 125.0 psのシミュレーションが実行できる。</p>
+<p>次に出力情報の設定をしている。 主にトラジェクトリファイルを何ステップごとに記述するかを設定しており、<code class="docutils literal notranslate"><span class="pre">nstxout</span></code>、<code class="docutils literal notranslate"><span class="pre">nstvout</span></code>、<code class="docutils literal notranslate"><span class="pre">nstfout</span></code>はそれぞれ系の原子の座標、速度及び働く力に対応する。 これらの情報はtrrファイルにトラジェクトリとして出力されるが、<code class="docutils literal notranslate"><span class="pre">nstxtcout</span></code>を指定するとxtcファイルにも座標情報を出力することができる。 また、エネルギーや計算ログの出力も<code class="docutils literal notranslate"><span class="pre">nstenergy</span></code>と<code class="docutils literal notranslate"><span class="pre">nstlog</span></code>で制御できる。</p>
+<p>温度制御は<code class="docutils literal notranslate"><span class="pre">tcoupl</span> <span class="pre">=</span> <span class="pre">Nose-Hoover</span></code>を適用している。 <code class="docutils literal notranslate"><span class="pre">ref_t</span></code>が参照温度なので、ここにシミュレーションしたい温度である310.15 Kを指定する。</p>
+<p><code class="docutils literal notranslate"><span class="pre">constraints</span></code>では結合の拘束条件とそのアルゴリズムを指定する。 今回は水素結合に対してLINCSという方法で結合拘束をしている。</p>
+<p><code class="docutils literal notranslate"><span class="pre">comm_mode</span></code>は系の質量中心が並進運動してしまう場合に、その速度を取り除く設定である。 <code class="docutils literal notranslate"><span class="pre">nstcomm</span></code>でその操作の頻度を指定する。</p>
+<p>最後、<code class="docutils literal notranslate"><span class="pre">gen-vel</span></code>で系の原子に対して初速度を与える。 初速度はマクスウェル分布に従って生成され、温度は<code class="docutils literal notranslate"><span class="pre">gen-temp</span></code>で与えることができる。 普通は温度制御時の参照温度と同じ値になるであろう。</p>
+<p>設定が確認できたら<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>と<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">mdrun</span></code>を実行する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">grompp</span> <span class="o">-</span><span class="n">f</span> <span class="mi">01</span><span class="n">_nvt</span><span class="o">.</span><span class="n">mdp</span> <span class="o">-</span><span class="n">c</span> <span class="mi">00</span><span class="n">_em</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span><span class="n">o</span> <span class="mi">01</span><span class="n">_nvt</span><span class="o">.</span><span class="n">tpr</span>
+<span class="n">gmx</span> <span class="n">mdrun</span> <span class="o">-</span><span class="n">deffnm</span> <span class="mi">01</span><span class="n">_nvt</span>
+</pre></div>
+</div>
+<p>チュートリアル①と同様に、NVT平衡化で温度が一定となっているかを確認する。 グラフにプロットすると、125.0 psの間温度が安定していることがわかる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">energy</span> <span class="o">-</span><span class="n">f</span> <span class="mi">01</span><span class="n">_nvt</span><span class="o">.</span><span class="n">tpr</span> <span class="o">-</span><span class="n">o</span> <span class="n">temperature</span><span class="o">.</span><span class="n">xvg</span>
+</pre></div>
+</div>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_temp_plot.png" width=50%></section>
+<section id="npt-02-npt">
+<h2>NPT平衡化（02_npt）<a class="headerlink" href="#npt-02-npt" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>系の温度が安定したら、続いてNPT平衡化を行う。 ここでの設定はほとんど本計算と同じものになるが、圧力が安定するまでがこのステップの役割である。 圧力制御にはParrinello-Rahmanの方法を使用し、参照圧力1.0 barとして500.0 psのシミュレーションを行う。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="n">_npt</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">integrator</span>              <span class="o">=</span> <span class="n">md</span>
+<span class="n">dt</span>                      <span class="o">=</span> <span class="mf">0.002</span>
+<span class="n">nsteps</span>                  <span class="o">=</span> <span class="mi">250000</span>
+<span class="n">nstxtcout</span>               <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstvout</span>                 <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstfout</span>                 <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">nstcalcenergy</span>           <span class="o">=</span> <span class="mi">100</span>
+<span class="n">nstenergy</span>               <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">nstlog</span>                  <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>           <span class="o">=</span> <span class="n">Verlet</span>
+<span class="n">nstlist</span>                 <span class="o">=</span> <span class="mi">20</span>
+<span class="n">rlist</span>                   <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">coulombtype</span>             <span class="o">=</span> <span class="n">pme</span>
+<span class="n">rcoulomb</span>                <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">vdwtype</span>                 <span class="o">=</span> <span class="n">Cut</span><span class="o">-</span><span class="n">off</span>
+<span class="n">vdw</span><span class="o">-</span><span class="n">modifier</span>            <span class="o">=</span> <span class="n">Force</span><span class="o">-</span><span class="n">switch</span>
+<span class="n">rvdw_switch</span>             <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">rvdw</span>                    <span class="o">=</span> <span class="mf">1.2</span>
+
+<span class="n">tcoupl</span>                  <span class="o">=</span> <span class="n">Nose</span><span class="o">-</span><span class="n">Hoover</span>
+<span class="n">tc_grps</span>                 <span class="o">=</span> <span class="n">SYSTEM</span>
+<span class="n">tau_t</span>                   <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">ref_t</span>                   <span class="o">=</span> <span class="mf">310.15</span>
+
+<span class="n">pcoupl</span>                  <span class="o">=</span> <span class="n">Parrinello</span><span class="o">-</span><span class="n">Rahman</span>
+<span class="n">pcoupltype</span>              <span class="o">=</span> <span class="n">semiisotropic</span>
+<span class="n">tau_p</span>                   <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">compressibility</span>         <span class="o">=</span> <span class="mf">4.5e-5</span>  <span class="mf">4.5e-5</span>
+<span class="n">ref_p</span>                   <span class="o">=</span> <span class="mf">1.0</span>     <span class="mf">1.0</span>
+
+<span class="n">constraints</span>             <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>
+<span class="n">constraint_algorithm</span>    <span class="o">=</span> <span class="n">LINCS</span>
+<span class="n">continuation</span>            <span class="o">=</span> <span class="n">yes</span>
+
+<span class="n">nstcomm</span>                 <span class="o">=</span> <span class="mi">100</span>
+<span class="n">comm_mode</span>               <span class="o">=</span> <span class="n">linear</span>
+<span class="n">comm_grps</span>               <span class="o">=</span> <span class="n">SYSTEM</span>
+
+<span class="n">refcoord_scaling</span>        <span class="o">=</span> <span class="n">com</span>
+</pre></div>
+</div>
+<p>おおよその設定はNVT平衡化のものと同様であるが、圧力制御のセクションが追加されている。 圧力制御は<code class="docutils literal notranslate"><span class="pre">pcoupl</span> <span class="pre">=</span> <span class="pre">Parrinello-Rahman</span></code>とし、参照圧力は<code class="docutils literal notranslate"><span class="pre">ref_p</span></code>に1.0 barを指定する。 ここで注意するのは、圧力の制御タイプが<code class="docutils literal notranslate"><span class="pre">pcoupltype</span> <span class="pre">=</span> <span class="pre">semiisotropic</span></code>となっている点である。 今回のシミュレーションはアルコールの二重膜を扱っており、膜はxy方向に広がっているので、xy方向とz方向で同じ圧力制御をすることができない。 従って、制御タイプにはsemiisotropic（半等方性）を設定し、<code class="docutils literal notranslate"><span class="pre">ref_p</span></code>にはxy方向とz方向でそれぞれの参照圧力を与える。</p>
+<p>また、NPT平衡化はNVT平衡化から継続するので<code class="docutils literal notranslate"><span class="pre">continuation</span> <span class="pre">=</span> <span class="pre">yes</span></code>とし、ここからタイムステップは<code class="docutils literal notranslate"><span class="pre">dt</span> <span class="pre">=</span> <span class="pre">0.002</span></code>としている。</p>
+<p>同様に、<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>と<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">mdrun</span></code>を実行する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">grompp</span> <span class="o">-</span><span class="n">f</span> <span class="mi">02</span><span class="n">_npt</span><span class="o">.</span><span class="n">mdp</span> <span class="o">-</span><span class="n">c</span> <span class="mi">01</span><span class="n">_nvt</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span><span class="n">o</span> <span class="mi">02</span><span class="n">_npt</span><span class="o">.</span><span class="n">tpr</span>
+<span class="n">gmx</span> <span class="n">mdrun</span> <span class="o">-</span><span class="n">deffnm</span> <span class="mi">02</span><span class="n">_npt</span>
+</pre></div>
+</div>
+<p>シミュレーションが完了すると、310.15 K、1.0 barでのアルコール二重膜の構造が得られる。 トラジェクトリを確認すると、膜分子の占有面積が小さくなり、系の大きさが変化したことが見られる。 圧力についてもグラフにプロットしてみた。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">energy</span> <span class="o">-</span><span class="n">f</span> <span class="mi">02</span><span class="n">_npt</span><span class="o">.</span><span class="n">tpr</span> <span class="o">-</span><span class="n">o</span> <span class="n">pressure</span><span class="o">.</span><span class="n">xvg</span>
+</pre></div>
+</div>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_press_plot.png" width=50%></section>
+<section id="npt">
+<h2>本計算（03_npt）<a class="headerlink" href="#npt" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最後は本計算を行う。 本計算はNPT平衡化の延長なので、ステップ数を増やして50.0 nsのシミュレーションを行う。 ここまでで温度と圧力が十分に安定していることを確認して、シミュレーションを実行しよう。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">03</span><span class="n">_npt</span><span class="o">.</span><span class="n">mdp</span>
+<span class="n">integrator</span>              <span class="o">=</span> <span class="n">md</span>
+<span class="n">dt</span>                      <span class="o">=</span> <span class="mf">0.002</span>
+<span class="n">nsteps</span>                  <span class="o">=</span> <span class="mi">25000000</span>
+<span class="n">nstxtcout</span>               <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">nstvout</span>                 <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">nstfout</span>                 <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">nstcalcenergy</span>           <span class="o">=</span> <span class="mi">100</span>
+<span class="n">nstenergy</span>               <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">nstlog</span>                  <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">cutoff</span><span class="o">-</span><span class="n">scheme</span>           <span class="o">=</span> <span class="n">Verlet</span>
+<span class="n">nstlist</span>                 <span class="o">=</span> <span class="mi">20</span>
+<span class="n">rlist</span>                   <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">coulombtype</span>             <span class="o">=</span> <span class="n">pme</span>
+<span class="n">rcoulomb</span>                <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">vdwtype</span>                 <span class="o">=</span> <span class="n">Cut</span><span class="o">-</span><span class="n">off</span>
+<span class="n">vdw</span><span class="o">-</span><span class="n">modifier</span>            <span class="o">=</span> <span class="n">Force</span><span class="o">-</span><span class="n">switch</span>
+<span class="n">rvdw_switch</span>             <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">rvdw</span>                    <span class="o">=</span> <span class="mf">1.2</span>
+
+<span class="n">tcoupl</span>                  <span class="o">=</span> <span class="n">Nose</span><span class="o">-</span><span class="n">Hoover</span>
+<span class="n">tc_grps</span>                 <span class="o">=</span> <span class="n">SYSTEM</span>
+<span class="n">tau_t</span>                   <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">ref_t</span>                   <span class="o">=</span> <span class="mf">310.15</span>
+
+<span class="n">pcoupl</span>                  <span class="o">=</span> <span class="n">Parrinello</span><span class="o">-</span><span class="n">Rahman</span>
+<span class="n">pcoupltype</span>              <span class="o">=</span> <span class="n">semiisotropic</span>
+<span class="n">tau_p</span>                   <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">compressibility</span>         <span class="o">=</span> <span class="mf">4.5e-5</span>  <span class="mf">4.5e-5</span>
+<span class="n">ref_p</span>                   <span class="o">=</span> <span class="mf">1.0</span>     <span class="mf">1.0</span>
+
+<span class="n">constraints</span>             <span class="o">=</span> <span class="n">h</span><span class="o">-</span><span class="n">bonds</span>
+<span class="n">constraint_algorithm</span>    <span class="o">=</span> <span class="n">LINCS</span>
+<span class="n">continuation</span>            <span class="o">=</span> <span class="n">yes</span>
+
+<span class="n">nstcomm</span>                 <span class="o">=</span> <span class="mi">100</span>
+<span class="n">comm_mode</span>               <span class="o">=</span> <span class="n">linear</span>
+<span class="n">comm_grps</span>               <span class="o">=</span> <span class="n">SYSTEM</span>
+
+<span class="n">refcoord_scaling</span>        <span class="o">=</span> <span class="n">com</span>
+</pre></div>
+</div>
+<p>実行コマンドも変わらず、<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">grompp</span></code>と<code class="docutils literal notranslate"><span class="pre">gmx</span> <span class="pre">mdrun</span></code>で実行する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gmx</span> <span class="n">grompp</span> <span class="o">-</span><span class="n">f</span> <span class="mi">03</span><span class="n">_npt</span><span class="o">.</span><span class="n">mdp</span> <span class="o">-</span><span class="n">c</span> <span class="mi">02</span><span class="n">_npt</span><span class="o">.</span><span class="n">gro</span> <span class="o">-</span><span class="n">p</span> <span class="n">topol</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span><span class="n">o</span> <span class="mi">03</span><span class="n">_npt</span><span class="o">.</span><span class="n">tpr</span>
+<span class="n">gmx</span> <span class="n">mdrun</span> <span class="o">-</span><span class="n">deffnm</span> <span class="mi">03</span><span class="n">_npt</span>
+</pre></div>
+</div>
+<p>シミュレーションには時間がかかると思うが、計算が終了すると次のような構造が見られるであろう。 二重膜を形成するアルコール分子が一定方向に傾き、ラメラ構造を形成している。</p>
+<img src="https://shalad2.github.io/JellyPage/gromacs/images/C16OH_simu_result.png" width=50%></section>
+<section id="id1">
+<h2>まとめ<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>チュートリアル②は以上となる。学習内容をまとめると以下のようになる。</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CHARMM-GUI</span></code>などを使用して、系の構造の作成方法を学習した。</p></li>
+<li><p>GROMACSへの力場の導入方法、及び分子の取り扱い方を理解した。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mdpファイル</span></code>を編集し、目的のシミュレーション条件に合った設定をした。</p></li>
+</ol>
+<p>ここまでできればGROMACSは一通り扱えるようになったのではないだろうか。 これから独自のシミュレーションを行い、さらに深い知識を身に付けていってほしい。 また、GROMACSのチュートリアルページは備忘録としても活用してほしい。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

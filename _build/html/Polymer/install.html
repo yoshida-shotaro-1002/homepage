@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高分子の研究に必要なライブラリのインストール &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="NASの使い方" href="NAS.html" />
+    <link rel="prev" title="PCの設定" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDnotes
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="polymer_property.html">高分子材料の物性値の調整</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="polymer_property.html#id2">目次</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">PCの設定</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">高分子の研究に必要なライブラリのインストール</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#liblbfgs">Liblbfgs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netcdf">Netcdf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intel-oneapi-basetoolkit-hpctoolkit">Intel oneapi(basetoolkit, hpctoolkit)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="NAS.html">NASの使い方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup.html">高分子鎖の物性値調整に対する準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Entanglement.html">高分子鎖のからみあい点間分子量(からみあい)調整</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Rg.html">高分子鎖の慣性半径調整</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="polymer_property.html">高分子材料の物性値の調整</a> &raquo;</li>
+      <li>高分子の研究に必要なライブラリのインストール</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>高分子の研究に必要なライブラリのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは高分子グループにおける研究を進める上で必要となってくるライブラリのインストールについてまとめている。</p>
+<section id="liblbfgs">
+<h2>Liblbfgs<a class="headerlink" href="#liblbfgs" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、Liblbfgsをダウンロードする必要がある。 <a class="reference external" href="https://src.fedoraproject.org/repo/pkgs/liblbfgs/liblbfgs-1.10.tar.gz/2a46da6c4014d6b1e8a8790a93edffbb/">Liblbfgs</a>にアクセスし、「liblbfgs-1.10.tar.gz」をダウンロードする。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Liblbfgsのインストール先へ移動</span>
+<span class="c1"># インストール先のディレクトリにliblbfgs-1.10.tar.gzを用意しておく</span>
+<span class="nb">cd</span> ~/apl
+tar -xzvf liblbfgs-1.10.tar.gz
+<span class="nb">cd</span> liblbfgs-1.10
+</pre></div>
+</div>
+<p>liblbfgs-1.10のディレクトリへ移動したら<code class="docutils literal notranslate"><span class="pre">ls</span></code>で中身を確認しておく。</p>
+<p>次に、configure(アプリがインストールされる環境を自動的に調べ、その環境に合わせたMakeFileを自動的に作ること)するディレクトリを作成する。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir install
+</pre></div>
+</div>
+<p>作成したinstallディレクトリへ移動し、<code class="docutils literal notranslate"><span class="pre">configure</span></code>を行う。 このとき指定がなければ/usr/local内にインストールされる。その際にスーパーユーザーの権限が必要になるため、この後の一連のコマンド入力の頭にsudoをつける必要がある。ローカル内にインストールしたい場合は以下のように--prefixでインストール先を指定する。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ローカルでのconfigureの例</span>
+./configure --prefix<span class="o">=</span>/home/<span class="o">(</span>ユーザー名<span class="o">)</span>/apl/liblbfgs-1.10/install/
+</pre></div>
+</div>
+<p>configureが終了したら続けて<code class="docutils literal notranslate"><span class="pre">make</span></code>を行う。 マルチプロセッサ環境であれば、<code class="docutils literal notranslate"><span class="pre">-j</span></code>を付けて並列コンパイルをすることで高速化ができる。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -j <span class="m">4</span>
+</pre></div>
+</div>
+<p>最後に<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>をする。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make install
+</pre></div>
+</div>
+<p>終了するとinstallにlibというディレクトリが生成しているはずである。このlibの中にLiblbfgsの実行ファイルが生成している。 .bashrcにパスを通してインストールは完了である。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi .bashrc
+<span class="c1"># ホームディレクトリの.bashrcを編集</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/home/<span class="o">{</span>ユーザー名<span class="o">}</span>/apl/liblbfgs-1.10/install/lib/
+</pre></div>
+</div>
+</section>
+<section id="netcdf">
+<h2>Netcdf<a class="headerlink" href="#netcdf" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このNetcdfのインストール方法も基本的にLiblbfgsと同様である。まず、Netcdfをダウンロードする必要がある。 <a class="reference external" href="https://src.fedoraproject.org/repo/pkgs/netcdf/netcdf-3.6.3.tar.gz/334e9bdc010b6cd03fd6531a45fe50ad/">Netcdf</a>にアクセスし、「netcdf-3.6.3.tar.gz」をダウンロードする。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Netcdfのインストール先へ移動</span>
+<span class="c1"># インストール先のディレクトリにnetcdf-3.6.3.tar.gzを用意しておく</span>
+<span class="nb">cd</span> ~/apl
+tar -xzvf netcdf-3.6.3.tar.gz
+<span class="nb">cd</span> netcdf-3.6.3
+</pre></div>
+</div>
+<p>netcdf-3.6.3のディレクトリへ移動したら<code class="docutils literal notranslate"><span class="pre">ls</span></code>で中身を確認しておく。</p>
+<p>次に、configure(アプリがインストールされる環境を自動的に調べ、その環境に合わせたMakeFileを自動的に作ること)するディレクトリを作成する。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir install
+</pre></div>
+</div>
+<p>作成したinstallディレクトリへ移動し、<code class="docutils literal notranslate"><span class="pre">configure</span></code>を行う。 このとき指定がなければ/usr/local内にインストールされる。その際にスーパーユーザーの権限が必要になるため、この後の一連のコマンド入力の頭にsudoをつける必要がある。ローカル内にインストールしたい場合は以下のように--prefixでインストール先を指定する。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ローカルでのconfigureの例</span>
+./configure --prefix<span class="o">=</span>/home/<span class="o">(</span>ユーザー名<span class="o">)</span>/apl/netcdf-3.6.3/install/
+</pre></div>
+</div>
+<p>configureが終了したら続けて<code class="docutils literal notranslate"><span class="pre">make</span></code>を行う。 マルチプロセッサ環境であれば、<code class="docutils literal notranslate"><span class="pre">-j</span></code>を付けて並列コンパイルをすることで高速化ができる。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -j <span class="m">4</span>
+</pre></div>
+</div>
+<p>最後に<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>をする。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make install
+</pre></div>
+</div>
+<p>終了するとinstallにlibというディレクトリが生成しているはずである。このlibの中にNetcdfの実行ファイルが生成している。 .bashrcにパスを通してインストールは完了である。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>vi .bashrc
+<span class="c1"># ホームディレクトリの.bashrcを編集</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/home/<span class="o">{</span>ユーザー名<span class="o">}</span>/apl/netcdf-3.6.3/install/lib/
+</pre></div>
+</div>
+</section>
+<section id="intel-oneapi-basetoolkit-hpctoolkit">
+<h2>Intel oneapi(basetoolkit, hpctoolkit)<a class="headerlink" href="#intel-oneapi-basetoolkit-hpctoolkit" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、Intelのアカウントを登録する必要がある。<a class="reference external" href="https://www.intel.com/content/www/us/en/homepage.html/">Intel webpage</a>にアクセスし、右上の人のマークをクリックし、指示に従って登録を進めていく。メールによる認証に時間がかかるため注意する。</p>
+<p>Intelのアカウントを作成し、ログインしたらサイト内検索でoneapiと検索する。Base ToolkitとHPC Toolkitが見つかると思うのでLinuxでダウンロードする。</p>
+<p>まず、インストールするためのディレクトリを/apl/intel/oneapi/のディレクトリを作成する。l_BaseKit_p_2021.1.0.2659_offline.sh, l_HPCKit_p_2021.1.0.2684_offline.shがダウンロードされているので、それぞれ以下のコマンドを打ち込むことでウィンドウの指示が表示されると思うのが、その指示に従ってインストールを進めていく。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#Base ToolKitの場合</span>
+bash l_BaseKit_p_2021.1.0.2659_offline.sh
+<span class="c1">#HPC ToolKitの場合</span>
+bash l_HPCKit_p_2021.1.0.2684_offline.sh
+</pre></div>
+</div>
+<p>インストールはカスタムしなくても良い。ディレクトリの指示があれば/apl/intel/oneapi/のディレクトリを指定して、両方ともそこにインストールする。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro.html" class="btn btn-neutral float-left" title="PCの設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="NAS.html" class="btn btn-neutral float-right" title="NASの使い方" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

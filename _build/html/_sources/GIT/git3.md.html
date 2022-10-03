@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gitの使い方について3 &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MDnotes
+            <img src="../../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Polymer/polymer_property.html">高分子材料の物性値の調整</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Gitの使い方について3</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git3">
+<h1>Gitの使い方について3<a class="headerlink" href="#git3" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="id1">
+<h2>実践編<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>さて、説明があまりにも長くなった。しかしここまで来れば後はコマンドを実行するだけである。一緒に進めていこう。</p>
+<p>まずはhttps://github.com/onefive13/sourceからクローンを行う。</p>
+<p>自分の手元のディレクトリで好きなところでクローンを行ってほしい。コマンドと出力結果を以下に示す。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/onefive13/source
+
+Cloning into &#39;source&#39;...
+Username for &#39;https://github.com&#39;: onefive13
+Password for &#39;https://onefive13@github.com&#39;:
+remote: Enumerating objects: 160, done.
+remote: Counting objects: 100% (160/160), done.
+remote: Compressing objects: 100% (116/116), done.
+remote: Total 160 (delta 36), reused 158 (delta 36), pack-reused 0
+Receiving objects: 100% (160/160), 3.52 MiB | 1.51 MiB/s, done.
+Resolving deltas: 100% (36/36), done.
+</pre></div>
+</div>
+<p>ここで<code class="docutils literal notranslate"><span class="pre">ls</span></code>をすると、sourceというディレクトリが作られている。これはonefive13のリポジトリの名前である。そのためディレクトリ内に入って<code class="docutils literal notranslate"><span class="pre">ls</span></code>すると以下のようになっている。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+source
+$ cd source/ &amp;&amp; ls
+GROMACS  Makefile  SPHINX  _build  _static  conf.py  index.rst  make.bat
+</pre></div>
+</div>
+<p>これはホームページの原稿となるファイルやディレクトリである。詳しくはSphinxの使い方を見てほしい。</p>
+<p>ここでファイルを編集してみる。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git branch onefive13     ##ブランチの作成
+$ git checkout onefive13   ##ブランチの切り替え
+Switched to branch &#39;onefive13&#39;
+
+
+$ mkdir TEST
+$ cd TEST/
+$ vi test.md                ##test.mdを編集
+
+$ cat test.md
+# This is a test.           ##注意！&quot;This&quot;の前の&quot;#&quot;はコメントアウトではなくMarkdownの見出し記号です
+
+$ cd ../
+$ vi index.rst              ##index.rstにtest.mdのパスを指定する
+
+$ cat index.rst
+.. bros. documentation master file, created by
+   sphinx-quickstart on Mon Mar  8 11:45:36 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to bros.&#39;s documentation!
+=================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   /GROMACS/GROMACSのインストール.md
+   /GROMACS/GROMACSindex1.rst
+   /GROMACS/GROMACSindex2.rst
+   /GROMACS/GROMACSmdpオプション.md
+   /SPHINX/sphinx1.md
+   /SPHINX/sphinx2.md
+   /SPHINX/sphinx3.md
+   /SPHINX/sphinx4.md
+   /TEST/test.md
+</pre></div>
+</div>
+<div class="highlight-caution:: この後make htmlというコマンドをしないとhtmlにはできないのですが、誰にでもできるような形にしたいので上記までの作業で編集は大丈夫です。ここまでして下されば筆者がmake htmlを実行してウェブページに反映させておきます。(詳しいことは直接説明するので聞いて下さい。)またSphinxのセットアップをしていない場合はmake htmlをしても足りないパッケージがあるためにエラーが出ます。但しSphinxの扱いが分かるようであれば、make htmlまで実行して下さい。その場合は実行後にhtmlも「homepage」というリポジトリに反映まで行って頂きます。 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>編集が終わったのでこれをadd。sourceというディレクトリに戻ったあとに実行する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd ~/hogehoge/fugafuga/source  ##hogehoge等は自分のPC依存
+$ git add .
+$ git commit -m &quot;test&quot;           ## -mでどのような変更かのコメント
+									   
+Committer: onefive13 &lt;hogehoge@fugafuga.localdomain&gt;
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+git config --global user.name &quot;Your Name&quot;
+git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+git commit --amend --reset-author
+
+46 files changed, 249 insertions(+), 1 deletion(-)
+create mode 100644 TEST/test.md
+create mode 100644 _build/doctrees/TEST/test.doctree
+rewrite _build/doctrees/environment.pickle (87%)
+create mode 100644 _build/html/TEST/test.html
+create mode 100644 _build/html/_sources/TEST/test.md.txt
+rewrite _build/html/objects.inv (84%)
+rewrite _build/html/searchindex.js (98%)
+</pre></div>
+</div>
+<p>commitまで完了したのであとはリモートリポジトリに反映する。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push origin onefive13
+
+Username for &#39;https://github.com&#39;: onefive13
+Password for &#39;https://onefive13@github.com&#39;:
+Enumerating objects: 108, done.
+Counting objects: 100% (108/108), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (53/53), done.
+Writing objects: 100% (58/58), 19.73 KiB | 381.00 KiB/s, done.
+Total 58 (delta 44), reused 0 (delta 0)
+remote: Resolving deltas: 100% (44/44), completed with 42 local objects.
+remote:
+remote: Create a pull request for &#39;onefive13&#39; on GitHub by visiting:
+remote:      https://github.com/onefive13/source/pull/new/onefive13
+remote:
+To https://github.com/onefive13/source
+* [new branch]      onefive13 -&gt; onefive13
+</pre></div>
+</div>
+<p>さて、リモートリポジトリに本当に反映できたか確認してみる。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/remote_repo.png
+    :width: 80%
+</pre></div>
+</div>
+<p>赤い丸のところに自分が作成したブランチが表示され、且つそれをクリックした時に上のような画面が出ていれば反映できている。これでブランチの作成に成功した。一応ここまでのやり方をGitの使い方2において説明してきた。</p>
+<p>ただ、GitHub上で最後にもう1つやるべきことが残っている。それは「<strong>プルリク</strong>」である。プルリクは、自分のブランチでの作業が完了したので本家のmasterブランチに反映してねーという意味である。プルリクは右上の黄色い丸で囲んだところをクリックすればできる。</p>
+<div class="highlight-eval_rst notranslate"><div class="highlight"><pre><span></span>.. figure:: image/pull_req.png
+    :width: 80%
+</pre></div>
+</div>
+<p>どのような変更を行ったのかをコメントでできれば書いてほしい。その後黄色の丸のところをクリックする。</p>
+<p>すると管理者にプルリクが来ているよーという通知が来るので管理者がどのような変更を行ったのかを確認して問題がなければ許可して<strong>マージ</strong>する。このマージも管理者が行うので、基本的にはここまでの手順で完了である！</p>
+<p>時間が経つと他の人が開発をしてローカルのリポジトリが古くなっている可能性があるため、pullコマンド等を使用してローカルリポジトリを最新にした後、これまでの手順を繰り返して再び開発を進めることになる。ただしこの辺りのコマンドの挙動が筆者もよく分かっておらず、コマンドを実行しても本当に最新になっているのか？などの疑念が晴れないでいる。</p>
+<p>そのため以下のようにするのが無難である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rm -rf ~/hogehoge/fugafuga/source
+
+$ git clone https://github.com/onefive13/source
+</pre></div>
+</div>
+<p>要するに力技である。上記の<code class="docutils literal notranslate"><span class="pre">clone</span></code>から再びbranch,checkout~の流れで新たな開発ができる。</p>
+<p>もしgit内で完結したければ、以下のようにするのが無難である。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout master(main)         ##masterまたはmainに切り替える
+$ git branch -d onefive13           ##onefive13のbranchを削除
+$ git pull origin master(main)      ##リモートリポジトリのmasterまたはmainブランチで最新のデータを手元のmasterブランチにもってくる。
+
+$ git branch onefive13              ##ブランチを切りなおして再び開発へ
+</pre></div>
+</div>
+<p>git pullは上にも書いたがリモートリポジトリの最新のデータを手元にもってくるコマンドである。</p>
+<p>その後git branch -dで元々開発のために作成したローカルリモートリポジトリのブランチを消している。ブランチを消してしまってもいいの？と思うかもしれないが、むしろ消さなければならない。消さないと古いバージョンに新たに開発を開始してしまう可能性があり、後々リモートリポジトリの最新バージョンと衝突が起きるかもしれない。そのため必ず最新のデータを用意して編集することを心掛けてほしい。またリモートリポジトリのブランチに関しては、管理者がマージを完了した時点でブランチを消している。</p>
+<p>でもデータ消えちゃうじゃん...と思うかもしれないが、管理者がマージした時点でその人のブランチはmasterブランチ、すなわち本家のブランチに反映されている。したがってその人のブランチで管理されていたデータは全てmasterブランチに存在している。そのためmasterブランチからダウンロード等すればよい。</p>
+<p>またローカルで書いたMarkdown等についてはローカルリポジトリとは全く関係のないディレクトリにコピーしておけばよい。筆者はそのようにしている。</p>
+<p>すなわち、</p>
+<p>1.ローカルリポジトリとは全く関係ないところで下書きを書く
+2. クローンしてローカルリポジトリを作成
+3. ローカルリポジトリでブランチを作成およびそのブランチに切り替える
+4. ローカルリポジトリのファイルに下書きをコピーする
+5. add,commit,push
+という流れである。</p>
+</section>
+<section id="id2">
+<h2>まとめ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>さてGitを使っての開発はうまくできただろうか？筆者もまだまだ分からないことだらけだが、Gitにより安全に便利に開発ができることは間違いない。またこのウェブページの発展にはより多くの人の助けが必要である。ぜひ他の人にも知ってほしい！自分のページを読んで！という人がいたら書いていってほしい。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

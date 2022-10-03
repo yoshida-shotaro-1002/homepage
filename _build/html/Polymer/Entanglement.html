@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高分子鎖のからみあい点間分子量(からみあい)調整 &mdash; MDnotes  ドキュメント</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="高分子鎖の慣性半径調整" href="Rg.html" />
+    <link rel="prev" title="高分子鎖の物性値調整に対する準備" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MDnotes
+            <img src="../_static/MDnoteslogo.jfif" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Simulation Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSinstall.html">GROMACSのインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex1.html">GROMACSチュートリアル1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSindex2.html">GROMACSチュートリアル2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACSmdp.html">GROMACS.mdpオプション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDindex.html">VMDの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GNUPLOT/GNUPLOTusage.html">gnuplotの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Dynamics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mdsoft.html">Molecular Dynamics Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/gromacs.html">Gromacs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/namd.html">Namd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/lammps.html">LAMMPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/mpdyn.html">MPDyn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot/Gnuplot_01.html">Gnuplotでグラフ作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/vmd.html">VMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/Discovery_studio.html">Discovery Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/fftw.html">FFTW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/plumed.html">PLUMED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/packmol.html">Packmol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MD/MPI.html">MPI environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slack/insto.html">slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device/main.html">Device in Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/how_to_use_git.html">How to edit this homepages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../make_homepages/sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPHINX/sphinxindex.html">Sphinxの使い方</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GIT/gitindex.html">Gitの使い方</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cheat sheet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GROMACS/GROMACScheat.html">GROMACSチートシート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../VMD/VMDcheat.html">VMDチートシート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Room</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis.html">MDAnalysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/MDAnalysis_tutorial.html">MDAnalysis tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/anaconda.html">Anaconda</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Polymer Group</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="polymer_property.html">高分子材料の物性値の調整</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="polymer_property.html#id2">目次</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">PCの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html">高分子の研究に必要なライブラリのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NAS.html">NASの使い方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setup.html">高分子鎖の物性値調整に対する準備</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">高分子鎖のからみあい点間分子量(からみあい)調整</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">からみあいとは</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">からみあいを変化させたトラジェクトリファイルを生成する。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">トラジェクトリファイルからからみあい点間分子量を出力させる。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">調整したい物性値(からみあい)を持つ座標ファイルの構造を取り出す。</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Rg.html">高分子鎖の慣性半径調整</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MDnotes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="polymer_property.html">高分子材料の物性値の調整</a> &raquo;</li>
+      <li>高分子鎖のからみあい点間分子量(からみあい)調整</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>高分子鎖のからみあい点間分子量(からみあい)調整<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="id2">
+<h2>からみあいとは<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>端的に説明すると以下の図のように分子鎖同士がフックしあっている点間の距離のことを指す。この物性値は高分子の歪みに対する応力を示す因子の一つであり、タイムスケールが小さいMD計算では実験値に収束しないため作為的に調整する必要がある。からみあいの調整を行なっているプログラムの内容は各自確認して欲しいが、高分子鎖を構成するモノマー重心間のなす角度を認識させて、それぞれのモノマーに対してからみあいの値が実験値と一致するように単位ベクトルを与えることを繰り返すことでプリミティブパス(高分子鎖末端の2点間をからみあい点を経由して繋いだ最小距離)を調整する。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/karamiai.png"><img alt="../_images/karamiai.png" src="../_images/karamiai.png" style="width: 80%;" /></a>
+</figure>
+</section>
+<section id="id3">
+<h2>からみあいを変化させたトラジェクトリファイルを生成する。<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>からみあいを調整するためにこのトラジェクトリファイルを生成する段階でスパコンを利用する。手元のパソコンからスパコンに以下のようにrsyncすることで様々な実行プログラムが整理されたディレクトリとからみあいを調整するディレクトリを持ってくる。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># からみあいを調整するディレクトリをpolymerparticleというディレクトリに入れる場合</span>
+rsync -avh /mnt/ImPACT02/temp_yoshida/AdjustEntanglement RCCS:/home/users/dfw/2022/polymerparticle/
+<span class="c1">#実行プログラムをまとめられたディレクトリをスパコンに入れる場合</span>
+rsync -avh /mnt/ImPACT02/temp_yoshida/bin RCCS:/home/users/dfw/2022/
+</pre></div>
+</div>
+<p>次に実行ファイルを動かしていく。手元のパソコンにおいてもスパコンにおいてもプログラムを動かすためにはコンパイルという作業を行う必要がある。実行ファイルが存在する~/bin/AdjustEntanglement/に移動し、Makefileに従ってadjustentanglement.cppというファイルをコンパイルをしていく。この際Makefileには筆者の環境での内容が記載されているため、このファイルを自分の環境用に書き換える必要がある。具体的には以下の部分を自分の環境用に書き換えて欲しい。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">MKLROOT</span><span class="o">=</span>/local/apl/lx/intel/
+<span class="nv">GROMACS</span><span class="o">=</span>/local/apl/lx/gromacs2018/
+<span class="nv">QHULL</span><span class="o">=</span>/home/users/dfw/2022/apl/liblbfgs-1.10/install/
+<span class="nv">LIBLBFGS</span><span class="o">=</span>/home/users/dfw/2022/apl/netcdf-3.6.3/install/
+<span class="nv">NETCDF</span><span class="o">=</span>/home/users/dfw/2022/apl/netcdf-3.6.3/install/
+<span class="nv">MYLIBRARY</span><span class="o">=</span>/home/users/dfw/2022/bin/library
+
+<span class="nv">INCLUDE</span> <span class="o">=</span> -I<span class="k">$(</span>MKLROOT<span class="k">)</span>...
+          -I<span class="k">$(</span>NETCDF<span class="k">)</span>...
+          ...
+<span class="nv">LIBDIR</span>  <span class="o">=</span> -L<span class="k">$(</span>MKLROOT<span class="k">)</span>...
+          -L<span class="k">$(</span>NETCDF<span class="k">)</span>...
+          ...
+</pre></div>
+</div>
+<p>基本的にはINCLUDEやLIBDIRの部分は変えなくて良いかもしれない。主に/home/user/dfw/2022/で始まる部分を自分のディレクトリ上のPATHに変更して欲しい。また筆者はGROMACSのバージョンは2018を使っていたが/local/apl/lx/にある自分の使っているバージョンのものに書き換えて欲しい(新しいものの方がいいかも)。この後に<code class="docutils literal notranslate"><span class="pre">make</span></code>でコンパイルが通れば成功である。
+しかし、上記のMYLIBRARYに存在するプログラムを参照しているためこのプログラムも自分のパソコンの環境用にコンパイルする必要がある。コンパイルする前に<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>を打ち込んでコンパイルする前の状態に戻してから上記と同じようにMakefileを書き換えた上で<code class="docutils literal notranslate"><span class="pre">make</span></code>を行なってコンパイルしてみよう。<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-ltrh</span></code>でlibmd.aが生成されていることを確認できたらコンパイル成功である。
+これでもう一度binの中にあるAdjustEntanglementに戻って<code class="docutils literal notranslate"><span class="pre">make</span></code>を実行して欲しい。make時にエラーが出た時は大抵ファイルが見つからない系の内容だと思われるのでfindコマンドなどを用いてファイルのPATHを特定してMakefileを書き換えて欲しい。それでもエラーが直らない場合は研究室の先輩などに聞いてみよう。実行ファイル(adjustmententanglement_3.7)ができたら<code class="docutils literal notranslate"><span class="pre">ldd</span> <span class="pre">adjustmententanglement_3.7</span></code>で実行ファイルが実行できるか確認して欲しい。not foundというものが表示された場合、必要に応じて~/.bashrcの中のPATHを通すようにしよう。</p>
+<p>次にbinディレクトリから出て、AdjustEntanglementのディレクトリに移動してからみあいを調整したい構造ファイル(~.gro)を持ってくる。その後Run.shを実行することでからみあいを変化させたトラジェクトリファイルを生成する。実際にプログラムを動かす場合は~.inputの内容を書き換える必要がある。自身の計算条件に応じて書き換えて欲しい、特にスパコンの環境に合わせてCORE数の指定は確実に行おう。Run.shファイルの中身は以下のようである。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>	/home/users/dfw/2022/bin/AdjustEntanglement/adjustentanglement_3.7 -i adjustentanglement.input
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>トラジェクトリファイルからからみあい点間分子量を出力させる。<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この過程は上記の過程で生成したトラジェクトリファイルの各フレームにおけるからみあい点間分子量を数値として出力するものであり、手元のパソコンで行う。手元のパソコンのbin内にあるZ1_input内にあるmakefileの中身を書き換えて<code class="docutils literal notranslate"><span class="pre">make</span></code>を実行してコンパイルを行う。makefileの書き換えは上記と同じように行なってもらいたい。特に/home/yoshida/で始まる部分は自分の環境に合わせて書き換える。<code class="docutils literal notranslate"><span class="pre">find</span></code>や<code class="docutils literal notranslate"><span class="pre">ldd</span></code>を駆使してプログラムに必要なファイルに対するPATHを通して欲しい。
+AdjustEntanglementの中にあるZ1_inputに入り、z1_input.inputの内容を自身の計算条件に応じて書き換えて欲しい(主にInputのトポロジーファイルとトラジェクトリファイル)。その後、binの中にあるZ1_inputの実行ファイルを以下のように実行する。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$/home/<span class="o">(</span>ユーザー名<span class="o">)</span>/bin/Z1_input/z1_input_1.2 -i z1_input.input
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>調整したい物性値(からみあい)を持つ座標ファイルの構造を取り出す。<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Z1_inputの実行ファイルを実行したら、Z1_input内のZ1に入ってloop.shを実行する(この時loop.sh内の/home/yoshida/で始まる部分を自分用に書き換える)。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$./loop.sh
+</pre></div>
+</div>
+<p>loop.shを実行後にNe.logをviで開いてからみあい点間分子量が適した値をもつフレームを探す。
+その後AdjustEntanglement(binの中のやつではない)のディレクトリまで戻り、vmdで初期構造ファイル(~.gro)と先ほど生成したトラジェクトリファイル(~.dcd)を選択し、上記で探したフレームの構造ファイルを取り出す。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="高分子鎖の物性値調整に対する準備" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Rg.html" class="btn btn-neutral float-right" title="高分子鎖の慣性半径調整" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, I.Kawabata, S.Harada, H.Tanaka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
