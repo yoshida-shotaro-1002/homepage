@@ -19,8 +19,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'MDnotes'
-copyright = '2022, I.Kawabata, S.Harada, H.Tanaka'
-author = 'ikawabata'
+copyright = '2022, S.Yoshida, I.Kawabata, S.Harada, H.Tanaka'
+author = 'syoshida'
 
 
 # -- General configuration ---------------------------------------------------
